@@ -48,8 +48,19 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -216,10 +227,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="261" />
-    <option name="y" value="88" />
-    <option name="width" value="793" />
-    <option name="height" value="713" />
+    <option name="y" value="-4" />
+    <option name="width" value="1366" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -237,19 +247,6 @@
               <item name="EasyParkOficial" type="b2602c69:ProjectViewProjectNode" />
               <item name="EasyParkOficial" type="462c0819:PsiDirectoryNode" />
               <item name="taller2018" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyParkOficial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyParkOficial" type="462c0819:PsiDirectoryNode" />
-              <item name="taller2018" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EasyParkOficial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyParkOficial" type="462c0819:PsiDirectoryNode" />
-              <item name="taller2018" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -288,16 +285,18 @@
       <updated>1540264325848</updated>
       <workItem from="1540264327846" duration="4241000" />
       <workItem from="1540298386404" duration="51000" />
+      <workItem from="1540298486216" duration="248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4292000" />
+    <option name="totallyTimeSpent" value="4540000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="261" y="88" width="793" height="713" extended-state="0" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23694779" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4090909" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -358,6 +357,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
