@@ -6,8 +6,6 @@
  * Time: 09:06 PM
  */
 
-
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -25,7 +23,7 @@ class CreateServiceTable extends Migration
             $table->increments('id_services');
             //$table->unsignedInteger('id_schedules_fk');
             //$table->unsignedInteger('id_parkings_fk');
-                        $table->boolean('open');
+            $table->boolean('open');
             $table->decimal('rate_per_hour',10,7);
         });
     }

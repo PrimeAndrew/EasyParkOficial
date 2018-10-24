@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIdSchedulesToAgendaTable extends Migration
+class AddIdScheduleToAgendaTable extends Migration
 {
     /**
      * Run the migrations.

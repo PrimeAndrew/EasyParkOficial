@@ -5,13 +5,11 @@
  * Date: 23-10-18
  * Time: 09:18 PM
  */
-
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIdServicesToTempClosedTable extends Migration
+class AddIdServiceToTempclosedTable extends Migration
 {
     /**
      * Run the migrations.

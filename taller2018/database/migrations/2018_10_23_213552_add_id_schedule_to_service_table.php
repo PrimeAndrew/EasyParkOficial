@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIdSchedulesToServiceTable extends Migration
+class AddIdScheduleToServiceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -21,7 +21,7 @@ class AddIdSchedulesToServiceTable extends Migration
     {
         Schema::table('services', function (Blueprint $table) {
             $table->unsignedInteger('id_schedules_fk')->after('id_services');
-            $table->foreign('id_schedules_fk')->references('id  _schedules')->on('schedules');
+            $table->foreign('id_schedules_fk')->references('id_schedules')->on('schedules');
 
         });
     }
