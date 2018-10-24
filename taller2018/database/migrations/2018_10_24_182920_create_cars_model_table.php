@@ -18,6 +18,7 @@ class CreateCarsModelTable extends Migration
             $table->string('model',50);
             $table->year('year',50);
             $table->timestamps();
+            //$table->foreign('id_area')->references('id_area')->on('area');
         });
     }
 
