@@ -21,60 +21,42 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="22" />
+          <entry key="php" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="22" />
+          <entry key="PHP" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="316" />
+          <entry key="php" value="339" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="316" />
+          <entry key="PHP" value="339" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_142307_add_id_parking_spaces_to_reservations_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_201805_add_id_service_to_tempclosed_table.php">
+        <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_202543_add_id_schedule_to_agenda_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            <state relative-caret-position="30">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_192534_create_service_table.php">
+        <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_185222_create_schedules_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_192613_create_temporal_closed_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="46" />
+            <state relative-caret-position="210">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -91,6 +73,7 @@
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_192534_create_service_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_192613_create_temporal_closed_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_201805_add_id_service_to_tempclosed_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_202543_add_id_schedule_to_agenda_table.php" />
       </list>
     </option>
   </component>
@@ -252,12 +235,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540342157236</updated>
-      <workItem from="1540342161004" duration="2049000" />
+      <workItem from="1540342161004" duration="2380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2049000" />
+    <option name="totallyTimeSpent" value="2380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="25" width="1309" height="743" extended-state="6" />
@@ -324,27 +307,6 @@
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_133346_create_parking_spaces_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_191856_create_agendas_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_185222_create_schedules_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_142307_add_id_parking_spaces_to_reservations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_192613_create_temporal_closed_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -361,8 +323,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_201805_add_id_service_to_tempclosed_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        <state relative-caret-position="45">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_142307_add_id_parking_spaces_to_reservations_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_191856_create_agendas_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_185222_create_schedules_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_202543_add_id_schedule_to_agenda_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
