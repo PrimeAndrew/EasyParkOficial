@@ -23,9 +23,9 @@ class CreateServiceTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id_services');
-            //$table->unsignedInteger('id_parkings_fk');
             //$table->unsignedInteger('id_schedules_fk');
-            $table->boolean('open');
+            //$table->unsignedInteger('id_parkings_fk');
+                        $table->boolean('open');
             $table->decimal('rate_per_hour',10,7);
         });
     }

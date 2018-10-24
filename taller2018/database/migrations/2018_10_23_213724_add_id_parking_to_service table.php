@@ -3,14 +3,14 @@
  * Created by PhpStorm.
  * User: josecordova
  * Date: 23-10-18
- * Time: 09:35 PM
+ * Time: 09:38 PM
  */
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIdSchedulesToServiceTable extends Migration
+class AddIdParkingsToServiceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,8 +20,8 @@ class AddIdSchedulesToServiceTable extends Migration
     public function up()
     {
         Schema::table('services', function (Blueprint $table) {
-            $table->unsignedInteger('id_schedules_fk')->after('id_services');
-            $table->foreign('id_schedules_fk')->references('id  _schedules')->on('schedules');
+            $table->unsignedInteger('id_parkings_fk')->after('id_schedules_fk');
+            $table->foreign('id_parkings_fk')->references('id_parkings')->on('parkings');
 
         });
     }
@@ -34,8 +34,8 @@ class AddIdSchedulesToServiceTable extends Migration
     public function down()
     {
         Schema::table('services', function (Blueprint $table) {
-            $table->dropForeign(['id_schedules_fk']);
-            $table->dropColumn(['id_schedules_fk']);
+            $table->dropForeign(['id_parkings_fk']);
+            $table->dropColumn(['id_parkings_fk']);
         });
     }
 }
