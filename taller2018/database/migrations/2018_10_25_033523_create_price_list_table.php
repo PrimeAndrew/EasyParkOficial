@@ -23,6 +23,7 @@ class CreatePriceListTable extends Migration
             $table->string('host_id',45);
             $table->string('state',45);
             $table->timestamps();
+
         });
     }
 
