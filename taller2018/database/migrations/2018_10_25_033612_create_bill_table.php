@@ -26,6 +26,7 @@ class CreateBillTable extends Migration
             $table->integer('user_id');
             $table->string('host_id',45);
             $table->timestamps();
+
         });
     }
 
