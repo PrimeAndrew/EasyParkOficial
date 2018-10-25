@@ -17,6 +17,7 @@ class CreateBillDetailTable extends Migration
             $table->increments('id_bill_detail');
             //$table->unsignedInteger('id_bill');
             //$table->unsignedInteger('id_parking');
+
         });
     }
 
