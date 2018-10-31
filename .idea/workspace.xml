@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="1c037571-b749-4ca2-a10a-2684ec7caa6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EasyParkOficial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EasyParkOficial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taller2018/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/taller2018/composer.lock" afterDir="false" />
+    </list>
+=======
     <list default="true" id="1c037571-b749-4ca2-a10a-2684ec7caa6d" name="Default Changelist" comment="" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,6 +20,60 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/taller2018/composer.json</pharConfigPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="369725838">
@@ -40,34 +104,85 @@
         </counts>
       </usages-collector>
     </session>
+<<<<<<< HEAD
+    <session id="2113888511">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="2" />
+=======
     <session id="1947047574">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.7" value="1" />
           <entry key="project.opened" value="1" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< HEAD
+          <entry key="DATABASE/c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c" value="1" />
+          <entry key="env" value="2" />
+          <entry key="php" value="14" />
+          <entry key="sql" value="1" />
+=======
           <entry key="env" value="1" />
           <entry key="php" value="12" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
+          <entry key=".env file" value="2" />
+          <entry key="PHP" value="14" />
+          <entry key="Scratch" value="1" />
+          <entry key="UML" value="1" />
+=======
           <entry key=".env file" value="1" />
           <entry key="PHP" value="12" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
+          <entry key="env" value="31" />
+          <entry key="php" value="424" />
+=======
           <entry key="env" value="35" />
           <entry key="php" value="32" />
           <entry key="txt" value="138" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
+          <entry key=".env file" value="31" />
+          <entry key="PHP" value="424" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.composer.actions" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.php.new.test" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.php.rename.constructor" />
+      <usages-collector id="statistics.php.new.class" />
+      <usages-collector id="statistics.php.composer.command.options" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taller2018/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+=======
           <entry key=".env file" value="35" />
           <entry key="PHP" value="32" />
           <entry key="PLAIN_TEXT" value="138" />
@@ -89,11 +204,35 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
               <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="33" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c/console.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="uml://DATABASE/c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c</OriginalElement>
+              <nodes>
+                <node x="0.0" y="0.0">c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c.TABLE:postgres.public.migrations</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="0.6848192771084337" x="462.8427163969036" y="453.5007037297678" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+=======
         <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_25_033625_create_company_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -166,6 +305,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="15" column="32" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="32" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
             </state>
           </provider>
         </entry>
@@ -192,6 +332,17 @@
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_213552_add_id_schedule_to_service_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_192534_create_service_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_213724_add_id_parking_to_service table.php" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_182555_create_brands_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_183029_create_cars_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_182920_create_cars_model_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_190733_add_id_brands_to_cars_model_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_191719_add_id_cars_type_to_cars_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_182956_create_cars_type_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_192848_add_id_cars_model_to_cars_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_193635_add_id_users_roles_to_cars_table.php" />
+        <option value="$PROJECT_DIR$/taller2018/.env" />
+=======
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_25_033523_create_price_list_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_25_033602_create_bill_detail_table.php" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_25_033612_create_bill_table.php" />
@@ -201,6 +352,7 @@
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_25_033855_add_id_company_to_bill_table.php" />
         <option value="$PROJECT_DIR$/taller2018/.env" />
         <option value="$PROJECT_DIR$/taller2018/database/migrations/2018_10_25_033730_add_id_parking_to_bill_detail_table.php" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
       </list>
     </option>
   </component>
@@ -214,6 +366,9 @@
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/taller2018/package.json" />
     </packageJsonPaths>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -289,19 +444,28 @@
       <path value="$PROJECT_DIR$/taller2018/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/taller2018/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/taller2018/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/taller2018/vendor/opis/closure" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
+    <option name="x" value="437" />
+    <option name="y" value="24" />
+    <option name="width" value="929" />
+    <option name="height" value="736" />
+=======
     <option name="x" value="67" />
     <option name="y" value="140" />
     <option name="width" value="1289" />
     <option name="height" value="555" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,23 +484,16 @@
               <item name="taller2018" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="EasyParkOficial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EasyParkOficial" type="462c0819:PsiDirectoryNode" />
-              <item name="taller2018" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/ucb_proyecto2/EasyParkOficial" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -363,6 +520,10 @@
       <option name="presentableId" value="Default" />
       <updated>1540342157236</updated>
       <workItem from="1540342161004" duration="3368000" />
+<<<<<<< HEAD
+      <workItem from="1540404902291" duration="5838000" />
+      <workItem from="1540990770771" duration="2806000" />
+=======
       <workItem from="1540437733808" duration="1838000" />
     </task>
     <task id="LOCAL-00001" summary="Migration: Create company table">
@@ -371,6 +532,7 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1540439507490</updated>
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
     </task>
     <task id="LOCAL-00002" summary="Migration: Add id_bill to bill_detail table">
       <created>1540439572580</created>
@@ -383,6 +545,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="12012000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984472" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5015528" side_tool="true" weight="0.24090908" />
+=======
     <option name="totallyTimeSpent" value="5206000" />
   </component>
   <component name="ToolWindowManager">
@@ -390,6 +562,38 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24501197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+=======
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.406199" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+<<<<<<< HEAD
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.16287878" />
+=======
+      <window_info anchor="right" id="Database" order="3" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984472" visible="true" weight="0.24090908" />
+      <window_info id="Structure" order="1" sideWeight="0.5015528" side_tool="true" weight="0.24090908" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -401,13 +605,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.406199" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -424,33 +628,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="Migration: Add id_bill to bill_detail table" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_034831_create_roles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_132803_create_zones_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_133456_create_reservations_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_133346_create_parking_spaces_table.php">
+=======
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_140406_add_id_parkings_to_parking_spaces_table.php">
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_192613_create_temporal_closed_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_201805_add_id_service_to_tempclosed_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -496,17 +690,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_213724_add_id_parking_to_service table.php">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_133024_create_parkings_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="86" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_040209_create_users_roles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="195">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -516,6 +704,137 @@
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_042059_add_id_users_to_users_roles_table.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_183029_create_cars_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_182956_create_cars_type_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_213724_add_id_parking_to_service table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="38" column="11" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="38" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_192848_add_id_cars_model_to_cars_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_201805_add_id_service_to_tempclosed_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="37" column="11" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="37" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_191719_add_id_cars_type_to_cars_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="70" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_190733_add_id_brands_to_cars_model_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="28" column="75" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="75" />
+          <caret line="29" column="75" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="75" />
+          <caret line="30" column="75" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="75" />
+          <caret line="31" column="75" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_182920_create_cars_model_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_182555_create_brands_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_034831_create_roles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_140406_add_id_parkings_to_parking_spaces_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="117" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="17" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_040209_create_users_roles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_23_141023_add_id_zones_to_parkings_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="31" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_24_193635_add_id_users_roles_to_cars_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taller2018/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+<<<<<<< HEAD
+    <entry file="uml://DATABASE/c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">c0b9dc92-03b3-40d4-8fe6-c74e7f91a01c.TABLE:postgres.public.migrations</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.6848192771084337" x="462.8427163969036" y="453.5007037297678" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+=======
     <entry file="file://$PROJECT_DIR$/taller2018/database/migrations/2018_10_25_033756_add_id_company_to_bill__table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -593,6 +912,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+>>>>>>> 71ddc5aa9382bfcc3d0418947213836a261ccca1
         </state>
       </provider>
     </entry>
