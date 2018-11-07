@@ -23,6 +23,11 @@
                     <span class="fa-angle-right fa right-arrow text-right"></span>
                 </a>
                 <ul class="nav nav-list tree">
+                    //
+
+                    <li><a href="/home">Registrar Parqueo</a></li>
+
+                    //
                     <li><a href="   ">Datos Parqueo</a></li>
                     <li><a href=" ">Ubicacion Parqueo</a></li>
                 </ul>
