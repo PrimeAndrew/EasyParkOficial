@@ -74,8 +74,8 @@
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2018-10-31.11:21:44.598</IntrospectionTimestamp>
-      <IntrospectionStateNumber>771</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-10-31.11:45:44.880</IntrospectionTimestamp>
+      <IntrospectionStateNumber>773</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -368,7 +368,7 @@
     <table id="53" parent="14" name="parkings">
       <ObjectId>16656</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>771</StateNumber>
+      <StateNumber>773</StateNumber>
     </table>
     <table id="54" parent="14" name="password_resets">
       <ObjectId>16613</ObjectId>
@@ -413,7 +413,7 @@
     <table id="62" parent="14" name="users_roles">
       <ObjectId>16630</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>738</StateNumber>
+      <StateNumber>773</StateNumber>
     </table>
     <table id="63" parent="14" name="zones">
       <ObjectId>16648</ObjectId>
@@ -1730,18 +1730,25 @@
       <StateNumber>690</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="254" parent="62" name="users_roles_pkey">
+    <column id="254" parent="62" name="id_parkings_fk">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>773</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="255" parent="62" name="users_roles_pkey">
       <ObjectId>16634</ObjectId>
       <ColNames>id_roles_users</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="255" parent="62" name="users_roles_pkey">
+    <key id="256" parent="62" name="users_roles_pkey">
       <ObjectId>16635</ObjectId>
       <ColNames>id_roles_users</ColNames>
       <UnderlyingIndexName>users_roles_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="256" parent="62" name="users_roles_id_users_fk_foreign">
+    <foreign-key id="257" parent="62" name="users_roles_id_users_fk_foreign">
       <ObjectId>16636</ObjectId>
       <ColNames>id_users_fk</ColNames>
       <RefTableId>16601</RefTableId>
@@ -1750,7 +1757,7 @@
       <RefKeyName>users_pkey</RefKeyName>
       <RefColNames>id_users</RefColNames>
     </foreign-key>
-    <foreign-key id="257" parent="62" name="users_roles_id_roles_fk_foreign">
+    <foreign-key id="258" parent="62" name="users_roles_id_roles_fk_foreign">
       <ObjectId>16641</ObjectId>
       <ColNames>id_roles_fk</ColNames>
       <RefTableId>16622</RefTableId>
@@ -1759,7 +1766,16 @@
       <RefKeyName>roles_pkey</RefKeyName>
       <RefColNames>id_roles</RefColNames>
     </foreign-key>
-    <column id="258" parent="63" name="id_zones">
+    <foreign-key id="259" parent="62" name="users_roles_id_parkings_fk_foreign">
+      <ObjectId>16868</ObjectId>
+      <ColNames>id_parkings_fk</ColNames>
+      <RefTableId>16656</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>parkings</RefTableName>
+      <RefKeyName>parkings_pkey</RefKeyName>
+      <RefColNames>id_parkings</RefColNames>
+    </foreign-key>
+    <column id="260" parent="63" name="id_zones">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1768,38 +1784,38 @@
       <TypeId>23</TypeId>
       <SequenceName>zones_id_zones_seq</SequenceName>
     </column>
-    <column id="259" parent="63" name="zone">
+    <column id="261" parent="63" name="zone">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>692</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="260" parent="63" name="city">
+    <column id="262" parent="63" name="city">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>692</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="261" parent="63" name="created_at">
+    <column id="263" parent="63" name="created_at">
       <Position>4</Position>
       <DataType>timestamp(0)|0s</DataType>
       <StateNumber>692</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="262" parent="63" name="updated_at">
+    <column id="264" parent="63" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp(0)|0s</DataType>
       <StateNumber>692</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="263" parent="63" name="zones_pkey">
+    <index id="265" parent="63" name="zones_pkey">
       <ObjectId>16652</ObjectId>
       <ColNames>id_zones</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="264" parent="63" name="zones_pkey">
+    <key id="266" parent="63" name="zones_pkey">
       <ObjectId>16653</ObjectId>
       <ColNames>id_zones</ColNames>
       <UnderlyingIndexName>zones_pkey</UnderlyingIndexName>
