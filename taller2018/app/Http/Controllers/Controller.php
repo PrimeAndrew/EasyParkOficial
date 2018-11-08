@@ -29,4 +29,21 @@ class Controller extends BaseController
 
         DB::table('users2')->insert($data);
     }
+
+    function getData(){
+        $data['data'] = DB::table('reservations')->get();
+
+        //dd($data);
+
+        if(count($data) > 0){
+            return view('deleteReservation',$data);
+        }else{
+            return view('deleteReservation  ');
+        }
+    }
+
+    function delete($id_reservations){
+        DB::table('reservations')->where('id_reservations',$id_reservations)->delete();
+        return redirect('/deleterev');
+    }
 }

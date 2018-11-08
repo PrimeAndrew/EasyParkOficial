@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Cars_type;
 use Illuminate\Http\Request;
 
-class CRUDController extends Controller
+class CarsTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -40,10 +41,10 @@ class CRUDController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Cars_type  $cars_type
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Cars_type $cars_type)
     {
         //
     }
@@ -51,10 +52,10 @@ class CRUDController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Cars_type  $cars_type
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Cars_type $cars_type)
     {
         //
     }
@@ -63,10 +64,10 @@ class CRUDController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Cars_type  $cars_type
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Cars_type $cars_type)
     {
         //
     }
@@ -74,10 +75,10 @@ class CRUDController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Cars_type  $cars_type
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Cars_type $cars_type)
     {
         //
     }

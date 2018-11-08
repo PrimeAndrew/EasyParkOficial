@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Car;
+use App\Cars_type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class CarController extends Controller
 {
@@ -23,7 +25,8 @@ class CarController extends Controller
      */
     public function create()
     {
-        return view('cars.create');
+        $cars_types = Cars_type::all();
+        return view('cars.create',compact('cars_types'));
     }
 
     /**
@@ -34,7 +37,16 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'plate_number'=> 'required',
+            'color' => 'required',
+            'id_car_type_fk' => 'required',
+            'id_car_model_fk' => 'required',
+            'id_roles_users_fk' => 'required',
+        ]);
+        Car::create($request->all());
+        Session::flash('message','Creado');
+        return redirect()->route('home');
     }
 
     /**
