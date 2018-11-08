@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('/bookings', function () {
-    echo "Hello";
+    return view('bookings');
 });
 
 
@@ -35,4 +35,10 @@ Route::post('/insert','Controller@insert');
 Route::get('/registerCliente', function () {
     return view('registerCliente');
 });
+//Reservas
+Route::resource('reservations', 'GmapsController');
+
+
+Route::get('/deleterev  ','Controller@getData');
+Route::get('/delete/{id_reservations}','Controller@delete');
 

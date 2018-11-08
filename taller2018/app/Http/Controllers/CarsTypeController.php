@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Car;
 use App\Cars_type;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 
-class CarController extends Controller
+class CarsTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,6 +14,7 @@ class CarController extends Controller
      */
     public function index()
     {
+        //
     }
 
     /**
@@ -25,8 +24,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        $cars_types = Cars_type::all();
-        return view('cars.create',compact('cars_types'));
+        //
     }
 
     /**
@@ -37,25 +35,16 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'plate_number'=> 'required',
-            'color' => 'required',
-            'id_car_type_fk' => 'required',
-            'id_car_model_fk' => 'required',
-            'id_roles_users_fk' => 'required',
-        ]);
-        Car::create($request->all());
-        Session::flash('message','Creado');
-        return redirect()->route('home');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Car  $car
+     * @param  \App\Cars_type  $cars_type
      * @return \Illuminate\Http\Response
      */
-    public function show(Car $car)
+    public function show(Cars_type $cars_type)
     {
         //
     }
@@ -63,10 +52,10 @@ class CarController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Car  $car
+     * @param  \App\Cars_type  $cars_type
      * @return \Illuminate\Http\Response
      */
-    public function edit(Car $car)
+    public function edit(Cars_type $cars_type)
     {
         //
     }
@@ -75,10 +64,10 @@ class CarController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Car  $car
+     * @param  \App\Cars_type  $cars_type
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Car $car)
+    public function update(Request $request, Cars_type $cars_type)
     {
         //
     }
@@ -86,10 +75,10 @@ class CarController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Car  $car
+     * @param  \App\Cars_type  $cars_type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Car $car)
+    public function destroy(Cars_type $cars_type)
     {
         //
     }

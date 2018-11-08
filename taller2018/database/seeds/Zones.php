@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class BrandsTableSeeder extends Seeder
+class Zones extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,11 +12,12 @@ class BrandsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 5; $i++) {
-            DB::table('brands')->insert([
-                'brand' => str_random(5)
+        for ($i = 0; $i < 5; $i++) {
+            DB::table('zones')->insert([
+                'zone' => str_random(5),
+                'city' => str_random(5)
             ]);
+
         }
-//        Brands::create(array('brand'=>'marca1'));
     }
 }
