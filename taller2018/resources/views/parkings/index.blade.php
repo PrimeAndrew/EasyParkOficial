@@ -3,6 +3,7 @@
 @extends('layouts.menu')
 @extends('layouts.app')
 
+
 @section('content')
 
     <h1 class="text-center">REGISTRO DE PARQUEO</h1>
