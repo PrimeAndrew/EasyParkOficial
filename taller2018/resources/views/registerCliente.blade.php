@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Insert Form</title>
-</head>
-<body>
-<center>
+@extends('layouts.app')
+@section('content')
+    <div id="content">
+        <div class="panel">
+            <div class="panel-body">
+
+                <h2>Eliminar Reserva</h2>
 
     <form action="/insert" method="post">
-        <table>
+        <table >
             <tr>
                 {{ csrf_field() }}
                 <td>Name: </td>
@@ -47,6 +47,7 @@
         </table>
     </form>
 
-</center>
-</body>
-</html>
+            </div>
+        </div>
+    </div>
+@endsection
