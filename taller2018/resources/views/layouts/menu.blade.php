@@ -36,7 +36,7 @@
                     <span class="fa fa-pencil-square"></span>Nueva Reserva<span class="fa-angle-right fa right-arrow text-right"></span> </a>
                 <ul class="nav nav-list tree">
 
-                    <li><a href="">Busqueda Parqueo</a></li>
+                    <li><a href="{{ route('reservations.index') }}">Busqueda Parqueo</a></li>
                     <li><a href="">Seleccionar Horario</a></li>
                     <li><a href="">Vista Previa</a></li>
                 </ul>
