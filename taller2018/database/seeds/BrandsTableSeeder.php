@@ -12,10 +12,11 @@ class BrandsTableSeeder extends Seeder
      */
     public function run()
     {
-//        DB::table('brands')->insert([
-//            'brand'=> str_random(10)
-//        ]);
-
+        for ($i=0; $i < 5; $i++) {
+            DB::table('brands')->insert([
+                'brand' => str_random(5)
+            ]);
+        }
 //        Brands::create(array('brand'=>'marca1'));
     }
 }
