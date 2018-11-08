@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Gmaps;
 use Illuminate\Http\Request;
 
+
 class GmapsController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class GmapsController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**

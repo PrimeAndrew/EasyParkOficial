@@ -35,4 +35,7 @@ Route::post('/insert','Controller@insert');
 Route::get('/registerCliente', function () {
     return view('registerCliente');
 });
+//Reservas
+Route::resource('reservations', 'GmapsController');
+
 
