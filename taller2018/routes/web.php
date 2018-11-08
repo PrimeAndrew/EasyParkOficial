@@ -18,7 +18,6 @@ Route::get('/', function () {
 
 Route::get('/bookings', function () {
     return view('bookings');
-    //echo "Hello";
 });
 
 
