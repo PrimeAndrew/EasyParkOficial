@@ -14,7 +14,6 @@ class CarController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -24,7 +23,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return view('cars.create');
     }
 
     /**
