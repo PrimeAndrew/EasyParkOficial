@@ -25,3 +25,7 @@ Route::post('/insert','Controller@insert');
 Route::get('/registerCliente', function () {
     return view('registerCliente');
 });
+
+Route::get('/deleterev  ','Controller@getData');
+
+Route::get('/delete/{id_reservations}','Controller@delete');
