@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Gmaps;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 
 class GmapsController extends Controller
 {
@@ -15,7 +15,8 @@ class GmapsController extends Controller
      */
     public function index()
     {
-
+        $locations=DB::table('parkings')->get();
+        return view('reservations.searchParking',compact('locations'));
     }
 
     /**
