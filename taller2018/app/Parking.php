@@ -9,7 +9,7 @@ class Parking extends Model
     //
     //use SoftDeletes;
     protected $fillable = [
-        'id_parkings','parking_name','parking_address','total_spaces','open_hour','close_hour','latitude','longitud'
+        'id_parkings','parking_name','parking_address','total_spaces','open_hour','close_hour','latitude','longitud','id_zone_fk','id_price_list_fk'
 
     ];
     protected $primaryKey='id_parkings';

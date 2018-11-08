@@ -60,6 +60,22 @@
                         <input type="text" name="longitud" class="form-control" placeholder="Introduzca la longitud del parqueo"></input>
                     </div>
                 </div>
+
+
+                <div class="form-group" style="margin-top:40px !important;">
+                    <input type="text" class="form-text" id="id_zone_fk" name="id_zone_fk" required>
+                    <span class="bar"></span>
+                    <label>Zona</label>
+                </div>
+
+                <!--div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <input type="text" class="form-text" id="id_price_list_fk" name="id_price_list_fk" required>
+                    <span class="bar"></span>
+                    <label>Tarifario del parqueo</label>
+                </div-->
+
+                //fgfffg
+
                 <div class="col-md-12 text-center">
                     <button type="submit" class="btn btn-primary mb-5">Enviar</button>
                 </div>
