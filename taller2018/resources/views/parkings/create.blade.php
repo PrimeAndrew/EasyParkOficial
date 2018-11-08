@@ -1,11 +1,9 @@
-
-@extends('layouts.navbar')
-@extends('layouts.menu')
 @extends('layouts.app')
-
-
-
 @section('content')
+    <div id="content">
+        <div class="panel">
+            <div class="panel-body">
+
     <h1 class="text-center">Agregar Parqueos</h1>
     <hr>
     @if (Session::has('message'))
@@ -83,5 +81,7 @@
 
         </form>
     </div>
-
+            </div>
+        </div>
+    </div>
 @endsection
