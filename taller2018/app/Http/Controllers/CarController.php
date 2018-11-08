@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Car;
+use App\Cars_type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -24,7 +25,8 @@ class CarController extends Controller
      */
     public function create()
     {
-        return view('cars.create');
+        $cars_types = Cars_type::all();
+        return view('cars.create',compact('cars_types'));
     }
 
     /**
