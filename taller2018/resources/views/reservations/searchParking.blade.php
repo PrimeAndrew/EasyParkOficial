@@ -15,17 +15,30 @@
                     }
                 </style>
                 <h2>Buscar Parqueo</h2>
-
+                <!--Inicia buscador-->
+                <div class="span11">
+                    <form method="post" id="geocoding_form">
+                        <label for="address">Direccion:</label>
+                        <div class="input">
+                            <input type="text" id="address" name="address" />
+                            <input type="submit" class="btn" value="Search" />
+                        </div>
+                    </form>
+                    <div class="popin">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <!--Termina buscador-->
                 <div id="mymap"></div>
                 <script type="text/javascript">
-                    var parking = <?php print_r(json_encode($locations)) ?>;
+                    var locations = <?php print_r(json_encode($locations)) ?>;
                     var mymap = new GMaps({
                         el: '#mymap',
                         lat: -16.5112520,
                         lng: -68.12922518,
                         zoom:15
                     });
-                    $.each( parking, function( index, value ){
+                    $.each( locations, function( index, value ){
                         mymap.addMarker({
                             latitude: value.lat,
                             longitude: value.lng,
