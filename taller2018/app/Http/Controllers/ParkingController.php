@@ -14,7 +14,11 @@ class ParkingController extends Controller
      */
     public function index()
     {
-        //
+        //return  view('parkings.index');
+        //$parkings =  Parking::orderBy('id','ASC')->paginate(2);
+        $parkings = Parking::all();
+        return view('parkings.index',compact('parkings'));
+       // return view('home');
     }
 
     /**
@@ -24,7 +28,7 @@ class ParkingController extends Controller
      */
     public function create()
     {
-        //
+        return view('parkings.create');
     }
 
     /**
@@ -36,6 +40,18 @@ class ParkingController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'parking_name'=> 'required',
+            'parking_address' => 'required',
+            'total_spaces' => 'required',
+            'open_hour' => 'required',
+            'close_hour' => 'required',
+            'latitude' => 'required',
+            'longitud' => 'required',
+        ]);
+        Parking::create($request->all());
+        Session::flash('message','Parqueo registrado');
+        return redirect()->route('parkings.index');
     }
 
     /**

@@ -15,10 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/bookings', function () {
+    return view('bookings');
+});
+
+
+Route:: resource('cars','CarController');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route:: resource('parkings','ParkingController');
+
 Route::post('/insert','Controller@insert');
 
 
@@ -27,5 +37,5 @@ Route::get('/registerCliente', function () {
 });
 
 Route::get('/deleterev  ','Controller@getData');
-
 Route::get('/delete/{id_reservations}','Controller@delete');
+
