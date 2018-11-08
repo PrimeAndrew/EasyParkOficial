@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Parking;
+use App\Gmaps;
 use Illuminate\Http\Request;
 
-class ParkingController extends Controller
+class GmapsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,7 @@ class ParkingController extends Controller
      */
     public function index()
     {
-        //return  view('parkings.index');
-        //$parkings =  Parking::orderBy('id','ASC')->paginate(2);
-        $parkings = Parking::all();
-        return view('parkings.index',compact('parkings'));
-       // return view('home');
+        //
     }
 
     /**
@@ -28,7 +24,7 @@ class ParkingController extends Controller
      */
     public function create()
     {
-        return view('parkings.create');
+        //
     }
 
     /**
@@ -40,27 +36,15 @@ class ParkingController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'parking_name'=> 'required',
-            'parking_address' => 'required',
-            'total_spaces' => 'required',
-            'open_hour' => 'required',
-            'close_hour' => 'required',
-            'latitude' => 'required',
-            'longitud' => 'required',
-        ]);
-        Parking::create($request->all());
-        Session::flash('message','Parqueo registrado');
-        return redirect()->route('parkings.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Parking  $parking
+     * @param  \App\Gmaps  $gmaps
      * @return \Illuminate\Http\Response
      */
-    public function show(Parking $parking)
+    public function show(Gmaps $gmaps)
     {
         //
     }
@@ -68,10 +52,10 @@ class ParkingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Parking  $parking
+     * @param  \App\Gmaps  $gmaps
      * @return \Illuminate\Http\Response
      */
-    public function edit(Parking $parking)
+    public function edit(Gmaps $gmaps)
     {
         //
     }
@@ -80,10 +64,10 @@ class ParkingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Parking  $parking
+     * @param  \App\Gmaps  $gmaps
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Parking $parking)
+    public function update(Request $request, Gmaps $gmaps)
     {
         //
     }
@@ -91,10 +75,10 @@ class ParkingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Parking  $parking
+     * @param  \App\Gmaps  $gmaps
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Parking $parking)
+    public function destroy(Gmaps $gmaps)
     {
         //
     }
