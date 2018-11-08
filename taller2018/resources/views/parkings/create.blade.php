@@ -1,6 +1,9 @@
+
 @extends('layouts.navbar')
 @extends('layouts.menu')
 @extends('layouts.app')
+
+
 
 @section('content')
     <h1 class="text-center">Agregar Parqueos</h1>

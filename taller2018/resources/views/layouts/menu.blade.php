@@ -25,7 +25,7 @@
                 <ul class="nav nav-list tree">
                     //
 
-                    <li><a href="/home">Registrar Parqueo</a></li>
+                    <li><a href="/parkings">Registrar Parqueo</a></li>
 
                     //
                     <li><a href="   ">Datos Parqueo</a></li>
