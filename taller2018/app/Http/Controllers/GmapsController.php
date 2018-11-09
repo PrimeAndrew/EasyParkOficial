@@ -18,8 +18,8 @@ class GmapsController extends Controller
         //configuaración
         $config = array();
         $config['center'] = 'auto';
-        $config['map_width'] = 400;
-        $config['map_height'] = 400;
+        $config['map_width'] = 500;
+        $config['map_height'] = 500;
         $config['zoom'] = 15;
         $config['onboundschanged'] = 'if (!centreGot) {
             var mapCentre = map.getCenter();
