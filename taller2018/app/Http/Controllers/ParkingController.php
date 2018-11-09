@@ -48,6 +48,8 @@ class ParkingController extends Controller
             'close_hour' => 'required',
             'latitude' => 'required',
             'longitud' => 'required',
+            'id_zone_fk' => 'required',
+            'id_price_list_fk' => 'required',
         ]);
         Parking::create($request->all());
         Session::flash('message','Parqueo registrado');

@@ -23,6 +23,7 @@
                 <th scope="col">Latitud del parqueo</th>
                 <th scope="col">Longitud del parqueo</th>
 
+
             </tr>
             </thead>
             <tbody>

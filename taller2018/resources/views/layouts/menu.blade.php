@@ -12,8 +12,8 @@
                     <span class="fa-angle-right fa right-arrow text-right"></span>
                 </a>
                 <ul class="nav nav-list tree">
-                    <li><a href="  ">Nuevo Cliente</a></li>
-                    <li><a href="  ">Nuevo Vehiculo</a></li>
+                    <li><a href="/registerCliente">Nuevo Cliente</a></li>
+                    <li><a href="/cars/create">Nuevo Vehiculo</a></li>
                 </ul>
             </li>
 
@@ -28,7 +28,7 @@
                     <li><a href=" ">Registrar Parqueo</a></li>
 
                     //
-                    <li><a href="   ">Datos Parqueo</a></li>
+                    <li><a href="/parkings/create">Datos Parqueo</a></li>
                     <li><a href=" ">Ubicacion Parqueo</a></li>
                 </ul>
             </li>
@@ -36,7 +36,11 @@
                     <span class="fa fa-pencil-square"></span>Nueva Reserva<span class="fa-angle-right fa right-arrow text-right"></span> </a>
                 <ul class="nav nav-list tree">
 
+<<<<<<< HEAD
                     <li><a href=" ">Busqueda Parqueo</a></li>
+=======
+                    <li><a href="/reservations">Busqueda Parqueo</a></li>
+>>>>>>> d8208cfcd070584d98fea7a9ee62775c718f1ebd
                     <li><a href="">Seleccionar Horario</a></li>
                     <li><a href="">Vista Previa</a></li>
                 </ul>
@@ -53,7 +57,7 @@
                         <ul class="nav nav-list sub-tree">
                             <li><a href=" ">Check In</a></li>
                             <li><a href=" ">Check Out</a></li>
-                            <li><a href=" ">Cancelar Reserva</a></li>
+                            <li><a href="/deleterev">Cancelar Reserva</a></li>
                         </ul>
                     </li>
                 </ul>
