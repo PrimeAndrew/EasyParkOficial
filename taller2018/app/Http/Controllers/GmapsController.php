@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Gmaps;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class GmapsController extends Controller
 {
@@ -17,10 +16,13 @@ class GmapsController extends Controller
     {
         //configuaración
         $config = array();
-        $config['center'] = 'auto';
+        $config['center'] = '-16.507852,-68.146009';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
         $config['zoom'] = 15;
+       /* $config['places']=TRUE;
+        $config['placesLocation']='-16.5078,-68.1460';
+        $config['placesRadius']=200;*/
         $config['onboundschanged'] = 'if (!centreGot) {
             var mapCentre = map.getCenter();
             marker_0.setOptions({
@@ -30,12 +32,27 @@ class GmapsController extends Controller
         }
         centreGot = true;';
 
+
         \Gmaps::initialize($config);
 
         // Colocar el marcador
         // Una vez se conozca la posición del usuario
         $marker = array();
+        $marker['position']='auto';
+        $marker['infowindow_content']='1-Hola';
+        $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
         \Gmaps::add_marker($marker);
+
+        $marker = array();
+        $marker['position']='-16.5080500,-68.1450780';
+        $marker['onClick']='alert("Posicion actal")';
+        \Gmaps::add_marker($marker);
+
+        $marker = array();
+        $marker['position']='-16.5074250,-68.1461940';
+        \Gmaps::add_marker($marker);
+
+
 
         $map = \Gmaps::create_map();
 
