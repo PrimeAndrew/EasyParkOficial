@@ -25,7 +25,7 @@
                 <ul class="nav nav-list tree">
                     //
 
-                    <li><a href="/parkings">Registrar Parqueo</a></li>
+                    <li><a href=" ">Registrar Parqueo</a></li>
 
                     //
                     <li><a href="/parkings/create">Datos Parqueo</a></li>
@@ -36,7 +36,11 @@
                     <span class="fa fa-pencil-square"></span>Nueva Reserva<span class="fa-angle-right fa right-arrow text-right"></span> </a>
                 <ul class="nav nav-list tree">
 
+<<<<<<< HEAD
+                    <li><a href=" ">Busqueda Parqueo</a></li>
+=======
                     <li><a href="/reservations">Busqueda Parqueo</a></li>
+>>>>>>> d8208cfcd070584d98fea7a9ee62775c718f1ebd
                     <li><a href="">Seleccionar Horario</a></li>
                     <li><a href="">Vista Previa</a></li>
                 </ul>
