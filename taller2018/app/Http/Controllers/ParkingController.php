@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Parking;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
+
 
 class ParkingController extends Controller
 {
@@ -16,7 +19,7 @@ class ParkingController extends Controller
     {
         //return  view('parkings.index');
         //$parkings =  Parking::orderBy('id','ASC')->paginate(2);
-        $parkings = Parking::all();
+       // $parkings = Parking::all();
         $parkings = Parking::orderBy('id_parkings','ASC')->paginate(4);
         return view('parkings.index',compact('parkings'));
        // return view('home');
@@ -29,7 +32,11 @@ class ParkingController extends Controller
      */
     public function create()
     {
-        return view('parkings.create');
+        //$zones = Zone::all();
+        return view('parkings.create',compact('zones'));
+
+        //$cars_types = Cars_type::all();
+        //return view('cars.create',compact('cars_types'));
     }
 
     /**
@@ -77,7 +84,7 @@ class ParkingController extends Controller
     public function edit(Parking $parking)
     {
         //
-        return view('cars.edit',compact('car'));
+        return view('parkings.edit',compact('parking'));
     }
 
     /**
@@ -90,6 +97,21 @@ class ParkingController extends Controller
     public function update(Request $request, Parking $parking)
     {
         //
+        $request->validate([
+            'parking_name'=> 'required',
+            'parking_address' => 'required',
+            'total_spaces' => 'required',
+            'open_hour' => 'required',
+            'close_hour' => 'required',
+            'latitude' => 'required',
+            'longitud' => 'required',
+        ]);
+        $parking->update($request->all());
+        Session::flash('message','Parqueo actualizado correctamente');
+        return redirect()->route('parkings.index');
+
+
+
     }
 
     /**
