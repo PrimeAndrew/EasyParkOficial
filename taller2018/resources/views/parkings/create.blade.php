@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 @section('content')
     <div id="content">
@@ -15,7 +16,9 @@
             @csrf
 
             <div class="row">
+                <body>
 
+                </body>
                 <div class="col-md-12">
                     <div class="form-group">
                         <strong>Nombre del parqueo:</strong>
@@ -71,8 +74,19 @@
                     <span class="bar"></span>
                     <label>Tarifario del parqueo</label>
                 </div-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-right">Usuario</label>
+                    <div class="col-sm-10">
+                        <div class="fa-align-left">
+                            <select class="form-control" name="id_roles_users_fk">
+                                @foreach($parkingss as $zones)
+                                    <option value="{{ $zones['id_zones'] }}}">{{ $zones['zone'] }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
-                //fgfffg
 
                 <div class="col-md-12 text-center">
                     <button type="submit" class="btn btn-primary mb-5">Enviar</button>
