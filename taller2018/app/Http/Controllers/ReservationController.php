@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\reservation;
+use App\Reservation;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
