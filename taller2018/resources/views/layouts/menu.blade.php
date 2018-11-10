@@ -23,17 +23,15 @@
                     <span class="fa-angle-right fa right-arrow text-right"></span>
                 </a>
                 <ul class="nav nav-list tree">
-                    //
-
                     <li><a href=" ">Registrar Parqueo</a></li>
-
-                    //
                     <li><a href="/parkings/create">Datos Parqueo</a></li>
                     <li><a href=" ">Ubicacion Parqueo</a></li>
                 </ul>
             </li>
-            <li class="ripple"><a class="tree-toggle nav-header">
-                    <span class="fa fa-pencil-square"></span>Nueva Reserva<span class="fa-angle-right fa right-arrow text-right"></span> </a>
+            <li class="ripple">
+                <a class="tree-toggle nav-header">
+                    <span class="fa fa-pencil-square"></span>Nueva Reserva<span class="fa-angle-right fa right-arrow text-right"></span>
+                </a>
                 <ul class="nav nav-list tree">
                     <li><a href="/reservations">Busqueda Parqueo</a></li>
                     <li><a href="">Seleccionar Horario</a></li>

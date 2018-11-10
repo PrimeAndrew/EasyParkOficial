@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.layout')
 @section('content')
     <div id="content">
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAKpOvOIRIGs6h9rZQHhJp-piWPx4nJ-60&sensor=TRUE_OR_FALSE">
@@ -7,7 +7,6 @@
         {!!$map['js']!!}
 
         <div class="panel">
-
             <div class="panel-body">
                 <h2>Buscar Parqueo</h2>
                 <div class="row">

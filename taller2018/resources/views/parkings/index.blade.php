@@ -1,11 +1,8 @@
-
-@extends('layouts.navbar')
-@extends('layouts.menu')
-@extends('layouts.app')
-
-
-
+@extends('layouts.layout')
 @section('content')
+    <div id="content">
+        <div class="panel">
+            <div class="panel-body">
 
     <h1 class="text-center">REGISTRO DE PARQUEO</h1>
     <div class="container">
@@ -53,5 +50,8 @@
             </tbody>
         </table>
         {{ $parkings -> links()  }}
+    </div>
+            </div>
+        </div>
     </div>
 @endsection

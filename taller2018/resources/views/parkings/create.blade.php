@@ -1,10 +1,8 @@
-
-@extends('layouts.app')
+@extends('layouts.layout')
 @section('content')
     <div id="content">
         <div class="panel">
             <div class="panel-body">
-
     <h1 class="text-center">Agregar Parqueos</h1>
     <hr>
     @if (Session::has('message'))
@@ -16,9 +14,6 @@
             @csrf
 
             <div class="row">
-                <body>
-
-                </body>
                 <div class="col-md-12">
                     <div class="form-group">
                         <strong>Nombre del parqueo:</strong>
@@ -34,31 +29,31 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <strong>Total de espacios:</strong>
-                        <input type="text" name="total_spaces" class="form-control" placeholder="Introduzca el espacio del parqueo"></input>
+                        <input type="text" name="total_spaces" class="form-control" placeholder="Introduzca el espacio del parqueo">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <strong>Hora de apertura:</strong>
-                        <input type="text" name="open_hour" class="form-control" placeholder="Introduzca la hora que de apertura del parqueo"></input>
+                        <input type="text" name="open_hour" class="form-control" placeholder="Introduzca la hora que de apertura del parqueo">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <strong>Hora de cierre:</strong>
-                        <input type="text" name="close_hour" class="form-control" placeholder="Introduzca la hora que de cierre del parqueo"></input>
+                        <input type="text" name="close_hour" class="form-control" placeholder="Introduzca la hora que de cierre del parqueo">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <strong>Latitud del parqueo:</strong>
-                        <input type="text" name="latitude" class="form-control" placeholder="Introduzca la latitud del parqueo"></input>
+                        <input type="text" name="latitude" class="form-control" placeholder="Introduzca la latitud del parqueo">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <strong>Longitud del parqueo:</strong>
-                        <input type="text" name="longitud" class="form-control" placeholder="Introduzca la longitud del parqueo"></input>
+                        <input type="text" name="longitud" class="form-control" placeholder="Introduzca la longitud del parqueo">
                     </div>
                 </div>
 
