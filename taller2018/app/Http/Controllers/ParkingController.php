@@ -123,5 +123,8 @@ class ParkingController extends Controller
     public function destroy(Parking $parking)
     {
         //
+        $parking->delete();
+        Session::flash('message','Parqueo borrado correctamente');
+        return redirect()->route('parkings.index');
     }
 }
