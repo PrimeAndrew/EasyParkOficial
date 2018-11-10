@@ -47,7 +47,6 @@ class GmapsController extends Controller
         $marker['position']='-16.5080500,-68.1450780';
         $marker['onClick']='alert("Posicion actal")';
         \Gmaps::add_marker($marker);
-
         $marker = array();
         $marker['position']='-16.5074250,-68.1461940';
         \Gmaps::add_marker($marker);
