@@ -17,6 +17,7 @@ class ParkingController extends Controller
         //return  view('parkings.index');
         //$parkings =  Parking::orderBy('id','ASC')->paginate(2);
         $parkings = Parking::all();
+        $parkings = Parking::orderBy('id_parkings','ASC')->paginate(4);
         return view('parkings.index',compact('parkings'));
        // return view('home');
     }
@@ -76,6 +77,7 @@ class ParkingController extends Controller
     public function edit(Parking $parking)
     {
         //
+        return view('cars.edit',compact('car'));
     }
 
     /**

@@ -22,6 +22,7 @@
                 <th scope="col">Hora de cierre</th>
                 <th scope="col">Latitud del parqueo</th>
                 <th scope="col">Longitud del parqueo</th>
+                <th scope="col">Acciones</th>
 
 
             </tr>
@@ -37,12 +38,12 @@
                     <td>{{ $parking->close_hour }}</td>
                     <td>{{ $parking->latitude }}
                     <td>{{ $parking->longitud }}
-
+                    <td><a class="btn btn-info mb-1" href="{{ route('parkings.edit', $parking->id_parkings) }}">Editar</a></td>
 
                 </tr>
             @endforeach
             </tbody>
         </table>
-
+        {{ $parkings -> links()  }}
     </div>
 @endsection

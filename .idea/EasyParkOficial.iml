@@ -16,6 +16,7 @@
       <excludeFolder url="file://$MODULE_DIR$/taller2018/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/taller2018/vendor/filp/whoops" />
       <excludeFolder url="file://$MODULE_DIR$/taller2018/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/taller2018/vendor/genealabs/phpgmaps" />
       <excludeFolder url="file://$MODULE_DIR$/taller2018/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/taller2018/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/taller2018/vendor/jakub-onderka/php-console-highlighter" />

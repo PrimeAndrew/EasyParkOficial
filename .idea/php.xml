@@ -75,6 +75,7 @@
       <path value="$PROJECT_DIR$/taller2018/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/taller2018/vendor/symfony/http-foundation" />
       <path value="$PROJECT_DIR$/taller2018/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/taller2018/vendor/genealabs/phpgmaps" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

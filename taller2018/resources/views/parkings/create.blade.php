@@ -79,9 +79,7 @@
                     <div class="col-sm-10">
                         <div class="fa-align-left">
                             <select class="form-control" name="id_roles_users_fk">
-                                @foreach($parkingss as $zones)
-                                    <option value="{{ $zones['id_zones'] }}}">{{ $zones['zone'] }}</option>
-                                @endforeach
+
                             </select>
                         </div>
                     </div>
