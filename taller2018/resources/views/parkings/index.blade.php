@@ -4,6 +4,7 @@
 @extends('layouts.app')
 
 
+
 @section('content')
 
     <h1 class="text-center">REGISTRO DE PARQUEO</h1>
@@ -38,8 +39,15 @@
                     <td>{{ $parking->close_hour }}</td>
                     <td>{{ $parking->latitude }}
                     <td>{{ $parking->longitud }}
-                    <td><a class="btn btn-info mb-1" href="{{ route('parkings.edit', $parking->id_parkings) }}">Editar</a></td>
+                    <td><a class="btn btn-info mb-1" href="{{ route('parkings.edit', $parking->id_parkings) }}"><i class="far fa-edit"></i></a></td>
+                    <td>
 
+                        <form action="{{ route('parkings.destroy', $parking->id_parkings) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('seguro que quiere eliminar?')"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
