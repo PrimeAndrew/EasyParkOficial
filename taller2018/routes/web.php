@@ -37,7 +37,10 @@ Route::get('/registerCliente', function () {
 });
 //Reservas
 Route::resource('reservations', 'GmapsController');
+//Roles
+Route::resource('roles', 'RoleController');
 
+Route::resource('users_roles', 'UserRoleController');
 
 Route::get('/deleterev  ','Controller@getData');
 Route::get('/delete/{id_reservations}','Controller@delete');
