@@ -16,7 +16,7 @@ class GmapsController extends Controller
     {
         //configuaración
         $config = array();
-        $config['center'] = '-16.507852,-68.146009';
+        $config['center'] = 'auto';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
         $config['zoom'] = 15;
@@ -43,13 +43,13 @@ class GmapsController extends Controller
         $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
         \Gmaps::add_marker($marker);
 
-        $marker = array();
-        $marker['position']='-16.5080500,-68.1450780';
-        $marker['onClick']='alert("Posicion actal")';
-        \Gmaps::add_marker($marker);
-        $marker = array();
-        $marker['position']='-16.5074250,-68.1461940';
-        \Gmaps::add_marker($marker);
+//        $marker = array();
+//        $marker['position']='-16.5080500,-68.1450780';
+//        $marker['onClick']='alert("Posicion actal")';
+//        \Gmaps::add_marker($marker);
+//        $marker = array();
+//        $marker['position']='-16.5074250,-68.1461940';
+//        \Gmaps::add_marker($marker);
 
 
 
