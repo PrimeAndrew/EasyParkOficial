@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Parking;
+use App\Price_list;
+use App\Zone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -32,10 +34,11 @@ class ParkingController extends Controller
      */
     public function create()
     {
-        //$zoness = Zone::all();
-        $zoness =[ 'hola','hola2','hola3',];
-        //return view('parkings.create',compact('zoness'));
-        return view('parkings.create', ['zoness'=>$zoness]);
+        $zones = Zone::all();
+       // $zoness =[ 'hola','hola2','hola3',];
+        $price_lists = Price_list::all();
+        return view('parkings.create',compact('zones','price_lists'));
+        //return view('parkings.create', ['zoness'=>$zones]);
 
 
        // $cars_types = Cars_type::all();
