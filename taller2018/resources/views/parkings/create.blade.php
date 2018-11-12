@@ -73,9 +73,11 @@
                     <label class="col-sm-2 control-label text-right">Usuario</label>
                     <div class="col-sm-10">
                         <div class="fa-align-left">
-                            <select class="form-control" name="id_roles_users_fk">
+                            <select class="form-control" name="id_zones_fk">
+                                @foreach($zoness as $zone)
 
-
+                                    <?php echo $zone ?>
+                                @endforeach
                             </select>
                         </div>
                     </div>

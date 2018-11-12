@@ -22,8 +22,8 @@ class CreateParkingsTable extends Migration
             $table->unsignedInteger('total_spaces');
             $table->time('open_hour');
             $table->time('close_hour');
-            $table->decimal('latitude',10,7 ) ;
-            $table->decimal('longitud',10,7);
+            $table->decimal('latitude',10,7 ) ->nullable() ;
+            $table->decimal('longitud',10,7) ->nullable();
             //$table->timestamp('registry_date');
             $table->timestamps();
         });

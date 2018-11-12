@@ -32,9 +32,13 @@ class ParkingController extends Controller
      */
     public function create()
     {
-        //$zones = Zone::all();
-        return view('parkings.create',compact('zones'));
+        //$zoness = Zone::all();
+        $zoness =[ 'hola','hola2','hola3',];
+        //return view('parkings.create',compact('zoness'));
+        return view('parkings.create', ['zoness'=>$zoness]);
 
+
+       // $cars_types = Cars_type::all();
         //$cars_types = Cars_type::all();
         //return view('cars.create',compact('cars_types'));
     }
