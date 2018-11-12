@@ -58,11 +58,7 @@
                 </div>
 
 
-                <div class="form-group" style="margin-top:40px !important;">
-                    <input type="text" class="form-text" id="id_zone_fk" name="id_zone_fk" required>
-                    <span class="bar"></span>
-                    <label>Zona</label>
-                </div>
+
 
                 <!--div class="form-group form-animate-text" style="margin-top:40px !important;">
                     <input type="text" class="form-text" id="id_price_list_fk" name="id_price_list_fk" required>
@@ -70,18 +66,31 @@
                     <label>Tarifario del parqueo</label>
                 </div-->
                 <div class="form-group">
-                    <label class="col-sm-2 control-label text-right">Usuario</label>
+                    <label class="col-sm-2 control-label text-right">Zona</label>
                     <div class="col-sm-10">
                         <div class="fa-align-left">
                             <select class="form-control" name="id_zones_fk">
-                                @foreach($zoness as $zone)
-
-                                    <?php echo $zone ?>
+                                @foreach($zones as $zone)
+                                    <option value="{{ $zone['id_zones'] }}}">{{ $zone['zone'] }}</option>
                                 @endforeach
                             </select>
                         </div>
                     </div>
                 </div>
+               <!--esto es para tarifario-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label text-right">Tarifario</label>
+                    <div class="col-sm-10">
+                        <div class="fa-align-left">
+                            <select class="form-control" name="id_price_list_fk">
+                                @foreach($price_lists as $Price_list)
+                                    <option value="{{ $Price_list['id_price_list'] }}}">{{ $Price_list['price'] }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
 
 
                 <div class="col-md-12 text-center">
