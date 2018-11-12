@@ -59,14 +59,19 @@
                                         </div>
 
                                         <div class="col-md-12">
-                                            <div class="col-md-4">
-                                                <input class="submit btn btn-success" type="submit" value="Submit">
+                                            <div class="col-md-6" style="margin-top:5px;">
+                                                <button class="btn ripple-infinite btn-raised btn-success" type="submit" value="Submit">
+                                                    <div>
+                                                        <span>Registrar</span>
+                                                    </div>
+                                                </button>
                                             </div>
-                                            <div class="col-md-4">
-                                                <input class="submit btn btn-warning" type="reset" value="Submit">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <input class="submit btn btn-danger" type="cancel" value="Submit">
+                                            <div class="col-md-6" style="margin-top:5px;">
+                                                <button class="btn ripple-infinite btn-raised btn-danger" type="reset" value="Submit">
+                                                    <div>
+                                                        <span>Limpiar</span>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
 
