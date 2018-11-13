@@ -21,18 +21,31 @@
                                                 <label>Numero de placa</label>
                                             </div>
 
-                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                <input type="text" class="form-text" id="color" name="color" required>
-                                                <span class="bar"></span>
-                                                <label>Color</label>
-                                            </div>
+                                            {{--<div class="col-md-6 form-group" >--}}
+                                                {{--<div class="col-sm-2 form-group form-animate-text text-right" style="margin-top:40px !important;">--}}
+                                                    {{--<span class="bar"></span>--}}
+                                                    {{--<label>Color</label>--}}
+                                                {{--</div>--}}
+                                                {{--<div type="col-sm-2 control-label text-left">--}}
+                                                    {{--<input type="color" class="form-text" id="color" name="color" required>--}}
+                                                {{--</div>--}}
 
+                                            {{--</div>--}}
+
+                                            <div class="col-md-12 form-group " style="margin-top:10px !important;">
+                                                <div class="col-sm-5 form-group text-right form-animate-text text-right">
+                                                    <label class="control-label text-right">Color</label>
+                                                </div>
+                                                <div class="col-sm-7 control-label text-left">
+                                                    <input type="color" class="form-text" id="color" name="color" size="10">
+                                                </div>
+                                            </div>
 
                                             <div class="col-md-12 form-group form-animate-text" style="margin-top:10px !important;">
                                                 <div class="col-sm-5 control-label text-right">
                                                     <label class="control-label text-right">Tipo de auto</label>
                                                 </div>
-                                                <div class="col-sm-7 ontrol-label text-left">
+                                                <div class="col-sm-7 control-label text-left">
 
                                                         <select class="form-control" name="id_car_type_fk">
                                                             @foreach($cars_types as $cars_type)
