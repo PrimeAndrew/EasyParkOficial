@@ -20,7 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call('Parkings');
         $this->call('Roles');
         $this->call('Parking_Spaces');
-        //prueba
         //$this->call('Users');
         //this->call('User_Roles');
 
