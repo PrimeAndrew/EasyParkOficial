@@ -15,10 +15,11 @@ class DatabaseSeeder extends Seeder
         $this->call(BrandsTableSeeder::class);
         $this->call('Cars_Type');
         $this->call('Cars_Model');
-        $this->call('Zones');
+       $this->call('Zones');
         $this->call('Price_List');
         $this->call('Parkings');
         $this->call('Roles');
+        $this->call('Parking_Spaces');
         //$this->call('Users');
         //this->call('User_Roles');
 

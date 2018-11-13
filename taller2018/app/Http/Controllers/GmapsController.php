@@ -17,15 +17,21 @@ class GmapsController extends Controller
      */
     public function index()
     {
+        $parkings=DB::table('parkings')
+            ->paginate(3);
+        $libre=DB::table('parking_spaces')
+            ->count()
+            ->where('space_status','=','libre')
+            ->get();
+
+
+
         //configuaración
         $config = array();
         $config['center'] = '-16.507852,-68.146009';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
         $config['zoom'] = 15;
-       /* $config['places']=TRUE;
-        $config['placesLocation']='-16.5078,-68.1460';
-        $config['placesRadius']=200;*/
         $config['onboundschanged'] = 'if (!centreGot) {
             var mapCentre = map.getCenter();
             marker_0.setOptions({
@@ -41,15 +47,14 @@ class GmapsController extends Controller
         // Colocar el marcador
         // Una vez se conozca la posición del usuario
         $marker = array();
-        $marker['position']='auto';
-        $marker['infowindow_content']='Ubicasion Actual';
+        $marker['position']=$parkings->latitude.",".$parkings->longitud;
+        $marker['infowindow_content']=$parkings->address;
+
         $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
         \Gmaps::add_marker($marker);
-
         $map = \Gmaps::create_map();
 
-        $parkings=DB::table('parkings')
-            ->paginate(3);
+
 
         //$parkings = Parking::orderBy('id_parkings','ASC')->paginate(2);
         //Devolver vista con datos del mapa
