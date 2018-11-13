@@ -9,7 +9,7 @@
         <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
 
-    <div class="container mb-5" >
+    <div-- class="container mb-5" >
         <form action="{{ route('parkings.store') }}" method="POST">
             @csrf
 

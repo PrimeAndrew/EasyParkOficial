@@ -11,9 +11,9 @@
                 <h2>Buscar Parqueo</h2>
                 <div class="row">
                     <div class="col-md-6">
-                            <div class="btn-group">
-                                <a href="" class="btn btn-info" >Buscar Zona</a>
-                            </div>
+                        <div class="btn-group">
+                            <a href="" class="btn btn-info" >Parqueo encontrado</a>
+                        </div>
 
                         <div class="table-container">
                             Parqueoes Encontrados:
@@ -24,21 +24,19 @@
                                 <th>Total esapcio</th>
                                 <th>Hora apertura</th>
                                 <th>Hora Cierre</th>
-                                <th>Seleccionar</th>
+
                                 </thead>
                                 <tbody>
-                                @if($parkings->count())
-
-                                    @foreach($parkings as $parking)
+                                @if($gmaps->id_parkings)
                                         <tr>
-                                            <td>{{ $parking->parking_name }}</td>
-                                            <td>{{ $parking->parking_address}}</td>
-                                            <td>{{ $parking->total_spaces }}</td>
-                                            <td>{{ $parking->open_hour }}</td>
-                                            <td>{{ $parking->close_hour }}</td>
-                                            <td><a class="btn btn-primary btn-xs" href="{{action('GmapsController@show', $parking->id_parkings)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
+                                            <td>{{ $gmaps->parking_name }}</td>
+                                            <td>{{ $gmaps->parking_address}}</td>
+                                            <td>{{ $gmaps->total_spaces }}</td>
+                                            <!--<td>{{ $gmaps->zone }}</td>
+                                            <td>{{$gmaps->city }}</td>-->
+                                            <td>{{ $gmaps->open_hour }}</td>
+                                            <td>{{$gmaps->close_hour }}</td>
                                         </tr>
-                                    @endforeach
                                 @else
                                     <tr>
                                         <td colspan="8">No hay registros !!</td>
@@ -47,7 +45,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        {{ $parkings->links() }}
+
                     </div>
                     <div class="col-md-6">
                         {!!$map['html']!!}

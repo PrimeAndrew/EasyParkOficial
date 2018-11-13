@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Gmaps;
 use App\Parking;
+use App\Zone;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class GmapsController extends Controller
 {
@@ -17,7 +19,7 @@ class GmapsController extends Controller
     {
         //configuaración
         $config = array();
-        $config['center'] = 'auto';
+        $config['center'] = '-16.507852,-68.146009';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
         $config['zoom'] = 15;
@@ -44,16 +46,12 @@ class GmapsController extends Controller
         $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
         \Gmaps::add_marker($marker);
 
-//        $marker = array();
-//        $marker['position']='-16.5080500,-68.1450780';
-//        $marker['onClick']='alert("Posicion actal")';
-//        \Gmaps::add_marker($marker);
-//        $marker = array();
-//        $marker['position']='-16.5074250,-68.1461940';
-//        \Gmaps::add_marker($marker);
         $map = \Gmaps::create_map();
-        //$ubicasion=DB::table('parkings')->select('latitude','longitud')->get();
-        $parkings = Parking::orderBy('id_parkings','ASC')->paginate(2);
+
+        $parkings=DB::table('parkings')
+            ->paginate(3);
+
+        //$parkings = Parking::orderBy('id_parkings','ASC')->paginate(2);
         //Devolver vista con datos del mapa
         return view('reservations.searchParking', compact('map','parkings'));
     }
@@ -87,11 +85,49 @@ class GmapsController extends Controller
      * @param  \App\Gmaps  $gmaps
      * @return \Illuminate\Http\Response
      */
-    public function show(Gmaps $gmaps)
+    public function show($id)
     {
-        /*$zones = Zone::all();
-        $direcciones=Parking::all();
-        return view('reservations.searchParking',compact('zones','direcciones'));*/
+
+      $gmaps=Parking::find($id);
+        /*$gmaps=DB::table('parkings')
+            ->join('zones','zones.id_zones','=','parkings.id_zones_fk')
+            ->select('parkings.parking_name','parkings.parking_address','parkings.total_spaces','parkings.latitude as latitude','parkings.longitud as longitud', 'zones.zone','zones.city')
+            ->where('parkings.id_parkings','=',$id)
+            ->get();
+*/
+
+        //configuaración
+        $config = array();
+        $config['center'] = '-16.507852,-68.146009';
+        $config['map_width'] = 500;
+        $config['map_height'] = 500;
+        $config['zoom'] = 15;
+        $config['onboundschanged'] = 'if (!centreGot) {
+            var mapCentre = map.getCenter();
+            marker_0.setOptions({
+                position: new google.maps.LatLng(mapCentre.lat(), mapCentre.lng())
+ 
+            });
+        }
+        centreGot = true;';
+        \Gmaps::initialize($config);
+        // Colocar el marcador
+        // Una vez se conozca la posición del usuario
+        $marker = array();
+        $marker['position']=$gmaps->latitude.",".$gmaps->longitud;
+        $marker['infowindow_content']='Parqueo Encontrado';
+        \Gmaps::add_marker($marker);
+
+        $marker = array();
+        $marker['position']='auto';
+        $marker['infowindow_content']='Ubicasion Actual';
+        $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
+        \Gmaps::add_marker($marker);
+
+        $map = \Gmaps::create_map();
+
+        return view('reservations.show',compact('gmaps','map'));
+
     }
 
     /**
