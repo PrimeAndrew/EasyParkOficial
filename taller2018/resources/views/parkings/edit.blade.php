@@ -40,7 +40,7 @@
                                     <input type="text" name="total_spaces" value="{{ $parking->total_spaces }}" class="form-control" placeholder="Introduzca el espacio del parqueo"></input>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-m->parking_name }}d-12">
                                 <div class="form-group">
                                     <strong>Hora de apertura:</strong>
                                     <input type="text" name="open_hour"  value="{{ $parking->open_hour }}" class="form-control" placeholder="Introduzca la hora que de apertura del parqueo"></input>

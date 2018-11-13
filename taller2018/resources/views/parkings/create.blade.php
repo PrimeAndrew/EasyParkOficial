@@ -14,82 +14,90 @@
             @csrf
 
             <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <strong>Nombre del parqueo:</strong>
-                        <input type="text" name="parking_name" class="form-control" placeholder="Introduzca el nombre del parqueo">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <strong>Direccion del parqueo:</strong>
-                        <textarea class="form-control"  name="parking_address" placeholder="Introduzca la direccion del parqueo"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <strong>Total de espacios:</strong>
-                        <input type="text" name="total_spaces" class="form-control" placeholder="Introduzca el espacio del parqueo">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <strong>Hora de apertura:</strong>
-                        <input type="text" name="open_hour" class="form-control" placeholder="Introduzca la hora que de apertura del parqueo">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <strong>Hora de cierre:</strong>
-                        <input type="text" name="close_hour" class="form-control" placeholder="Introduzca la hora que de cierre del parqueo">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <strong>Latitud del parqueo:</strong>
-                        <input type="text" name="latitude" class="form-control" placeholder="Introduzca la latitud del parqueo">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <strong>Longitud del parqueo:</strong>
-                        <input type="text" name="longitud" class="form-control" placeholder="Introduzca la longitud del parqueo">
-                    </div>
-                </div>
 
+                <div class="col-md-6">
+                    <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                            <input type="text" name="parking_name" class="form-text" id="parking_name" required>
+                            <span class="bar"></span>
+                            <label>Nombre del parqueo:</label>
 
+                    </div>
+                    <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                            <input type="text" class="form-text" id="parking_address" name="parking_address" required>
+                            <span class="bar"></span>
+                            <label>Direccion del parqueo</label>
+                    </div>
 
-
-                <!--div class="form-group form-animate-text" style="margin-top:40px !important;">
-                    <input type="text" class="form-text" id="id_price_list_fk" name="id_price_list_fk" required>
+                    <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                            <input type="text" class="form-text" id="total_spaces" name="total_spaces" required>
+                            <span class="bar"></span>
+                            <label>Introduzca el espacio del parqueo</label>
+                    </div>
+                </div>
+                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <input type="text" class="form-text" id="open_hour" name="open_hour" required>
                     <span class="bar"></span>
-                    <label>Tarifario del parqueo</label>
-                </div-->
-                <div class="form-group">
-                    <label class="col-sm-2 control-label text-right">Zona</label>
-                    <div class="col-sm-10">
-                        <div class="fa-align-left">
-                            <select class="form-control" name="id_zones_fk">
-                                @foreach($zones as $zone)
-                                    <option value="{{ $zone['id_zones'] }}}">{{ $zone['zone'] }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                    <label>Introduzca la hora que de apertura del parqueo</label>
+                </div>
+                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <input type="text" class="form-text" id="close_hour" name="close_hour" required>
+                    <span class="bar"></span>
+                    <label>Introduzca la hora que de cierre del parqueo</label>
+                </div>
+                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <input type="text" class="form-text" id="latitude" name="latitude" required>
+                    <span class="bar"></span>
+                    <label>Latitud del parqueo</label>
+                </div>
+                <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                    <input type="text" class="form-text" id="longitud" name="longitud" required>
+                    <span class="bar"></span>
+                    <label>Longitud del parqueo</label>
+                </div>
+                <!--
+                                               <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                <input type="text" class="form-text" id="plate_number" name="plate_number" required>
+                                                <span class="bar"></span>
+                                                <label>Numero de placa</label>
+                                               </div>
+
+                                               <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                <input type="text" class="form-text" id="" name="" required>
+                                                <span class="bar"></span>
+                                                <label></label>
+                                               </div>
+
+                -->
+
+                <div class="col-md-12 form-group form-animate-text" style="margin-top:10px !important;">
+                    <div class="col-sm-5 control-label text-right">
+                        <label class="control-label text-right">Zona de ubicacion del parqueo</label>
+                    </div>
+                    <div class="col-sm-7 control-label text-left">
+
+                        <select class="form-control" name="id_zones_fk">
+                            @foreach($zones as $zone)
+                                <option value="{{ $zone['id_zones'] }}}">{{ $zone['zone'] }}</option>
+                            @endforeach
+                        </select>
+
                     </div>
                 </div>
-               <!--esto es para tarifario-->
-                <div class="form-group">
-                    <label class="col-sm-2 control-label text-right">Tarifario</label>
-                    <div class="col-sm-10">
-                        <div class="fa-align-left">
-                            <select class="form-control" name="id_price_list_fk">
-                                @foreach($price_lists as $Price_list)
-                                    <option value="{{ $Price_list['id_price_list'] }}}">{{ $Price_list['price'] }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                <div class="col-md-12 form-group form-animate-text" style="margin-top:10px !important;">
+                    <div class="col-sm-5 control-label text-right">
+                        <label class="control-label text-right">Tarifario del parqueo</label>
+                    </div>
+                    <div class="col-sm-7 control-label text-left">
+
+                        <select class="form-control" name="id_price_list_fk">
+                            @foreach($price_lists as $Price_list)
+                                <option value="{{ $Price_list['id_price_list'] }}}">{{ $Price_list['price'] }}</option>
+                            @endforeach
+                        </select>
+
                     </div>
                 </div>
+               </div-->
 
 
 
