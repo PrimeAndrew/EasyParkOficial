@@ -7,7 +7,7 @@ use App\Price_list;
 use App\Zone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-
+use Illuminate\Support\Facades\DB;
 
 
 class ParkingController extends Controller
@@ -34,10 +34,46 @@ class ParkingController extends Controller
      */
     public function create()
     {
+        //configuracion del mapa
+        $config = array();
+        $config['center'] = '-16.507852,-68.146009';
+        $config['map_width'] = 500;
+        $config['map_height'] = 500;
+        $config['zoom'] = 15;
+        $config['onboundschanged'] = 'if (!centreGot) {
+            var mapCentre = map.getCenter();
+            marker_0.setOptions({
+                position: new google.maps.LatLng(mapCentre.lat(), mapCentre.lng())
+ 
+            });
+        }
+        centreGot = true;';
+
+
+        \Gmaps::initialize($config);
+
+        // Colocar el marcador
+        // Una vez se conozca la posición del usuario
+        $marker = array();
+        $marker['position']='auto';
+        $marker['draggable'] = true;
+        //La acción de JavaScript a realizar cuando el usuario deja de arrastrar el mapa.
+        $marker['ondragend'] = 'alert(\'YUbicasion Actual: \' + event.latLng.lat() + \', \' + event.latLng.lng());';;
+        //$lat=latLng.lat();
+        //$lon=latLng.lng();
+        \Gmaps::add_marker($marker);
+
+        $map = \Gmaps::create_map();
+
+
+        //Devolver vista con datos del mapa
+        //return view('parkings.create', compact('map'));
+        //------------------------------------------
+
         $zones = Zone::all();
        // $zoness =[ 'hola','hola2','hola3',];
         $price_lists = Price_list::all();
-        return view('parkings.create',compact('zones','price_lists'));
+        return view('parkings.create',compact('map','zones','price_lists'));
         //return view('parkings.create', ['zoness'=>$zones]);
 
 
@@ -63,7 +99,7 @@ class ParkingController extends Controller
             'close_hour' => 'required',
             'latitude' => 'required',
             'longitud' => 'required',
-            //'id_zones_fk' => 'required',
+            'id_zones_fk' => 'required',
             'id_price_list_fk' => 'required',
         ]);
         Parking::create($request->all());
