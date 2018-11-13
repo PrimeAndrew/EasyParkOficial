@@ -19,12 +19,33 @@ class GmapsController extends Controller
     {
         $parkings=DB::table('parkings')
             ->paginate(3);
-        $libre=DB::table('parking_spaces')
-            ->count()
-            ->where('space_status','=','libre')
+        $ocupados=DB::table('parking_spaces')
+            ->join('parkings', 'parking_spaces.id_parkings_fk','=', 'parkings.id_parkings')
+            ->select(DB::raw('count(parking_spaces.space_status)'),'parking_spaces.space_status as estado',
+                'parkings.id_parkings as id_parkings',
+                'parkings.parking_name as parking_name',
+                'parkings.parking_address as parking_addres',
+                'parkings.total_spaces as total_spaces',
+                'parkings.open_hour as open_hour',
+                'parkings.close_hour as close_hour',
+                'parkings.latitude as latitude',
+                'parkings.longitud as longitud'
+                )
+            ->where('parking_spaces.space_status','=','Ocupado')
+            ->orWhere('parking_spaces.space_status','=','Reservado')
+            ->orWhere('parking_spaces.space_status','=','Cancelado')
+            ->orWhere('parking_spaces.space_status','=','Libre')
+            ->groupBy('estado','parkings.id_parkings')
             ->get();
 
-
+     /*   select distinct count(s.space_status),s.space_status as estado,p.parking_name,p.id_parkings
+from parking_spaces s, parkings p
+where s.id_parkings_fk=p.id_parkings
+    and s.space_status='Libre'
+    or s.space_status='Reservado'
+    or s.space_status='Ocupado'
+group by estado,p.parking_name,p.id_parkings
+*/
 
         //configuaración
         $config = array();
@@ -41,21 +62,27 @@ class GmapsController extends Controller
         }
         centreGot = true;';
 
-
         \Gmaps::initialize($config);
 
         // Colocar el marcador
         // Una vez se conozca la posición del usuario
-        $marker = array();
-        $marker['position']=$parkings->latitude.",".$parkings->longitud;
-        $marker['infowindow_content']=$parkings->address;
+      while($ocupados) {
+          $marker = array();
+          $marker['position']="".$ocupados->latitude.",".$ocupados->longitud."";
+          $marker['infowindow_content']=$ocupados->address;
+          if ($ocupados->estado!='Libre'){
+              \Gmaps::add_marker($marker);
+          }
+          else{
+              $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
+              \Gmaps::add_marker($marker);
 
-        $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
-        \Gmaps::add_marker($marker);
+          }
+
+        }
+
+
         $map = \Gmaps::create_map();
-
-
-
         //$parkings = Parking::orderBy('id_parkings','ASC')->paginate(2);
         //Devolver vista con datos del mapa
         return view('reservations.searchParking', compact('map','parkings'));
