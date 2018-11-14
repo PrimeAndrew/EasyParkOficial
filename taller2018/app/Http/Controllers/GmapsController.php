@@ -20,7 +20,6 @@ class GmapsController extends Controller
 
         $parkings=DB::table('parkings')
             ->paginate(3);
-        //configuracion del mapa
         $config = array();
         $config['center'] = ' -16.4897,-68.1193';
         $config['map_width'] = 500;
