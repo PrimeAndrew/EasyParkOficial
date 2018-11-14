@@ -42,7 +42,7 @@ class GmapsController extends Controller
         // Colocar el marcador
         // Una vez se conozca la posición del usuario
         $marker = array();
-        $marker['position']='-16.5080500,-68.1450780';
+        $marker['position']='auto';
         $marker['infowindow_content']='Psiciosion actual';
 
         \Gmaps::add_marker($marker);
@@ -96,7 +96,7 @@ class GmapsController extends Controller
 
         //configuaración
         $config = array();
-        $config['center'] = '-16.507852,-68.146009';
+        $config['center'] = 'auto';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
         $config['zoom'] = 15;
@@ -108,9 +108,9 @@ class GmapsController extends Controller
             });
         }
         centreGot = true;';
-        $marker['position']='auto';
+        //
         $nombre.=$gmaps->parking_name.'<br />'.$gmaps->parking_address.'<br />';
-  
+
         \Gmaps::initialize($config);
         // Colocar el marcador
         // Una vez se conozca la posición del usuario
@@ -120,7 +120,8 @@ class GmapsController extends Controller
         \Gmaps::add_marker($marker);
 
         $marker = array();
-
+        $marker['position']='auto';
+        $marker['infowindow_content']='Actual';
         $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
         \Gmaps::add_marker($marker);
 
