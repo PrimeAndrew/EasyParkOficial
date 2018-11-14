@@ -7,7 +7,30 @@
                 <h1 class="text-center">Registro de vehiculos</h1>
                 <div class="container">
 
-                    <a class="btn btn-success mb-3" href="{{ route('cars.create')  }}">Agregar vehiculo</a>
+                    <div class="col-md-12 form-element-padding" style="padding-bottom:50px;padding-right:0px;">
+                        {{--<div class="panel-body">--}}
+                        <div class="col-md-6">
+                            <a class="btn btn-success mb-3" href="{{ route('cars.create')  }}">Agregar vehiculo</a>
+
+                        </div>
+
+                        <form action="{{ route('cars.index') }}" method="get" role="search" class="form-group">
+                            <div class="col-md-6 col-md-12">
+                                <div class="col-md-9">
+                                    <div class="col-sm-12">
+                                        <input type="text" name="plate_number" class="form-control success" placeholder="Placa/Matricula">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="submit" class="btn btn-success mb-3"> Buscar </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+
+                        {{--</div>--}}
+                </div>
                     <style>
                         table {
                             font-family: arial, sans-serif;

@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 use App\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use DB;
+
 
 class ReservationController extends Controller
 {
@@ -80,5 +86,17 @@ class ReservationController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    function getData(){
+        $data['data'] = DB::table('reservations')->get();
+
+        //dd($data);
+
+        if(count($data) > 0){
+            return view('bookings',$data);
+        }else{
+            return view('bookings');
+        }
     }
 }

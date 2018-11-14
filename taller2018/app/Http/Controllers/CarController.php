@@ -17,10 +17,9 @@ class CarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-
-        $cars =  Car::orderBy('id_car','ASC')->paginate(10);
+        $cars =  Car::plate($request->get('plate_number'))->orderBy('id_car','ASC')->paginate(10);
         return view('cars.index',compact('cars'));
     }
 
@@ -80,7 +79,6 @@ class CarController extends Controller
         $cars_models = Cars_model::all();
         $user_roles = UserRole::all();
         return view('cars.edit',compact('car','cars_types','cars_models','user_roles'));
-
     }
 
     /**
