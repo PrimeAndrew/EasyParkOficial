@@ -13,7 +13,7 @@
                 </a>
                 <ul class="nav nav-list tree">
                     <li><a href="/registerCliente">Nuevo Cliente</a></li>
-                    <li><a href="/cars/create">Nuevo Vehiculo</a></li>
+                    <li><a href="/cars">Nuevo Vehiculo</a></li>
                 </ul>
             </li>
 
@@ -23,9 +23,9 @@
                     <span class="fa-angle-right fa right-arrow text-right"></span>
                 </a>
                 <ul class="nav nav-list tree">
-                    <li><a href=" ">Registrar Parqueo</a></li>
+                    <li><a href="/parkings">Listado Parqueo</a></li>
                     <li><a href="/parkings/create">Datos Parqueo</a></li>
-                    <li><a href=" ">Ubicacion Parqueo</a></li>
+                    <li><a href="/parqueo/">Ubicacion Parqueo</a></li>
                 </ul>
             </li>
             <li class="ripple">

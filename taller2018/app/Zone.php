@@ -11,8 +11,8 @@ class Zone extends Model
         'id_zones','zone','city'
     ];
     protected $primaryKey = 'id_zones';
-    protected $table = "zone";
-    protected $table1 = "city";
+    protected $table = "zones";
+
 }
 
 

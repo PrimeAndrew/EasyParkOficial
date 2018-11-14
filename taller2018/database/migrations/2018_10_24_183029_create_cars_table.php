@@ -18,6 +18,7 @@ class CreateCarsTable extends Migration
             $table->string('plate_number',50);
             $table->string('color',50);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

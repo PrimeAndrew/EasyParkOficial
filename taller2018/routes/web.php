@@ -15,10 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+/*
 Route::get('/bookings', function () {
     return view('bookings');
-});
+});*/
+Route::get('/bookings','ReservationController@getData');
+Route::resource('/checkin','CheckInController');
+Route::resource('/checkout','CheckOutController');
 
 
 Route:: resource('cars','CarController');

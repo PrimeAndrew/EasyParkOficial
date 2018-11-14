@@ -18,6 +18,7 @@ class CreateUsersRolesTable extends Migration
             // $table->unsignedInteger('id_roles_fk');
             // $table->unsignedInteger('id_users_fk');
             // $table->unsignedInteger('id_parking_fk');
+            $table->timestamps();
         });
     }
 

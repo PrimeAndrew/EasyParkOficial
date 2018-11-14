@@ -21,18 +21,37 @@
                                                 <label>Numero de placa</label>
                                             </div>
 
-                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                <input type="text" class="form-text" id="color" name="color" required>
-                                                <span class="bar"></span>
-                                                <label>Color</label>
-                                            </div>
+                                            {{--<div class="col-md-6 form-group" >--}}
+                                                {{--<div class="col-sm-2 form-group form-animate-text text-right" style="margin-top:40px !important;">--}}
+                                                    {{--<span class="bar"></span>--}}
+                                                    {{--<label>Color</label>--}}
+                                                {{--</div>--}}
+                                                {{--<div type="col-sm-2 control-label text-left">--}}
+                                                    {{--<input type="color" class="form-text" id="color" name="color" required>--}}
+                                                {{--</div>--}}
 
+                                            {{--</div>--}}
+
+                                            <div class="col-md-12 form-group form-animate-text" style="margin-top:10px !important;">
+                                                <div class="col-sm-5 control-label text-right">
+                                                    <label class="control-label text-right">Modelo</label>
+                                                </div>
+                                                <div class="col-sm-7 control-label text-left">
+
+                                                    <select class="form-control" name="id_car_model_fk">
+                                                        @foreach($cars_models as $cars_model)
+                                                            <option value="{{ $cars_model['id_car_model'] }}">{{ $cars_model['model'] }}</option>
+                                                        @endforeach
+                                                    </select>
+
+                                                </div>
+                                            </div>
 
                                             <div class="col-md-12 form-group form-animate-text" style="margin-top:10px !important;">
                                                 <div class="col-sm-5 control-label text-right">
                                                     <label class="control-label text-right">Tipo de auto</label>
                                                 </div>
-                                                <div class="col-sm-7 ontrol-label text-left">
+                                                <div class="col-sm-7 control-label text-left">
 
                                                         <select class="form-control" name="id_car_type_fk">
                                                             @foreach($cars_types as $cars_type)
@@ -45,28 +64,58 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                <input type="text" class="form-text" id="id_car_model_fk" name="id_car_model_fk" required>
-                                                <span class="bar"></span>
-                                                <label>Modelo</label>
+                                            {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
+                                                {{--<input type="text" class="form-text" id="id_car_model_fk" name="id_car_model_fk" required>--}}
+                                                {{--<span class="bar"></span>--}}
+                                                {{--<label>Modelo</label>--}}
+                                            {{--</div>--}}
+
+                                            <div class="col-md-12 form-group " style="margin-top:50px !important;">
+                                                <div class="col-sm-5 form-group text-right form-animate-text text-right">
+                                                    <label class="control-label text-right">Color</label>
+                                                </div>
+                                                <div class="col-sm-7 control-label text-left">
+                                                    <input type="color" class="form-text" id="color" name="color" size="10" >
+                                                </div>
                                             </div>
 
-                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                <input type="text" class="form-text" id="id_roles_users_fk" name="id_roles_users_fk" required>
-                                                <span class="bar"></span>
-                                                <label>User</label>
+
+                                            {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
+                                                {{--<input type="text" class="form-text" id="id_roles_users_fk" name="id_roles_users_fk" required>--}}
+                                                {{--<span class="bar"></span>--}}
+                                                {{--<label>UserSeeder</label>--}}
+                                            {{--</div>--}}
+                                            <div class="col-md-12 form-group form-animate-text" style="margin-top:20px !important;">
+                                                <div class="col-sm-5 control-label text-right">
+                                                    <label class="control-label text-right">Usuario</label>
+                                                </div>
+                                                <div class="col-sm-7 control-label text-left">
+
+                                                    <select class="form-control" name="id_roles_users_fk">
+                                                        @foreach($user_roles as $user_role)
+                                                            <option value="{{ $user_role['id_roles_users'] }}">{{ $user_role['id_users_fk'] }}</option>
+                                                        @endforeach
+                                                    </select>
+
+                                                </div>
                                             </div>
+
                                         </div>
 
                                         <div class="col-md-12">
-                                            <div class="col-md-4">
-                                                <input class="submit btn btn-success" type="submit" value="Submit">
+                                            <div class="col-md-6" style="margin-top:5px;">
+                                                <button class="btn ripple-infinite btn-raised btn-success" type="submit" value="Submit">
+                                                    <div>
+                                                        <span>Registrar</span>
+                                                    </div>
+                                                </button>
                                             </div>
-                                            <div class="col-md-4">
-                                                <input class="submit btn btn-warning" type="reset" value="Submit">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <input class="submit btn btn-danger" type="cancel" value="Submit">
+                                            <div class="col-md-6" style="margin-top:5px;">
+                                                <button class="btn ripple-infinite btn-raised btn-danger" type="reset" value="Submit">
+                                                    <div>
+                                                        <span>Limpiar</span>
+                                                    </div>
+                                                </button>
                                             </div>
                                         </div>
 
@@ -147,7 +196,7 @@
                                             {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
                                                 {{--<input type="text" class="form-text" id="id_roles_users_fk" name="id_roles_users_fk" required>--}}
                                                 {{--<span class="bar"></span>--}}
-                                                {{--<label>User</label>--}}
+                                                {{--<label>UserSeeder</label>--}}
                                             {{--</div>--}}
 
 

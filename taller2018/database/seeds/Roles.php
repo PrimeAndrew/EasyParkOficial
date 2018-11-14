@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+use App\Role;
 class Roles extends Seeder
 {
     /**
@@ -12,11 +12,12 @@ class Roles extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 5; $i++) {
-            DB::table('roles')->insert([
-                'roles_description' => str_random(5)
-            ]);
+        $role = new Role();
+        $role->roles_description = 'Administrator';
+        $role->save();
 
-        }
+        $role = new Role();
+        $role->roles_description  = 'Propietario';
+        $role->save();
     }
 }
