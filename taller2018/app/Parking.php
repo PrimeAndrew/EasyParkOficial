@@ -13,4 +13,15 @@ class Parking extends Model
 
     ];
     protected $primaryKey='id_parkings';
+    protected $table = "parkings";
+
+    //metod para el buscador de parqueo por zona que tiene como parametro al name del diseño
+    public function scopePlate($query, $idzones){
+        //dd("hola");
+        if($idzones!= ""){
+            //dd($id_zone);
+            $query -> where ("id_zones_fk",$idzones);
+          //  dd($query);
+        }
+    }
 }

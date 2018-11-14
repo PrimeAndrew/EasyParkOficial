@@ -15,10 +15,11 @@ class GmapsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
-        $parkings=DB::table('parkings')
+//utiliza el buscador por zonas del modelo Parking, la variale del request es el name del modelo
+        $parkings=Parking::plate($request->get('idzones'))
             ->paginate(3);
         $config = array();
         $config['center'] = ' -16.4897,-68.1193';

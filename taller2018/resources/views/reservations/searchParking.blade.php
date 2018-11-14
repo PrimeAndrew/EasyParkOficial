@@ -12,7 +12,20 @@
                 <div class="row">
                     <div class="col-md-6">
                             <div class="btn-group">
-                                <a href="" class="btn btn-info" >Buscar Zona</a>
+                                <!--Buscador por zonas declarado con metodo scopeplate en modelo Zone-->
+                                <form action="{{ route('reservations.index') }}" method="get" role="search" class="form-group">
+                                    <div class="col-md-6 col-md-12">
+                                        <div class="col-md-9">
+                                            <div class="col-sm-12">
+                                                <!--name como esta en la BD-->
+                                                <input type="text" name="idzones" class="form-control success" placeholder="Direccion,Zona">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="submit" class="btn btn-success mb-3"> Buscar </button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
 
                         <div class="table-container">
@@ -24,6 +37,7 @@
                                 <th>Total esapcio</th>
                                 <th>Hora apertura</th>
                                 <th>Hora Cierre</th>
+                                <th>zona</th>
                                 <th>Seleccionar</th>
                                 </thead>
                                 <tbody>
@@ -36,6 +50,7 @@
                                             <td>{{ $parking->total_spaces }}</td>
                                             <td>{{ $parking->open_hour }}</td>
                                             <td>{{ $parking->close_hour }}</td>
+                                            <td>{{ $parking->id_zones_fk}}</td>
                                             <td><a class="btn btn-primary btn-xs" href="{{action('GmapsController@show', $parking->id_parkings)}}" ><span class="glyphicon glyphicon-pencil"></span></a></td>
                                         </tr>
                                     @endforeach
