@@ -15,36 +15,45 @@
                             <a href="" class="btn btn-info" >Parqueo encontrado</a>
                         </div>
 
+
                         <div class="table-container">
-                            Parqueoes Encontrados:
+                            Espacios por parqueo:
                             <table id="mytable" class="table table-bordred table-striped">
                                 <thead>
                                 <th>Nombre</th>
                                 <th>Direccion</th>
                                 <th>Total esapcio</th>
-                                <th>Hora apertura</th>
-                                <th>Hora Cierre</th>
-
+                                <th>Cod Espacio</th>
+                                <th>Estado</th>
+                                <th># Espacios</th>
                                 </thead>
                                 <tbody>
-                                @if($gmaps->id_parkings)
+                                @if($ocupados->count())
+
+                                    @foreach($ocupados as $parking)
                                         <tr>
-                                            <td>{{ $gmaps->parking_name }}</td>
-                                            <td>{{ $gmaps->parking_address}}</td>
-                                            <td>{{ $gmaps->total_spaces }}</td>
-                                            <!--<td>{{ $gmaps->zone }}</td>
-                                            <td>{{$gmaps->city }}</td>-->
-                                            <td>{{ $gmaps->open_hour }}</td>
-                                            <td>{{$gmaps->close_hour }}</td>
+                                            <td>{{ $parking->parking_name }}</td>
+                                            <td>{{ $parking->parking_address}}</td>
+                                            <td>{{ $parking->total_spaces }}</td>
+                                            <td>{{ $parking->codigo }}</td>
+                                            <td>{{ $parking->estado }}</td>
+                                            <td>{{ $parking->espacio}}</td>
+
+                                            <td><a class="btn btn-primary btn-xs"
+                                                   href="{{action('GmapsController@create', $parking->id_parkings)}}"><span
+                                                            class="glyphicon glyphicon-pencil"></span></a></td>
                                         </tr>
+                                    @endforeach
                                 @else
                                     <tr>
                                         <td colspan="8">No hay registros !!</td>
                                     </tr>
                                 @endif
+
                                 </tbody>
                             </table>
                         </div>
+
 
                     </div>
                     <div class="col-md-6">

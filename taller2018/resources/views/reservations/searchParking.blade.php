@@ -69,40 +69,7 @@
                             </table>
                         </div>
                         {{ $parkings->links() }}
-                        <div class="table-container">
-                            Espacios por parqueo:
-                            <table id="mytable" class="table table-bordred table-striped">
-                                <thead>
-                                <th>Nombre</th>
-                                <th>Direccion</th>
-                                <th>Total esapcio</th>
-                                <th>Estado_Espacio</th>
-                                </thead>
-                                <tbody>
-                                @if($ocupados->count())
 
-                                    @foreach($ocupados as $parking)
-                                        <tr>
-                                            <td>{{ $parking->parking_name }}</td>
-                                            <td>{{ $parking->parking_address}}</td>
-                                            <td>{{ $parking->total_spaces }}</td>
-                                            <td>{{ $parking->espacio}} , {{ $parking->estado }}</td>
-
-                                            <td><a class="btn btn-primary btn-xs"
-                                                   href="{{action('GmapsController@show', $parking->id_parkings)}}"><span
-                                                            class="glyphicon glyphicon-pencil"></span></a></td>
-                                        </tr>
-                                    @endforeach
-                                @else
-                                    <tr>
-                                        <td colspan="8">No hay registros !!</td>
-                                    </tr>
-                                @endif
-
-                                </tbody>
-                            </table>
-                        </div>
-                        {{ $parkings->links() }}
                     </div>
                     <div class="col-md-6">
                         {!!$map['html']!!}
