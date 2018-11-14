@@ -83,7 +83,7 @@
                                             {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
                                                 {{--<input type="text" class="form-text" id="id_roles_users_fk" name="id_roles_users_fk" required>--}}
                                                 {{--<span class="bar"></span>--}}
-                                                {{--<label>User</label>--}}
+                                                {{--<label>UserSeeder</label>--}}
                                             {{--</div>--}}
                                             <div class="col-md-12 form-group form-animate-text" style="margin-top:20px !important;">
                                                 <div class="col-sm-5 control-label text-right">
@@ -196,7 +196,7 @@
                                             {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
                                                 {{--<input type="text" class="form-text" id="id_roles_users_fk" name="id_roles_users_fk" required>--}}
                                                 {{--<span class="bar"></span>--}}
-                                                {{--<label>User</label>--}}
+                                                {{--<label>UserSeeder</label>--}}
                                             {{--</div>--}}
 
 

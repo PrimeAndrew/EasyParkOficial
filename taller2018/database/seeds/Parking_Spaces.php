@@ -17,7 +17,7 @@ class Parking_Spaces extends Seeder
                 'space_code' => $i+1,
                 'space_status' =>'Libre',
                 'space_mod_date' =>'2018-10-10',
-                'id_parkings_fk' => $i+1
+                'id_parkings_fk' => $i+2
             ]);
 
         }
@@ -26,7 +26,7 @@ class Parking_Spaces extends Seeder
                 'space_code' => $j,
                 'space_status' => 'Ocupado',
                 'space_mod_date' =>'2018-10-10',
-                'id_parkings_fk' => $i+1
+                'id_parkings_fk' => $i+2
             ]);
         }
         for ($i = 0,$j=10; $i < 5; $i++,$j++) {

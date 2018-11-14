@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: josecordova
+ * UserSeeder: josecordova
  * Date: 13-11-18
  * Time: 03:47 PM
  */

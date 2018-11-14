@@ -13,15 +13,17 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $this->call(BrandsTableSeeder::class);
+        $this->call(Roles::class);
+
+        // Los usuarios necesitarán los roles previamente generados
+
         $this->call('Cars_Type');
         $this->call('Cars_Model');
-       $this->call('Zones');
+        $this->call('Zones');
         $this->call('Price_List');
         $this->call('Parkings');
-        $this->call('Roles');
+        //$this->call('Roles');
         $this->call('Parking_Spaces');
-        //$this->call('Users');
-        //this->call('User_Roles');
-
+       // $this->call(User::class);
     }
 }
