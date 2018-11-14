@@ -102,7 +102,10 @@
                                                 </div>
 
                                          </div>
+                                        <div class="col-md-12">
+                                            {!!$map['html']!!}
 
+                                        </div>
                                         <div class="col-md-12 text-center">
                                             <button type="submit" class="btn btn-primary mb-5">Enviar</button>
                                         </div>
@@ -111,11 +114,17 @@
                                 </form>
                             </div>
              </div>
-           </div>
-                                    <div class="col-md-6">
-                                        {!!$map['html']!!}
 
-                                    </div>
+           </div>
+
+
+
+
+
+
+
+
+
         </div>
 
 @endsection

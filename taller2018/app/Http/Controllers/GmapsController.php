@@ -19,10 +19,6 @@ class GmapsController extends Controller
     {
         $parkings=DB::table('parkings')
             ->paginate(3);
-        $libre=DB::table('parking_spaces')
-            ->count()
-            ->where('space_status','=','libre')
-            ->get();
 
 
 
