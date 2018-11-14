@@ -13,7 +13,7 @@
                 </a>
                 <ul class="nav nav-list tree">
                     <li><a href="/registerCliente">Nuevo Cliente</a></li>
-                    <li><a href="/cars/create">Nuevo Vehiculo</a></li>
+                    <li><a href="/cars">Nuevo Vehiculo</a></li>
                 </ul>
             </li>
 

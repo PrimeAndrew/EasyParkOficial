@@ -53,7 +53,7 @@ class CarController extends Controller
         ]);
         Car::create($request->all());
         Session::flash('message','Creado');
-        return redirect()->route('home');
+        return redirect()->route('cars.index');
     }
 
     /**
