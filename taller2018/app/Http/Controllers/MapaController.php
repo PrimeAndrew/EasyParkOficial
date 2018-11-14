@@ -1,16 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Reservation;
+
 use Illuminate\Http\Request;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use DB;
 
-
-class ReservationController extends Controller
+class MapaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -29,7 +23,39 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        //
+
+        //configuracion del mapa
+        $config = array();
+        $config['center'] = '-16.507852,-68.146009';
+        $config['map_width'] = 500;
+        $config['map_height'] = 500;
+        $config['zoom'] = 15;
+        $config['onboundschanged'] = 'if (!centreGot) {
+            var mapCentre = map.getCenter();
+            marker_0.setOptions({
+                position: new google.maps.LatLng(mapCentre.lat(), mapCentre.lng())
+ 
+            });
+        }
+        centreGot = true;';
+
+
+        \Gmaps::initialize($config);
+
+        // Colocar el marcador
+        // Una vez se conozca la posición del usuario
+        $marker = array();
+        $marker['position']='auto';
+        $marker['draggable'] = true;
+        //La acción de JavaScript a realizar cuando el usuario deja de arrastrar el mapa.
+        $marker['ondragend'] = 'alert(\'YUbicasion Actual: \' + event.latLng.lat() + \', \' + event.latLng.lng());';;
+        \Gmaps::add_marker($marker);
+
+        $map = \Gmaps::create_map();
+
+
+        //Devolver vista con datos del mapa
+        return view('parkings.create', compact('map'));
     }
 
     /**
@@ -86,17 +112,5 @@ class ReservationController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    function getData(){
-        $data['data'] = DB::table('reservations')->get();
-
-        //dd($data);
-
-        if(count($data) > 0){
-            return view('bookings',$data);
-        }else{
-            return view('bookings');
-        }
     }
 }

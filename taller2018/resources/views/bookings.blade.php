@@ -28,127 +28,36 @@
                     }
                 </style>
 
-                    <table id="myTable" style="width:100%" align="center">
+                <table id="myTable" style="width:100%" align="center">
+                    <tr>
+                        <!-- th onclick="sortTable(0)" style="cursor:pointer">Cliente</th-->
+                        <!-- th onclick="sortTable(1)" style="cursor:pointer">Matricula</th-->
+                        <th>Fecha de entrada</th>
+                        <th>Fecha de salida</th>
+                        <th onclick="sortTable(2)" style="cursor:pointer">Estado</th>
+                        <th>Accion</th>
+                    </tr>
+
+                    @foreach($data as $value)
                         <tr>
-                            <th onclick="sortTable(0)" style="cursor:pointer">Apellido_Cliente</th>
-                            <th onclick="sortTable(1)" style="cursor:pointer">Nombre_Cliente</th>
-                            <th onclick="sortTable(2)" style="cursor:pointer">CI</th>
-                            <th onclick="sortTable(3)" style="cursor:pointer">Matricula</th>
-                            <th>Fecha</th>
-                            <th onclick="sortTable(4)" style="cursor:pointer">Estado</th>
-                            <th>Accion</th>
+                            <!-- td>{<!--{ $value->name }}</td>
+                            <td>{<!--{ $value->plate_number }}</td> -->
+                            <td>{{ $value->reservation_entry_date }}</td>
+                            <td>{{ $value->reservation_departure_date }}</td>
+                            <td>{{ $value->reservation_state }}</td>
+                            <!--td><a href="/delete/{<!--{$value -> id_reservations}}"><button>Ver</button></a></td> -->
+                            <td>if ($value->reservation_state == "Reservado") {
+                                <a href="/checkin" <button>Ver</button> </a>
+                            }
+                            else {
+                            if ($value->reservation_state == "Ocupado") {
+                            <a href="/checkout" <button>Ver</button> </a>
+                            }
+                                } </td>
                         </tr>
-                        <tr>
-                            <td>Smith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Reserva</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Snith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Pagado</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Spith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Cancelado</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Sxith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Ocupado</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Saith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Cancelado</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Smith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Ocupado</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                       <tr>
-                            <td>Seith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Reserva</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Sdith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Pagado</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Slith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Cancelado</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Szith</td>
-                            <td>John</td>
-                            <td>4281762</td>
-                            <td>4125-ETT</td>
-                            <td>10/06/18</td>
-                            <td>Ocupado</td>
-                            <td>
-                                <button type="button">Ver</button>
-                            </td>
-                        </tr>
-                    </table>
+
+                    @endforeach
+                </table>
 
                 <script>
                     function sortTable(n) {
