@@ -70,8 +70,8 @@ class Parkings extends Seeder
 
 
         $loc = new Parking();
-        $loc->parking_name = 'Parqueo 2';
-        $loc->parking_address = 'Av. 20 de octubre 2149';
+        $loc->parking_name = 'Parqueo 3';
+        $loc->parking_address = 'Av. 6 de agosto';
         $loc->total_spaces= '15';
         $loc->open_hour= '10:00';
         $loc->close_hour= '22:00';

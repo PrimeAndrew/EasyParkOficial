@@ -21,6 +21,25 @@ class GmapsController extends Controller
 //utiliza el buscador por zonas del modelo Parking, la variale del request es el name del modelo
         $parkings=Parking::plate($request->get('idzones'))
             ->paginate(3);
+
+        $ocupados=DB::table('parking_spaces')
+            ->join('parkings', 'parking_spaces.id_parkings_fk','=', 'parkings.id_parkings')
+            ->select(DB::raw('count(parking_spaces.space_status) as espacio'),'parking_spaces.space_status as estado',
+                'parkings.id_parkings as id_parkings',
+                'parkings.parking_name as parking_name',
+                'parkings.parking_address as parking_address',
+                'parkings.total_spaces as total_spaces',
+                'parkings.open_hour as open_hour',
+                'parkings.close_hour as close_hour',
+                'parkings.latitude as latitude',
+                'parkings.longitud as longitud'
+            )
+            ->where('parking_spaces.space_status','=','Ocupado')
+            ->orWhere('parking_spaces.space_status','=','Reservado')
+            ->orWhere('parking_spaces.space_status','=','Cancelado')
+            ->orWhere('parking_spaces.space_status','=','Libre')
+            ->groupBy('estado','parkings.id_parkings')
+            ->get();
         $config = array();
         $config['center'] = ' -16.4897,-68.1193';
         $config['map_width'] = 500;
@@ -35,8 +54,6 @@ class GmapsController extends Controller
         }
         centreGot = true;';
 
-
-
         \Gmaps::initialize($config);
 
         // Colocar el marcador
@@ -44,15 +61,35 @@ class GmapsController extends Controller
         $marker = array();
         $marker['position']='auto';
         $marker['infowindow_content']='Psiciosion actual';
-
         \Gmaps::add_marker($marker);
 
+        foreach ($parkings as $parking){
+            $nombre = $parking->parking_name;
+            $latitud = $parking->latitude;
+            $longitud = $parking->longitud;
+            $to=$parking->total_spaces;
+            foreach ($ocupados as $o){
+                $idp=$o->id_parkings;
+                $idpp=$parking->id_parkings;
+                $marker = array();
+                if ($to> $o->espacio && $idp==$idpp && $o->estado ==='Libre'){
+                    $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
+                    $marker['position']=$latitud.",".$longitud;
+                    $marker['infowindow_content']='Nombre: '.$nombre.'<br />total: '.$to.'<br />'.$o->estado.': '.$o->espacio;
+                }
+                else{
+                    $marker['position']=$latitud.",".$longitud;
+                    $marker['infowindow_content']='Nombre: '.$nombre.'<br />total: '.$to.'<br />'.$o->estado.': '.$o->espacio;
+                }
+
+                \Gmaps::add_marker($marker);
+            }
+
+        }
+
         $map = \Gmaps::create_map();
-
-
-
         //Devolver vista con datos del mapa
-        return view('reservations.searchParking', compact('map','parkings'));    }
+        return view('reservations.searchParking', compact('map','parkings','ocupados'));    }
 
 
 
