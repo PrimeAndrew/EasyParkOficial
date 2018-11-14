@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\DB;
 
 class Car extends Model
 {
@@ -15,4 +16,12 @@ class Car extends Model
     protected $primaryKey = 'id_car';
     protected $table = "cars";
     protected $date = ['deleted_at'];
+
+
+    public function scopePlate($query, $plate_number){
+       // $query -> where('plate_number',$plate_number);
+        if(trim($plate_number != "")){
+            $query -> where ("plate_number","like","%$plate_number%");
+        }
+    }
 }
