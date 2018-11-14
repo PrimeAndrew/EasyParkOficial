@@ -22,7 +22,7 @@ class GmapsController extends Controller
             ->paginate(3);
         //configuracion del mapa
         $config = array();
-        $config['center'] = '-16.507852,-68.146009';
+        $config['center'] = ' -16.4897,-68.1193';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
         $config['zoom'] = 15;
@@ -96,7 +96,7 @@ class GmapsController extends Controller
 
         //configuaración
         $config = array();
-        $config['center'] = 'auto';
+        $config['center'] = ' -16.4897,-68.1193';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
         $config['zoom'] = 15;
