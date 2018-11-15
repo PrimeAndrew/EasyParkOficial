@@ -11,17 +11,14 @@
                 <h2>Buscar Parqueo</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="btn-group">
-                            <a href="" class="btn btn-info" >Parqueo encontrado</a>
+                        <div class="panel-heading">
+                            <h4>Informacion del Parqueo:</h4>
                         </div>
-
-
                         <div class="table-container">
-                            Espacios por parqueo:
+
                             <table id="mytable" class="table table-bordred table-striped">
                                 <thead>
                                 <th>Nombre</th>
-                                <th>Direccion</th>
                                 <th>Total esapcio</th>
                                 <th>Cod Espacio</th>
                                 <th>Estado</th>
@@ -33,10 +30,13 @@
                                     @foreach($ocupados as $parking)
                                         <tr>
                                             <td>{{ $parking->parking_name }}</td>
-                                            <td>{{ $parking->parking_address}}</td>
                                             <td>{{ $parking->total_spaces }}</td>
                                             <td>{{ $parking->codigo }}</td>
-                                            <td>{{ $parking->estado }}</td>
+                                            @if($parking->estado=='Libre')
+                                            <td style="background-color:#ACEC70"><span > {{ $parking->estado }}</span></td>
+                                            @else
+                                                <td ><span > {{ $parking->estado }}</span></td>
+                                            @endif
                                             <td>{{ $parking->espacio}}</td>
 
                                             <td><a class="btn btn-primary btn-xs"
