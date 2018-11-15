@@ -1,5 +1,5 @@
-@extends('layouts.layout')
-@section('content')
+<!--
+
     <div id="content">
         <div class="panel">
             <div class="panel-body">
@@ -50,8 +50,8 @@
             </div>
         </div>
     </div>
-@endsection
 
+-->
 
 
 @extends('layouts.layout')
@@ -86,46 +86,40 @@
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                             <input type="text" class="form-text" name="users_phone" required>
                                             <span class="bar"></span>
-                                            <label>Color</label>
+                                            <label>Numero de telefono</label>
                                         </div>
 
 
-                                        <div class="col-md-12 form-group form-animate-text" style="margin-top:10px !important;">
-                                            <div class="col-sm-5 control-label text-right">
-                                                <label class="control-label text-right">Tipo de auto</label>
-                                            </div>
-                                            <div class="col-sm-7 ontrol-label text-left">
-
-                                                <select class="form-control" name="id_car_type_fk">
-                                                    @foreach($cars_types as $cars_type)
-                                                        <option value="{{ $cars_type['id_car_type'] }}">{{ $cars_type['car_type'] }}</option>
-                                                    @endforeach
-                                                </select>
-
-                                            </div>
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <input type="text" class="form-text" name="users_email" required>
+                                            <span class="bar"></span>
+                                            <label>Email</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="id_car_model_fk" name="id_car_model_fk" required>
+                                            <input type="text" class="form-text" name="users_type_doc" required>
                                             <span class="bar"></span>
-                                            <label>Modelo</label>
+                                            <label>Tipo de documento</label>
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="id_roles_users_fk" name="id_roles_users_fk" required>
+                                            <input type="text" class="form-text" name="users_password" required>
                                             <span class="bar"></span>
-                                            <label>User</label>
+                                            <label>Password</label>
+                                        </div>
+
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <input type="text" class="form-text" name="users_password2" required>
+                                            <span class="bar"></span>
+                                            <label>Vuelva a ingresar el password</label>
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="col-md-4">
-                                            <input class="submit btn btn-success" type="submit" value="Submit">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <input class="submit btn btn-warning" type="reset" value="Submit">
+                                            <input class="submit btn btn-success" type="submit" value="Add">
                                         </div>
                                         <div class="col-md-4">
                                             <input class="submit btn btn-danger" type="cancel" value="Submit">
