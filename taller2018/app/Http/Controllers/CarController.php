@@ -19,7 +19,7 @@ class CarController extends Controller
      */
     public function index(Request $request)
     {
-        $users = User::all();
+        //$users = User::all();
         $cars =  Car::plate($request->get('plate_number'))
             ->join('cars_type','cars.id_car_type_fk','=','cars_type.id_car_type')
             ->join('cars_model','cars.id_car_model_fk','=','cars_model.id_car_model')
