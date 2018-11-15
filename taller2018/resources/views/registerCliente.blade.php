@@ -122,9 +122,7 @@
                                         <div class="col-md-4">
                                             <input class="submit btn btn-success" type="submit" value="Add">
                                         </div>
-                                        <div class="col-md-4">
-                                            <input class="submit btn btn-danger" type="cancel" value="Submit">
-                                        </div>
+
                                     </div>
 
 
@@ -136,7 +134,7 @@
                 </div>
 
             </div>
-    {{--</div>--}}
-    {{--</div>--}}
+    </div>
+    </div>
     {{--</div>--}}
 @endsection

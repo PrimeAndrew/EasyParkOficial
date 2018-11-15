@@ -50,7 +50,7 @@ class Controller extends BaseController
     }
 
     function delete($id_reservations){
-        DB::table('reservations')->where('id_reservations',$id_reservations)->delete();
+        DB::table('reservations')->where('id_reservations',$id_reservations)->softDeletes();
         return redirect('/deleterev');
     }
 }
