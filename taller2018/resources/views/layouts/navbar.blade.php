@@ -8,7 +8,7 @@
                 <span class="bottom"></span>
             </div>
             <!--Para ir a la pagina inicial -->
-             <a href="   " class="navbar-brand">
+             <a href="/home" class="navbar-brand">
                  <b>Easy Park</b>
              </a>
              <ul class="nav navbar-nav navbar-right user-nav">
