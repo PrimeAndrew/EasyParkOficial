@@ -18,7 +18,10 @@
                                  @if (Session::has('message'))
                                  <div class="alert alert-info">{{ Session::get('message') }}</div>
                                  @endif
+                            <div class="col-md-12">
+                                {!!$map['html']!!}
 
+                            </div>
                             <div class="container mb-5" >
                                 <form action="{{ route('parkings.store') }}" method="POST">
                                     @csrf
@@ -51,12 +54,12 @@
                                                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" id="open_hour" name="open_hour" required>
                                                     <span class="bar"></span>
-                                                    <label>Introduzca la hora que de apertura del parqueo <i class="fas fa-clock"></i></label>
+                                                    <label>Introduzca la hora que de apertura del parqueo (hh:mm)<i class="fas fa-clock"></i></label>
                                                 </div>
                                                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" id="close_hour" name="close_hour" required>
                                                     <span class="bar"></span>
-                                                    <label>Introduzca la hora que de cierre del parqueo <i class="fas fa-clock"></i></label>
+                                                    <label>Introduzca la hora que de cierre del parqueo (hh:mm)<i class="fas fa-clock"></i></label>
                                                 </div>
                                                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" id="latitude" name="latitude"  required>
@@ -102,10 +105,7 @@
                                                 </div>
 
                                          </div>
-                                        <div class="col-md-12">
-                                            {!!$map['html']!!}
 
-                                        </div>
                                         <div class="col-md-12 text-center">
                                             <button type="submit" class="btn btn-primary mb-5">Enviar</button>
                                         </div>
@@ -120,16 +120,16 @@
 
 
 
-        <div class="col-md-12 form-group " style="margin-top:50px !important;">
+        <!--div class="col-md-12 form-group " style="margin-top:50px !important;">
             <div class="col-sm-5 form-group text-right form-animate-text text-right">
                 <label class="control-label text-right">Color</label>
             </div>
             <div class="col-sm-7 control-label text-left">
                 <input type="color" class="form-text" id="color" name="color" size="10" >
             </div>
-        </div>
+        </div-->
 
-        <div class="container">
+        <!--div class="container">
             <div class="row">
                 <div class='col-sm-6'>
                     <div class="form-group">
@@ -149,7 +149,7 @@
                     });
                 </script>
             </div>
-        </div>
+        </div-->
 
         </div>
 
