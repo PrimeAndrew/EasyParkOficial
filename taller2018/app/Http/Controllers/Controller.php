@@ -12,8 +12,14 @@ use DB;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
     function insert(Request $req){
+
+
+
         $users_name = $req->input('users_name');
         $users_lastname = $req->input('users_lastname');
         $users_phone = $req->input('users_phone');
@@ -22,6 +28,7 @@ class Controller extends BaseController
         $users_doc_number = $req->input('users_doc_number');
         $users_password = $req->input('users_password');
         $users_status = $req->input('users_status');
+
 
         $data = array('users_name'=>$users_name,'users_lastname'=>$users_lastname,'users_phone'=>$users_phone,
             'users_email'=>$users_email,'users_type_doc'=>$users_type_doc,'users_doc_number'=>$users_doc_number,
@@ -43,7 +50,7 @@ class Controller extends BaseController
     }
 
     function delete($id_reservations){
-        DB::table('reservations')->where('id_reservations',$id_reservations)->delete();
+        DB::table('reservations')->where('id_reservations',$id_reservations)->softDeletes();
         return redirect('/deleterev');
     }
 }

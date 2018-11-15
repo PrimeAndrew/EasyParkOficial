@@ -19,7 +19,16 @@ class CarController extends Controller
      */
     public function index(Request $request)
     {
-        $cars =  Car::plate($request->get('plate_number'))->orderBy('id_car','ASC')->paginate(10);
+        //$users = User::all();
+        $cars =  Car::plate($request->get('plate_number'))
+            ->join('cars_type','cars.id_car_type_fk','=','cars_type.id_car_type')
+            ->join('cars_model','cars.id_car_model_fk','=','cars_model.id_car_model')
+            ->join('users_roles','cars.id_roles_users_fk','=','users_roles.id_roles_users')
+            //->whereHas()
+            //->join('users','users_roles','users_roles.id_users_fk','=','users.id_users')
+            ->orderBy('id_car','ASC')
+            ->paginate(10);
+       // dd($cars);
         return view('cars.index',compact('cars'));
     }
 
