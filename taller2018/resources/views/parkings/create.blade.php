@@ -51,11 +51,18 @@
 
 
 
-                                                <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" class="form-text" id="open_hour" name="open_hour" required>
+                                                {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
+                                                    {{--<input type="text" class="form-text" id="open_hour" name="open_hour" required>--}}
+                                                    {{--<span class="bar"></span>--}}
+                                                    {{--<label>Introduzca la hora que de apertura del parqueo (hh:mm)<i class="fas fa-clock"></i></label>--}}
+                                                {{--</div>--}}
+                                                <div class="form-group form-animate-text">
+                                                    <input type="text" class="form-text time" name="open_hour" required>
                                                     <span class="bar"></span>
-                                                    <label>Introduzca la hora que de apertura del parqueo (hh:mm)<i class="fas fa-clock"></i></label>
+                                                    <label><span class="fa fa-clock-o"></span>Introduzca la hora que de apertura del parqueo</label>
                                                 </div>
+
+
                                                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" id="close_hour" name="close_hour" required>
                                                     <span class="bar"></span>
