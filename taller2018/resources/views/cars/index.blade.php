@@ -66,8 +66,8 @@
                                 <th scope="row">{{ $car->id_car}}</th>
                                 <td>{{ $car->plate_number }}</td>
                                 <td>{{ $car->color}}</td>
-                                <td>{{ $car->id_car_type_fk }}</td>
-                                <td>{{ $car->id_car_model_fk }}</td>
+                                <td>{{ $car->car_type}}</td>
+                                <td>{{ $car->model}}</td>
                                 <td>{{ $car->id_roles_users_fk }}</td>
                                 <td><a class="btn btn-info mb-1" href="{{ route('cars.edit', $car->id_car) }}"><i class="far fa-edit"></i></a></td>
                                 <td>
