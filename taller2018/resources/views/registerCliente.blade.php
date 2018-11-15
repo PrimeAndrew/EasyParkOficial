@@ -9,7 +9,7 @@
     <form action="/insert" method="post">
         <table >
             <tr>
-                {{ csrf_field() }}
+
                 <td>Name: </td>
                 <td><input type="text" name="users_name"></td>
             </tr>
@@ -71,6 +71,7 @@
                                 <form class="cmxform" id="signupForm" method="POST" action="/insert" >
                                     @csrf
                                     <div class="col-md-6">
+                                        {{ csrf_field() }}
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                             <input type="text" class="form-text" name="users_name" required>
                                             <span class="bar"></span>
