@@ -106,13 +106,13 @@
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="users_password" required>
+                                            <input type="password" class="form-text" name="users_password" required>
                                             <span class="bar"></span>
                                             <label>Password</label>
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="users_password2" required>
+                                            <input type="password" class="form-text" name="users_password2" required>
                                             <span class="bar"></span>
                                             <label>Vuelva a ingresar el password</label>
                                         </div>
