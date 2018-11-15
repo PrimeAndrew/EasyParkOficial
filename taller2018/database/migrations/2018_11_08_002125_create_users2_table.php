@@ -20,9 +20,9 @@ class CreateUsers2Table extends Migration
             $table->string('users_phone',10);
             $table->string('users_email',45);
             $table->string('users_type_doc',10);
-            $table->string('users_doc_number',10);
+            $table->string('users_doc_number',10)->nullable();
             $table->string('users_password',45);
-            $table->string('users_status',10);
+            $table->string('users_status',10)->nullable();
             $table->timestamps();
         });
     }
