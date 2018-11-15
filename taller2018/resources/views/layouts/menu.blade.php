@@ -24,8 +24,8 @@
                 </a>
                 <ul class="nav nav-list tree">
                     <li><a href="/parkings">Listado Parqueo</a></li>
-                    <li><a href="/parkings/create">Datos Parqueo</a></li>
-                    <li><a href="/parqueo/">Ubicacion Parqueo</a></li>
+                    <li><a href="/parkings/create">Nuevo Parqueo</a></li>
+                    <li><a href="">Ubicacion Parqueo</a></li>
                 </ul>
             </li>
             <li class="ripple">
