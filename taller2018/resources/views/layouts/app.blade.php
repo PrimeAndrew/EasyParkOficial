@@ -98,6 +98,13 @@
     <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/simple-line-icons.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/animate.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/fullcalendar.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="asset/css/plugins/bootstrap-material-datetimepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="asset/css/plugins/nouislider.min.css"/>
+    <link rel="stylesheet" type="text/css" href="asset/css/plugins/select2.min.css"/>
+    <link rel="stylesheet" type="text/css" href="asset/css/plugins/ionrangeslider/ion.rangeSlider.css"/>
+    <link rel="stylesheet" type="text/css" href="asset/css/plugins/ionrangeslider/ion.rangeSlider.skinFlat.css"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/bootstrap-material-datetimepicker.css')}}"/>
+    <link href="asset/css/style.css" rel="stylesheet">
     <link href="{{asset('asset/css/style.css')}}" rel="stylesheet">
     <!-- end: Css -->
 
