@@ -12,6 +12,9 @@ use DB;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
     function insert(Request $req){
         $users_name = $req->input('users_name');
