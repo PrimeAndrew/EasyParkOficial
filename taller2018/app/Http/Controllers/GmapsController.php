@@ -34,17 +34,18 @@ class GmapsController extends Controller
                 'parkings.latitude as latitude',
                 'parkings.longitud as longitud'
             )
-            ->where('parking_spaces.space_status','=','Ocupado')
+
+          /*  ->Where('parking_spaces.space_status','=','Libre')
+            ->orwhere('parking_spaces.space_status','=','Ocupado')
             ->orWhere('parking_spaces.space_status','=','Reservado')
-            ->orWhere('parking_spaces.space_status','=','Cancelado')
-            ->orWhere('parking_spaces.space_status','=','Libre')
+            ->orWhere('parking_spaces.space_status','=','Cancelado')*/
             ->groupBy('estado','parkings.id_parkings')
             ->get();
         $config = array();
         $config['center'] = ' -16.4897,-68.1193';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
-        $config['zoom'] = 15;
+        $config['zoom'] = 12;
         $config['onboundschanged'] = 'if (!centreGot) {
             var mapCentre = map.getCenter();
             marker_0.setOptions({
@@ -60,6 +61,7 @@ class GmapsController extends Controller
         // Una vez se conozca la posición del usuario
         $marker = array();
         $marker['position']='auto';
+        $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
         $marker['infowindow_content']='Psiciosion actual';
         \Gmaps::add_marker($marker);
 
@@ -68,20 +70,17 @@ class GmapsController extends Controller
             $latitud = $parking->latitude;
             $longitud = $parking->longitud;
             $to=$parking->total_spaces;
+            $idpp=$parking->id_parkings;
+            $marker = array();
+            $marker['position']=$latitud.",".$longitud;
+
             foreach ($ocupados as $o){
                 $idp=$o->id_parkings;
-                $idpp=$parking->id_parkings;
-                $marker = array();
-                if ($to> $o->espacio && $idp==$idpp && $o->estado ==='Libre'){
-                    $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
-                    $marker['position']=$latitud.",".$longitud;
-                    $marker['infowindow_content']='Nombre: '.$nombre.'<br />total: '.$to.'<br />'.$o->estado.': '.$o->espacio;
-                }
-                else{
-                    $marker['position']=$latitud.",".$longitud;
-                    $marker['infowindow_content']='Nombre: '.$nombre.'<br />total: '.$to.'<br />'.$o->estado.': '.$o->espacio;
-                }
+                $marker['infowindow_content']='Nombre: '.$nombre.'<br />total: '.$to.'<br />'.$o->estado.': '.$o->espacio;
 
+                if ($idp==$idpp && $o->estado=='Libre'){
+                    $marker['icon']='http://www.googlemapsmarkers.com/v1/009900/';
+                }
                 \Gmaps::add_marker($marker);
             }
 
@@ -138,13 +137,14 @@ class GmapsController extends Controller
                 'parkings.latitude as latitude',
                 'parkings.longitud as longitud'
             )
+            ->where('parking_spaces.id_parkings_fk','=',$id)
+            ->where('parkings.id_parkings','=',$id)
             ->where('parking_spaces.space_status','=','Ocupado')
-            ->where('parking_spaces.id_parking_spaces','=',$id)
+
             ->orWhere('parking_spaces.space_status','=','Reservado')
             ->orWhere('parking_spaces.space_status','=','Cancelado')
             ->orWhere('parking_spaces.space_status','=','Libre')
             ->groupBy('estado','parkings.id_parkings','codigo')
-
             ->get();
         $config = array();
         $config['center'] = ' -16.4897,-68.1193';
@@ -180,7 +180,7 @@ class GmapsController extends Controller
                 $to=$o->total_spaces;
                 $marker = array();
                 if ($to> $o->espacio && $idp==$idpp &&$idp==$id && $o->estado ==='Libre'){
-                    $marker['icon']='http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|9999FF|000000';
+                    $marker['icon']='http://www.googlemapsmarkers.com/v1/009900/';
                     $marker['position']=$latitud.",".$longitud;
                     $marker['infowindow_content']='Nombre: '.$nombre.'<br />total: '.$to.'<br />'.$o->estado.': '.$o->espacio;
                 }

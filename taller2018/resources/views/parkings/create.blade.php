@@ -51,12 +51,12 @@
                                                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" id="open_hour" name="open_hour" required>
                                                     <span class="bar"></span>
-                                                    <label>Introduzca la hora que de apertura del parqueo</label>
+                                                    <label>Introduzca la hora que de apertura del parqueo <i class="fas fa-clock"></i></label>
                                                 </div>
                                                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" id="close_hour" name="close_hour" required>
                                                     <span class="bar"></span>
-                                                    <label>Introduzca la hora que de cierre del parqueo</label>
+                                                    <label>Introduzca la hora que de cierre del parqueo <i class="fas fa-clock"></i></label>
                                                 </div>
                                                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" id="latitude" name="latitude"  required>
@@ -120,10 +120,36 @@
 
 
 
+        <div class="col-md-12 form-group " style="margin-top:50px !important;">
+            <div class="col-sm-5 form-group text-right form-animate-text text-right">
+                <label class="control-label text-right">Color</label>
+            </div>
+            <div class="col-sm-7 control-label text-left">
+                <input type="color" class="form-text" id="color" name="color" size="10" >
+            </div>
+        </div>
 
-
-
-
+        <div class="container">
+            <div class="row">
+                <div class='col-sm-6'>
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker3'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker3').datetimepicker({
+                            format: 'LT'
+                        });
+                    });
+                </script>
+            </div>
+        </div>
 
         </div>
 
