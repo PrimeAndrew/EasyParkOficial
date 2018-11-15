@@ -17,22 +17,32 @@
                             <form action="{{ route('reservations.index') }}" method="get" role="search"
                                   class="form-group">
                                 <div class="col-md-6 col-md-12">
+                                    <div class="col-sm-12">
+                                        <!--name como esta en la BD-->
+                                        <label class="label-search"><b>Ingrese Codigo de la Zona</b> </label>
+
+                                    </div>
                                     <div class="col-md-9">
+
                                         <div class="col-sm-12">
                                             <!--name como esta en la BD-->
-                                            <input type="text" name="idzones" class="form-control success"
-                                                   placeholder="Direccion,Zona">
+
+                                           <input type="text" name="idzones" class="form-control primary" placeholder="Zona" size="100">
                                         </div>
+
                                     </div>
+
                                     <div class="col-md-3">
-                                        <button type="submit" class="btn btn-success mb-3"> Buscar</button>
+                                        <button type="submit" class="btn btn-primary mb-3"> Buscar</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
 
                         <div class="table-container">
-                            Parqueoes Encontrados:
+                            <div class="panel-heading">
+                                <h4>Parqueos Encontrados:</h4>
+                            </div>
                             <table id="mytable" class="table table-bordred table-striped">
                                 <thead>
                                 <th>Nombre</th>
@@ -54,7 +64,7 @@
                                             <td>{{ $parking->open_hour }}</td>
                                             <td>{{ $parking->close_hour }}</td>
                                             <td>{{ $parking->id_zones_fk}}</td>
-                                            <td><a class="btn btn-primary btn-xs"
+                                            <td><a class="btn btn-info"
                                                    href="{{action('GmapsController@show', $parking->id_parkings)}}"><span
                                                             class="glyphicon glyphicon-pencil"></span></a></td>
                                         </tr>
