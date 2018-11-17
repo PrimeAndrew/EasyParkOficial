@@ -35,6 +35,8 @@ class Controller extends BaseController
             'users_password'=>$users_password,'users_status'=>$users_status);
 
         DB::table('users2')->insert($data);
+
+        return redirect('/home');
     }
 
     function getData(){
@@ -50,7 +52,7 @@ class Controller extends BaseController
     }
 
     function delete($id_reservations){
-        DB::table('reservations')->where('id_reservations',$id_reservations)->softDeletes();
+        DB::table('reservations')->where('id_reservations',$id_reservations)->delete();
         return redirect('/deleterev');
     }
 }

@@ -100,19 +100,38 @@
 
                                     <div class="col-md-6">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="users_type_doc" required>
+
+                                            <select class="form-control" name="users_type_doc">
+                                                <option value="carnet">Carnet</option>
+                                                <option value="pasaporte">Pasaporte</option>
+                                            </select>
+                                            {{--<label>Tipo de documento</label>--}}
+                                        </div>
+                                        {{--<div class="form-group"><label class="col-sm-2 control-label text-right" >Tipo de documento</label>--}}
+                                            {{--<div class="col-sm-10">--}}
+                                                {{--<div class="col-sm-12 padding-0">--}}
+                                                    {{--<select class="form-control" name="users_type_doc">--}}
+                                                        {{--<option value="carnet">Carnet</option>--}}
+                                                        {{--<option value="pasaporte">Pasaporte</option>--}}
+                                                    {{--</select>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <input type="text" class="form-text" name="users_doc_number" required>
                                             <span class="bar"></span>
-                                            <label>Tipo de documento</label>
+                                            <label>Numero de documento</label>
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="users_password" required>
+                                            <input type="password" class="form-text" name="users_password" required>
                                             <span class="bar"></span>
                                             <label>Password</label>
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="users_password2" required>
+                                            <input type="password" class="form-text" name="users_password2" required>
                                             <span class="bar"></span>
                                             <label>Vuelva a ingresar el password</label>
                                         </div>
