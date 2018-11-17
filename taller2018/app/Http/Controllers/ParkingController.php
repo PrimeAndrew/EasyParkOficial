@@ -58,7 +58,7 @@ class ParkingController extends Controller
         $marker['position']='auto';
         $marker['draggable'] = true;
         //La acción de JavaScript a realizar cuando el usuario deja de arrastrar el mapa.
-        $marker['ondragend'] = 'alert(\'YUbicasion Actual: \' + event.latLng.lat() + \', \' + event.latLng.lng());';;
+        $marker['ondragend'] = 'alert(\'Ubicacion Actual: \' + event.latLng.lat() + \', \' + event.latLng.lng());';;
         //$lat=latLng.lat();
         //$lon=latLng.lng();
         \Gmaps::add_marker($marker);
