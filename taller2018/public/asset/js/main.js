@@ -239,6 +239,8 @@
               width: '100%'
             }, 750 );
 
+
+
              $("#mimin-mobile .ink").on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
               function(e){
                 $(".sub-mimin-mobile-menu-list").show();
@@ -336,3 +338,5 @@
     treeMenu();
     hide();
 })(jQuery);
+
+

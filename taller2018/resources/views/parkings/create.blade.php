@@ -1,10 +1,13 @@
 @extends('layouts.layout')
 @section('content')
+
+
     <div id="content">
         <!--/siempre aniadir para mapras-->
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAKpOvOIRIGs6h9rZQHhJp-piWPx4nJ-60&sensor=TRUE_OR_FALSE">
         </script>
         <script type="text/javascript">var centreGot = false;</script>
+
         {!!$map['js']!!}
         <!--//-**************-->
 
@@ -27,6 +30,7 @@
                                     @csrf
 
                                     <!--div class="row"-->
+
 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
@@ -55,19 +59,36 @@
                                                     {{--<input type="text" class="form-text" id="open_hour" name="open_hour" required>--}}
                                                     {{--<span class="bar"></span>--}}
                                                     {{--<label>Introduzca la hora que de apertura del parqueo (hh:mm)<i class="fas fa-clock"></i></label>--}}
-                                                {{--</div>--}}
-                                                <div class="form-group form-animate-text">
-                                                    <input type="text" class="form-text time" name="open_hour" required>
-                                                    <span class="bar"></span>
-                                                    <label><span class="fa fa-clock-o"></span>Introduzca la hora que de apertura del parqueo</label>
-                                                </div>
+
+                                            {{--</div>--}}
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                <input type="text" class="form-text" id="open_hour" name="open_hour" required>
+                                                <span class="bar"></span>
+                                                <label>Introduzca la hora que de apertura del parqueo</label>
+                                                <label>Introduzca la hora que de apertura del parqueo <i class="fas fa-clock"></i></label>
+                                            </div>
+
+                                            <div class="form-group form-animate-text">
+                                                <input type="text" class="form-text time" required>
+                                                <span class="bar"></span>
+                                                <label><span class="fa fa-clock-o"></span> Time Picker</label>
+                                            </div>
 
 
-                                                <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" class="form-text" id="close_hour" name="close_hour" required>
-                                                    <span class="bar"></span>
-                                                    <label>Introduzca la hora que de cierre del parqueo (hh:mm)<i class="fas fa-clock"></i></label>
-                                                </div>
+
+
+
+
+
+                                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                                <input type="text" class="form-text" id="close_hour" name="close_hour" required>
+                                                <span class="bar"></span>
+                                                <label>Introduzca la hora que de cierre del parqueo</label>
+                                                <label>Introduzca la hora que de cierre del parqueo <i class="fas fa-clock"></i></label>
+                                            </div>
+
+
+
                                                 <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                                     <input type="text" class="form-text" id="latitude" name="latitude"  required>
                                                     <!--value="{}" disabled="true"-->
@@ -111,7 +132,7 @@
                                                   </div>
                                                 </div>
 
-                                         </div>
+                                             </div>
 
                                         <div class="col-md-12 text-center">
                                             <button type="submit" class="btn btn-primary mb-5">Enviar</button>
