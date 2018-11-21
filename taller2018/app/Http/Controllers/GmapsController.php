@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Gmaps;
 use App\Parking;
+use App\ParkingSpace;
 use App\Zone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -96,13 +97,17 @@ class GmapsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Parking $id)
+    public function create($id)
     {
         //buscara por id del usuario para editar los datos. mandado del formualrio de list
-        $park=Parking::find($id);
+        $park=Parking::find($id)->id_parkings;
 
-        if ($park!=null){
-            return view('reservations.newReservation',compact('park'));
+        $space= ParkingSpace::where('id_parkings_fk', '=', $park->id_parkings)
+            ->paginate(3)
+            ->get();
+
+        if ($space->space_status=='Libre'){
+            return view('reservations.newReservation',compact('park','space'));
         }
         else{
             Session::flash('message','El parqueo esta lleno');
@@ -151,6 +156,7 @@ class GmapsController extends Controller
                 'parkings.latitude as latitude',
                 'parkings.longitud as longitud'
             )
+            ->distinct()
             ->groupBy('estado','parkings.id_parkings','codigo')
             ->get('parkings.*','parking_spaces');
         $config = array();

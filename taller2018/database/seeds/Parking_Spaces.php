@@ -10,8 +10,10 @@ class Parking_Spaces extends Seeder
      *
      * @return void
      */
+    ///Datos apara espacios de parqueo
     public function run()
     {
+        //espacios libres
         for ($i = 0; $i < 5; $i++) {
             DB::table('parking_spaces')->insert([
                 'space_code' => $i+1,
@@ -21,6 +23,8 @@ class Parking_Spaces extends Seeder
             ]);
 
         }
+
+        //espacios ocupados
         for ($i = 0,$j=6; $i < 5; $i++,$j++) {
             DB::table('parking_spaces')->insert([
                 'space_code' => $j,
@@ -29,6 +33,8 @@ class Parking_Spaces extends Seeder
                 'id_parkings_fk' => $i+2
             ]);
         }
+
+        //espacios reservados
         for ($i = 0,$j=10; $i < 5; $i++,$j++) {
             DB::table('parking_spaces')->insert([
                 'space_code' => $j,
@@ -37,6 +43,8 @@ class Parking_Spaces extends Seeder
                 'id_parkings_fk' => $i+1
             ]);
         }
+
+        ///espacios cancelados
         for ($i = 0,$j=14; $i < 5; $i++,$j++) {
             DB::table('parking_spaces')->insert([
                 'space_code' => $j,
