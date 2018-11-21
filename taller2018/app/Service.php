@@ -16,4 +16,20 @@ class Service extends Model
 
     protected $primaryKey = 'id_services';
     protected $table = "services";
+
+    ///para la lalve foranea id_schedules_fk que viene de la tabla schedules.Estos son metodos de Eloquent
+    public function schedules (){
+
+        return $this -> belongsTo(Schedule::class);
+    }
+
+    ///para la lalve foranea id_parkings_fk que viene de la tabla parkings.Estos son metodos de Eloquent
+    public function parkings (){
+
+        return $this -> belongsTo(Parking::class);
+    }
+    ///para la llave que va a temporalcloseds.Estos son metodos de Eloquent
+    public function temporal_closeds (){
+        return $this -> hasMany(TemporalClosed::class,'id_services_fk');
+    }
 }
