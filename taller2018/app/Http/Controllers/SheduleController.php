@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Shedule;
+use App\Schedule;
 use Illuminate\Http\Request;
 
 class SheduleController extends Controller
@@ -41,10 +41,10 @@ class SheduleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Shedule  $shedule
+     * @param  \App\Schedule  $shedule
      * @return \Illuminate\Http\Response
      */
-    public function show(Shedule $shedule)
+    public function show(Schedule $shedule)
     {
         //
     }
@@ -52,10 +52,10 @@ class SheduleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Shedule  $shedule
+     * @param  \App\Schedule  $shedule
      * @return \Illuminate\Http\Response
      */
-    public function edit(Shedule $shedule)
+    public function edit(Schedule $shedule)
     {
         //
     }
@@ -64,10 +64,10 @@ class SheduleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Shedule  $shedule
+     * @param  \App\Schedule  $shedule
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Shedule $shedule)
+    public function update(Request $request, Schedule $shedule)
     {
         //
     }
@@ -75,10 +75,10 @@ class SheduleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Shedule  $shedule
+     * @param  \App\Schedule  $shedule
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Shedule $shedule)
+    public function destroy(Schedule $shedule)
     {
         //
     }

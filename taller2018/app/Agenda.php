@@ -16,4 +16,9 @@ class Agenda extends Model
     protected $primaryKey = 'id_agendas';
     protected $table = "agendas";
 
+    public function schedules (){
+
+        return $this -> belongsTo(Schedule::class);
+    }
+
 }

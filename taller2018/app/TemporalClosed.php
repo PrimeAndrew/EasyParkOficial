@@ -16,4 +16,10 @@ class TemporalClosed extends Model
 
     protected $primaryKey = 'id_tempcloseds';
     protected $table = "temporal_closeds";
+
+    ///Para llave foranea id_services_fk que viene de la tabla services.Estos son metodos de Eloquent
+    public function services ()
+    {
+        return $this -> belongsTo(Service::class);
+    }
 }
