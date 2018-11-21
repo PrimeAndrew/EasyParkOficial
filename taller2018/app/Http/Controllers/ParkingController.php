@@ -132,8 +132,14 @@ class ParkingController extends Controller
      */
     public function edit(Parking $parking)
     {
-        //
-        return view('parkings.edit',compact('parking'));
+
+        $zones = Zone::all();
+        //$zoness =[ 'hola','hola2','hola3',];
+        $price_lists = Price_list::all();
+        return view('parkings.edit',compact('parking','zones','price_lists'));
+
+
+
     }
 
     /**
