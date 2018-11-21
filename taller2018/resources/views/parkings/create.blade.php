@@ -17,20 +17,96 @@
                 <div class="col-md-12 panel-heading">
                     <h4>Registrar Parqueos</h4>
                 </div>
-                            <hr>
-                                 @if (Session::has('message'))
-                                 <div class="alert alert-info">{{ Session::get('message') }}</div>
-                                 @endif
-                            <div class="col-md-12">
-                                {!!$map['html']!!}
+
+
+
+
+
+
+                                <!------------------>
+                                    {{--<div class="card-header bg-white border-0">--}}
+                                        {{--<div class="row align-items-center">--}}
+                                            {{--<div class="col-8">--}}
+                                                {{--<h3 class="mb-0">Registro de Parqueos:</h3>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                    {{--<hr>--}}
+                                    {{--<div class="card-body">--}}
+                                        {{--<div class="row">--}}
+                                            {{--<div class="col-md-12">--}}
+                                                {{--<label for="Mapa">Seleccionar Ubicacion:</label>--}}
+                                                {{--<div align="center">--}}
+                                                    {{--{!!$map['html']!!}--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                        {{--<!--form method="post" action="{{url('parkings')}}" enctype="multipart/form-data"-->--}}
+                                            {{--@csrf--}}
+                                            {{--<br>--}}
+                                            {{--<div class="form-row">--}}
+                                                {{--<div class="form-group col-md-6">--}}
+                                                    {{--<label for="Latitud">Latitud:</label>--}}
+                                                    {{--<input type="text" class="form-control" name="latitud_x" id="lat" readonly>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="form-group col-md-6">--}}
+                                                    {{--<label for="Longitud">Longitud:</label>--}}
+                                                    {{--<input type="text" class="form-control" name="longitud_y" id="lon" readonly>--}}
+                                                {{--</div>--}}
+                                            {{--</div>--}}
+                                        {{--</form>--}}
+                                    {{--</div>--}}
+                                <!------------------>
 
                             </div>
                             <div class="container mb-5" >
                                 <form action="{{ route('parkings.store') }}" method="POST">
                                     @csrf
 
+
+
+
+<!------------------>
+
+                                    {{--@if(count($errors) > 0)--}}
+                                    {{--<div class="alert alert-danger">--}}
+                                        {{--<strong>Error!</strong> Revise los campos obligatorios.<br><br>--}}
+                                        {{--<ul>--}}
+                                            {{--@foreach ($errors->all() as $error)--}}
+                                                {{--<li>{{ $error }}</li>--}}
+                                            {{--@endforeach--}}
+                                        {{--</ul>--}}
+                                    {{--</div>--}}
+                                {{--@endif--}}
+
+                                    {{--@if(Session::has('success'))--}}
+                                        {{--<div class="alert alert-info">--}}
+                                            {{--{{Session::get('success')}}--}}
+                                        {{--</div>--}}
+                                {{--@endif--}}
+                                    <!------------------>
                                     <!--div class="row"-->
 
+                                        <hr>
+                                        @if (Session::has('message'))
+                                            <div class="alert alert-info">{{ Session::get('message') }}</div>
+                                        @endif
+                                        <div class="col-md-12">
+                                        {!!$map['html']!!}
+                                        <!------->
+                                            <br>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="Latitud">Latitud:</label>
+                                                    <input type="text" class="form-control" name="latitude" id="latitude" readonly>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="Longitud">Longitud:</label>
+                                                    <input type="text" class="form-control" name="longitud" id="longitud" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <!------->
 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
@@ -68,11 +144,11 @@
                                                 <label>Introduzca la hora que de apertura del parqueo <i class="fas fa-clock"></i></label>
                                             </div>
 
-                                            <div class="form-group form-animate-text">
-                                                <input type="text" class="form-text time" required>
-                                                <span class="bar"></span>
-                                                <label><span class="fa fa-clock-o"></span> Time Picker</label>
-                                            </div>
+                                            {{--<div class="form-group form-animate-text">--}}
+                                                {{--<input type="text" class="form-text time" required>--}}
+                                                {{--<span class="bar"></span>--}}
+                                                {{--<label><span class="fa fa-clock-o"></span> Time Picker</label>--}}
+                                            {{--</div>--}}
 
 
 
@@ -89,18 +165,18 @@
 
 
 
-                                                <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" class="form-text" id="latitude" name="latitude"  required>
-                                                    <!--value="{}" disabled="true"-->
-                                                    <span class="bar"></span>
-                                                    <label>Latitud del parqueo</label>
-                                                </div>
-                                                <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" class="form-text" id="longitud" name="longitud"  required>
-                                                    <!--value="{}" disabled="true"-->
-                                                    <span class="bar"></span>
-                                                    <label>Longitud del parqueo</label>
-                                                </div>
+                                                {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
+                                                    {{--<input type="text" class="form-text" id="latitude" name="latitude"  required>--}}
+                                                    {{--<!--value="{}" disabled="true"-->--}}
+                                                    {{--<span class="bar"></span>--}}
+                                                    {{--<label>Latitud del parqueo</label>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
+                                                    {{--<input type="text" class="form-text" id="longitud" name="longitud"  required>--}}
+                                                    {{--<!--value="{}" disabled="true"-->--}}
+                                                    {{--<span class="bar"></span>--}}
+                                                    {{--<label>Longitud del parqueo</label>--}}
+                                                {{--</div>--}}
 
                                                 <div class="col-md-12 form-group form-animate-text" style="margin-top:10px !important;">
                                                      <div class="col-sm-5 control-label text-right">

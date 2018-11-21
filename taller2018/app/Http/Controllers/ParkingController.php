@@ -58,9 +58,14 @@ class ParkingController extends Controller
         $marker['position']='auto';
         $marker['draggable'] = true;
         //La acción de JavaScript a realizar cuando el usuario deja de arrastrar el mapa.
-        $marker['ondragend'] = 'alert(\'Ubicacion Actual: \' + event.latLng.lat() + \', \' + event.latLng.lng());';;
-        //$lat=latLng.lat();
-        //$lon=latLng.lng();
+        $marker['ondragend'] = 'alert(\'Ubicacion Actual: \' + event.latLng.lat() + \', \' + event.latLng.lng());';
+
+        $marker['ondragend'] = 'document.getElementById("latitude").value = event.latLng.lat(); document.getElementById("longitud").value = event.latLng.lng();';
+
+        //$lat=event.latLng.lat()+"";
+        //$lon=event.latLng.lng()+"";
+        //alert('$lat','$lon');
+
         \Gmaps::add_marker($marker);
 
         $map = \Gmaps::create_map();
@@ -75,6 +80,7 @@ class ParkingController extends Controller
         $price_lists = Price_list::all();
         return view('parkings.create',compact('map','zones','price_lists'));
         //return view('parkings.create', ['zoness'=>$zones]);
+
 
 
        // $cars_types = Cars_type::all();
