@@ -47,7 +47,7 @@
                             <td>{{ $value->reservation_state }}</td>
                             <!--td><a href="/delete/{<!--{$value -> id_reservations}}"><button>Ver</button></a></td> -->
                             <td><a href="/checkin"><button>Ver</button></a></td>
-                            
+
                         </tr>
 
                     @endforeach

@@ -19,7 +19,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        $data['data'] = DB::table('reservations')->get();
+        return view('reservations.bookings',$data);
     }
 
     /**
@@ -89,14 +90,14 @@ class ReservationController extends Controller
     }
 
     function getData(){
-        $data['data'] = DB::table('reservations')->get();
-
+        //$data['data'] = DB::table('reservations')->get();
+        //return view('/bookings');
         //dd($data);
 
-        if(count($data) > 0){
-            return view('bookings',$data);
-        }else{
-            return view('bookings');
-        }
+        //if(count($data) > 0){
+        //    return view('/bookings',$data);
+        //}else{
+        //    return view('/bookings');
+        //}
     }
 }

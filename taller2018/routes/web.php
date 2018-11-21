@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/bookings', function () {
     return view('bookings');
 });*/
-Route::get('/bookings','ReservationController@getData');
+Route::resource('/bookings','ReservationController');
 Route::resource('/checkin','CheckInController');
 Route::resource('/checkout','CheckOutController');
 
