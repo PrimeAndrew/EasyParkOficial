@@ -13,16 +13,29 @@
     <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/simple-line-icons.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/animate.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/fullcalendar.min.css')}}"/>
+
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/bootstrap-material-datetimepicker.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/nouislider.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/select2.min.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/ionrangeslider/ion.rangeSlider.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/ionrangeslider/ion.rangeSlider.skinFlat.css')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset('asset/css/plugins/bootstrap-material-datetimepicker.css')}}"/>
     <link href="{{asset('asset/css/style.css')}}" rel="stylesheet">
     <!-- end: Css -->
+
 
     <link rel="shortcut icon" href="{{asset('asset/img/logomi.png ')}} ">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="{{asset('https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')}}"></script>
+    <script src="{{asset('https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
+
     <![endif]-->
     <!Font  -->
+    <!-- start: Javascript -->
+
+
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="
     sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
@@ -42,23 +55,26 @@
 </div>
 
 <!-- start: Javascript -->
-<script src="asset/js/jquery.min.js"></script>
-<script src="asset/js/jquery.ui.min.js"></script>
-<script src="asset/js/bootstrap.min.js"></script>
+<script src="{{asset('asset/js/jquery.min.js')}}"></script>
+<script src="{{asset('asset/js/jquery.ui.min.js')}}"></script>
+<script src="{{asset('asset/js/bootstrap.min.js')}}"></script>
 
 
 <!-- plugins -->
-<script src="asset/js/plugins/moment.min.js"></script>
-<script src="asset/js/plugins/fullcalendar.min.js"></script>
-<script src="asset/js/plugins/jquery.nicescroll.js"></script>
-<script src="asset/js/plugins/jquery.vmap.min.js"></script>
-<script src="asset/js/plugins/maps/jquery.vmap.world.js"></script>
-<script src="asset/js/plugins/jquery.vmap.sampledata.js"></script>
-<script src="asset/js/plugins/chart.min.js"></script>
+<script src="{{asset('asset/js/plugins/moment.min.js')}}"></script>
+<script src="{{asset('asset/js/plugins/fullcalendar.min.js')}}"></script>
+<script src="{{asset('asset/js/plugins/jquery.nicescroll.js')}}"></script>
+<script src="{{asset('asset/js/plugins/jquery.vmap.min.js')}}"></script>
+<script src="{{asset('asset/js/plugins/maps/jquery.vmap.world.js')}}"></script>
+<script src="{{asset('asset/js/plugins/jquery.vmap.sampledata.js')}}"></script>
+<script src="{{asset('asset/js/plugins/chart.min.js')}}"></script>
+<script src="{{asset('asset/js/plugins/chart.min.js')}}"></script>
+
 
 
 <!-- custom -->
-<script src="asset/js/main.js"></script>
+<script src="{{asset('asset/js/main.js')}}"></script>
+<!--script src="asset/js/main.js"></script-->
 <script type="text/javascript">
     (function(jQuery){
 
@@ -229,7 +245,7 @@
             window.myLine = new Chart(ctx2).Line(lineChartData, {
                 responsive: true,
                 showTooltips: true,
-                multiTooltipTemplate: "<%= value %>",
+                multiTooltipTemplate: "",
                      maintainAspectRatio: false
                 });
 

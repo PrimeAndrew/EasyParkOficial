@@ -24,8 +24,8 @@
                 </a>
                 <ul class="nav nav-list tree">
                     <li><a href="/parkings">Listado Parqueo</a></li>
-                    <li><a href="/parkings/create">Datos Parqueo</a></li>
-                    <li><a href="/parqueo/">Ubicacion Parqueo</a></li>
+                    <li><a href="/parkings/create">Nuevo Parqueo</a></li>
+
                 </ul>
             </li>
             <li class="ripple">
@@ -40,7 +40,7 @@
             </li>
             <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-table"></span> Historial Reservas<span class="fa-angle-right fa right-arrow text-right"></span> </a>
                 <ul class="nav nav-list tree">
-                    <li><a href="bookings">Listar Reservas</a></li>
+                    <li><a href="/bookings">Listar Reservas</a></li>
 
                     <li class="ripple">
                         <a class="sub-tree-toggle nav-header">
