@@ -24,6 +24,7 @@ class CreateSchedulesTable extends Migration
             $table->time('open_time');
             $table->time('close_time');
             $table->string('day',45);
+            $table->timestamps();
         });
     }
 

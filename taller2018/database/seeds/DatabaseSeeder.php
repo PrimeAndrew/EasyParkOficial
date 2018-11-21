@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call('Parkings');
         //$this->call('Roles');
         $this->call('Parking_Spaces');
+        $this->call('ScheduleSeeder');
        // $this->call(User::class);
     }
 }
