@@ -18,7 +18,7 @@
                             <div class="col-md-6 col-md-12">
                                 <div class="col-md-9">
                                     <div class="col-sm-12">
-                                        <input type="text" name="plate_number" class="form-control success" placeholder="Placa/Matricula">
+                                        <input type="text" name="plate_number" class="form-control success" placeholder="Placa/Matricula" maxlength="7" pattern="[A-Z0-9]+">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -87,4 +87,5 @@
             </div>
         </div>
     </div>
+
 @endsection
