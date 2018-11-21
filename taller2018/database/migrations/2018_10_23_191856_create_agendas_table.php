@@ -25,9 +25,11 @@ class CreateAgendasTable extends Migration
             $table->increments('id_agendas');
             //$table->unsignedInteger('id_schedules_fk');
             $table->string('state_agenda',45);
-            $table->time('date_mod_agenda');
-            $table->unsignedInteger('user_id');
-            $table->string('host_mode_id',45);
+            $table->time('date_mod_agenda')->nullable();
+            $table->timestamps();
+
+            /* $table->unsignedInteger('user_id');
+            $table->string('host_mode_id',45);*/
         });
     }
 

@@ -17,7 +17,7 @@
                                     @method('PUT')
                                     <div class="col-md-6">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="plate_number" name="plate_number" value="{{ $car->plate_number }}" required>
+                                            <input type="text" class="form-text" id="plate_number" name="plate_number" value="{{ $car->plate_number }}" required maxlength="7" pattern="[A-Z0-9]+">
                                             <span class="bar"></span>
                                             <label>Numero de placa</label>
                                         </div>
