@@ -46,14 +46,8 @@
                             <td>{{ $value->reservation_departure_date }}</td>
                             <td>{{ $value->reservation_state }}</td>
                             <!--td><a href="/delete/{<!--{$value -> id_reservations}}"><button>Ver</button></a></td> -->
-                            <td>if ($value->reservation_state == "Reservado") {
-                                <a href="/checkin" <button>Ver</button> </a>
-                            }
-                            else {
-                            if ($value->reservation_state == "Ocupado") {
-                            <a href="/checkout" <button>Ver</button> </a>
-                            }
-                                } </td>
+                            <td><a href="/checkin"><button>Ver</button></a></td>
+                            
                         </tr>
 
                     @endforeach
