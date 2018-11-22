@@ -14,7 +14,6 @@ class ReservationClientController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -24,7 +23,8 @@ class ReservationClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('reservationClients.create');
+
     }
 
     /**
@@ -35,7 +35,12 @@ class ReservationClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+        ]);
+        Car::create($request->all());
+        Session::flash('message','Creado');
+        return redirect()->route('cars.index');
     }
 
     /**

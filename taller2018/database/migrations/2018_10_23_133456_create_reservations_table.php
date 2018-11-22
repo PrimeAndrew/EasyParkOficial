@@ -19,17 +19,20 @@ class CreateReservationsTable extends Migration
             //$table->unsignedInteger('id_users_roles_fk');
             //$table->unsignedInteger('id_car_fk');
             //$table->unsignedInteger('id_schedule_fk');
-            $table->timestamp('reservation_entry_date');
-            $table->timestamp('reservation_departure_date');
+            $table->date('entry_date');
+            $table->time('entry_hour');
+            $table->date('departure_date');
+            $table->time('departure_hour');
             $table->decimal('amount',10,7);
             $table->string('confirmation_code',45);
             $table->string('reservation_state',45);
-            $table->timestamp('real_entry_date');
-            $table->timestamp('real_departure_date');
-            $table->string('reservation_type',45);
-            $table->unsignedInteger('client_score');
-            $table->unsignedInteger('parking_score');
-            $table->timestamp('date_mode_state');
+            $table->date('real_entry_date')->nullable();
+            $table->time('real_entry_hour')->nullable();
+            $table->date('real_departure_date')->nullable();
+            $table->time('real_departure_hour')->nullable();
+            $table->string('reservation_type',45)->nullable();
+            $table->unsignedInteger('client_score')->nullable();
+            $table->unsignedInteger('parking_score')->nullable();
             $table->timestamps();
         });
     }

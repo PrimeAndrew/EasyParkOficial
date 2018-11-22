@@ -156,8 +156,9 @@ class GmapsController extends Controller
                 'parkings.latitude as latitude',
                 'parkings.longitud as longitud'
             )
-            ->distinct()
+            ->orderBy('parking_name','dsc')
             ->groupBy('estado','parkings.id_parkings','codigo')
+            ->having('parkings.id_parkings','=',$id)
             ->get('parkings.*','parking_spaces');
         $config = array();
         $config['center'] = ' -16.4897,-68.1193';
