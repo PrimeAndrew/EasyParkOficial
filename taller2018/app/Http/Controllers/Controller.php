@@ -7,7 +7,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
+
 
 class Controller extends BaseController
 {
@@ -30,13 +31,24 @@ class Controller extends BaseController
         $users_status = $req->input('users_status');
 
 
-        $data = array('users_name'=>$users_name,'users_lastname'=>$users_lastname,'users_phone'=>$users_phone,
+        /*$data = array('users_name'=>$users_name,'users_lastname'=>$users_lastname,'users_phone'=>$users_phone,
             'users_email'=>$users_email,'users_type_doc'=>$users_type_doc,'users_doc_number'=>$users_doc_number,
-            'users_password'=>$users_password,'users_status'=>$users_status);
+            'users_password'=>$users_password,'users_status'=>$users_status);*/
 
-        DB::table('users2')->insert($data);
+        $data = array('name'=>$users_name,'email'=>$users_email,'password'=>$users_password);
 
-        return redirect('/home');
+
+
+
+        DB::table('users')->insert($data);
+        $id = DB::getPdo()->lastInsertId();
+
+        $data2 = array('id_users_fk'=>$id,'id_roles_fk'=>3,'id_parkings_fk'=>1);
+
+        DB::table('users_roles')->insert($data2);
+
+        //return redirect('/home');
+        return redirect('cars/create');
     }
 
     function getData(){
