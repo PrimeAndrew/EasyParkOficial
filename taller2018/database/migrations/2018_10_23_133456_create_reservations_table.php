@@ -26,12 +26,13 @@ class CreateReservationsTable extends Migration
             $table->decimal('amount',10,7);
             $table->string('confirmation_code',45);
             $table->string('reservation_state',45);
-            $table->timestamp('real_entry_date')-> nullable();
-            $table->timestamp('real_departure_date');
+            $table->timestamp('real_entry_date')->nullable();
+            $table->time('real_entry_hour')->nullable();
+            $table->timestamp('real_departure_date')->nullable();
+            $table->time('real_departure_hour')->nullable();
             $table->string('reservation_type',45)->nullable();
-            $table->unsignedInteger('client_score');
-            $table->unsignedInteger('parking_score');
-            $table->timestamp('date_mode_state');
+            $table->unsignedInteger('client_score')->nullable();
+            $table->unsignedInteger('parking_score')->nullable();
             $table->timestamps();
         });
     }
