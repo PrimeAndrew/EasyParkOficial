@@ -72,7 +72,7 @@
 
                                                 <select class="form-control" name="id_roles_users_fk">
                                                     @foreach($user_roles as $user_role)
-                                                        <option value="{{ $user_role['id_roles_users'] }}">{{ $user_role['id_users_fk'] }}</option>
+                                                        <option value="{{ $user_role['id_users'] }}">{{ $user_role['name'] }}</option>
                                                     @endforeach
                                                 </select>
 

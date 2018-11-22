@@ -18,9 +18,9 @@ class UserSeeder extends Seeder
         $role_cliente = Role::where('roles_description', 'Cliente')->first();
 
         $user = new User();
-        $user->name = 'Propietario 1';
-        $user->email = 'propietario1@gmail.com';
-        $user->password = bcrypt('propietario1');
+        $user->name = 'Juan';
+        $user->email = 'juan@gmail.com';
+        $user->password = bcrypt('123');
         $user->save();
         //$user->roles()->attach($role_propietario);
 
