@@ -28,4 +28,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     protected $primaryKey = 'id_users';
+
+    public function roles()
+    {
+        return $this
+            ->belongsToMany('App\Role')
+            ->withTimestamps();
+    }
 }

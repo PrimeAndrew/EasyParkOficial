@@ -11,5 +11,11 @@ class Role extends Model
         'roles_description'
     ];
     protected $primaryKey = 'id_roles';
-    protected $table = "roles";
+
+    public function users()
+    {
+        return $this
+            ->belongsToMany('App\User')
+            ->withTimestamps();
+    }
 }
