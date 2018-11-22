@@ -22,10 +22,11 @@ class DatabaseSeeder extends Seeder
         $this->call('Zones');
         $this->call('Price_List');
         $this->call('Parkings');
-        //$this->call('Roles');
+
         $this->call('Parking_Spaces');
         $this->call('ScheduleSeeder');
         $this->call('ServiceSeeder');
-       // $this->call(User::class);
+        $this->call('AgendaSeeder');
+
     }
 }
