@@ -36,7 +36,8 @@ class Controller extends BaseController
 
         DB::table('users2')->insert($data);
 
-        return redirect('/home');
+        //return redirect('/home');
+        return redirect('cars/create');
     }
 
     function getData(){
