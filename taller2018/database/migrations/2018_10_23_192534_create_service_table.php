@@ -25,6 +25,7 @@ class CreateServiceTable extends Migration
             //$table->unsignedInteger('id_parkings_fk');
             $table->boolean('open');
             $table->decimal('rate_per_hour',10,7);
+            $table->timestamps();
         });
     }
 
