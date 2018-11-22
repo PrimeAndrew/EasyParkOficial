@@ -19,5 +19,9 @@ class Roles extends Seeder
         $role = new Role();
         $role->roles_description  = 'Propietario';
         $role->save();
+
+        $role = new Role();
+        $role->roles_description  = 'Cliente';
+        $role->save();
     }
 }
