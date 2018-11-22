@@ -35,7 +35,16 @@ class CarsModelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'plate_number'=> 'required',
+            'color' => 'required',
+            'id_car_type_fk' => 'required',
+            'id_car_model_fk' => 'required',
+            'id_roles_users_fk' => 'required',
+        ]);
+        Car::create($request->all());
+        Session::flash('message','Creado');
+        return redirect()->route('cars.index');
     }
 
     /**

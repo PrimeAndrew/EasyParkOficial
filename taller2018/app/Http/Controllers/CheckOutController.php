@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Checkout;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use DB;
 
 class CheckOutController extends Controller
 {
@@ -14,7 +19,8 @@ class CheckOutController extends Controller
      */
     public function index()
     {
-        //
+        $data['data'] = DB::table('reservations')->get();
+        return view('reservations.checkOut',$data);
     }
 
     /**
