@@ -164,7 +164,7 @@ class GmapsController extends Controller
         $config['center'] = ' -16.4897,-68.1193';
         $config['map_width'] = 500;
         $config['map_height'] = 500;
-        $config['zoom'] = 15;
+        $config['zoom'] = 12;
         $config['onboundschanged'] = 'if (!centreGot) {
             var mapCentre = map.getCenter();
             marker_0.setOptions({
@@ -176,12 +176,6 @@ class GmapsController extends Controller
 
         \Gmaps::initialize($config);
 
-        // Colocar el marcador
-        // Una vez se conozca la posición del usuario
-        /*$marker = array();
-        $marker['position']='auto';
-        $marker['infowindow_content']='Posicision actual';
-        \Gmaps::add_marker($marker);*/
             foreach ($ocupados as $o){
                 $idp=$o->id_parkings;
                 $nombre = $o->parking_name;
