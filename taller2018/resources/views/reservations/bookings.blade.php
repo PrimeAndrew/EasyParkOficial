@@ -33,9 +33,10 @@
                         <!-- th onclick="sortTable(0)" style="cursor:pointer">Cliente</th-->
                         <!-- th onclick="sortTable(1)" style="cursor:pointer">Matricula</th-->
                         <th onclick="sortTable(0)" style="cursor:pointer">Fecha de entrada</th>
-                        <th onclick="sortTable(1)" style="cursor:pointer">Fecha de salida</th>
-                        <th onclick="sortTable(2)" style="cursor:pointer">Estado</th>
-                        <th onclick="sortTable(2)" style="cursor:pointer">Estado</th>
+                        <th onclick="sortTable(1)" style="cursor:pointer">Hora de entrada</th>
+                        <th onclick="sortTable(2)" style="cursor:pointer">Fecha de salida</th>
+                        <th onclick="sortTable(3)" style="cursor:pointer">Hora de salida</th>
+                        <th onclick="sortTable(5)" style="cursor:pointer">Estado</th>
                         <th>Accion</th>
                     </tr>
 
@@ -44,9 +45,10 @@
                             <!-- td>{<!--{ $value->name }}</td>
                             <td>{<!--{ $value->plate_number }}</td> -->
                             <td>{{ $value->entry_date }}</td>
+                            <td>{{ $value->entry_hour }}</td>
                             <td>{{ $value->departure_date }}</td>
+                            <td>{{ $value->departure_hour }}</td>
                             <td>{{ $value->reservation_state }}</td>
-                            <td>{{ $value->id_reservations }}</td>
                             <td><?php
                                 $state = $value->reservation_state;
                                 $checkinurl = ("/checkin/" . $value->id_reservations);

@@ -5,8 +5,8 @@
             <div class="panel-body">
 
                 <h2>Paso 2: Finalizar reserva de clientes con cuenta</h2>
-
-                <h2>Actual</h2>
+                <a href="/bookings"><button>Atras</button></a>
+                <h2>Informacion actual</h2>
 
                 <style>
                     table {
@@ -43,7 +43,7 @@
                     </tr>
 
                 </table>
-                <a href="/bookings"><button>Finalizar reserva</button></a>
+                <a href="/bookings"><button style="float:right">Finalizar reserva</button></a>
 
 
             </div>
