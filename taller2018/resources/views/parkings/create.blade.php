@@ -47,7 +47,7 @@
 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" name="parking_name" class="form-text" id="parking_name" required>
+                                                    <input type="text" name="parking_name" class="form-text" id="parking_name" name="plate_number" required maxlength="30" pattern="[A-Za-z]+" title="No se adminten numeros" >
                                                     <span class="bar"></span>
                                                     <label>Nombre del parqueo:</label>
 
@@ -59,7 +59,7 @@
                                             </div>
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                        <input type="text" class="form-text" id="total_spaces" name="total_spaces" required>
+                                                        <input type="text" class="form-text" id="total_spaces" name="total_spaces" required maxlength="4" pattern="[0-24]{0-100}" title="No se adminten numeros">
                                                         <span class="bar"></span>
                                                         <label>Introduzca el espacio del parqueo</label>
                                              </div>
