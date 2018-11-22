@@ -48,8 +48,8 @@
                             <span class="fa-angle-right fa right-arrow text-right"></span>
                         </a>
                         <ul class="nav nav-list sub-tree">
-                            <li><a href=" ">Check In</a></li>
-                            <li><a href=" ">Check Out</a></li>
+                            <!--li><a href=" ">Check In</a></li-->
+                            <!--li><a href=" ">Check Out</a></li-->
                             <li><a href="/deleterev">Cancelar Reserva</a></li>
                         </ul>
                     </li>

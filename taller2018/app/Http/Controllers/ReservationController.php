@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -8,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use DB;
+use Illuminate\View\View;
 
 
 class ReservationController extends Controller
@@ -53,6 +55,7 @@ class ReservationController extends Controller
     public function show($id)
     {
         //
+
     }
 
     /**
@@ -64,7 +67,15 @@ class ReservationController extends Controller
     public function edit($id)
     {
         //
+        //$zones = Zone::all();
+        //$zoness =[ 'hola','hola2','hola3',];
+        //$price_lists = Price_list::all();
+        //return view('id.edit',compact('id','zones','price_lists'));
+        $reserva = Reservation::find($id);
+
+        //return View::make('reserva.edit')
     }
+
 
     /**
      * Update the specified resource in storage.

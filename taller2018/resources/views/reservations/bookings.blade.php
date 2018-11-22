@@ -8,7 +8,7 @@
 
                 <input type="text" placeholder="Buscar cliente..">
                 <button type="submit">Buscar</button>
-                <button type="submit" style="float:right">Nuevo cliente</button>
+                <a href="/registerCliente"><button type="submit" style="float:right">Nuevo cliente</button></a>
 
                 <style>
                     table {
@@ -35,6 +35,7 @@
                         <th onclick="sortTable(0)" style="cursor:pointer">Fecha de entrada</th>
                         <th onclick="sortTable(1)" style="cursor:pointer">Fecha de salida</th>
                         <th onclick="sortTable(2)" style="cursor:pointer">Estado</th>
+                        <th onclick="sortTable(2)" style="cursor:pointer">Estado</th>
                         <th>Accion</th>
                     </tr>
 
@@ -45,15 +46,19 @@
                             <td>{{ $value->reservation_entry_date }}</td>
                             <td>{{ $value->reservation_departure_date }}</td>
                             <td>{{ $value->reservation_state }}</td>
+                            <td>{{ $value->id_reservations }}</td>
                             <td><?php
-                            $state = $value->reservation_state;
+                                $state = $value->reservation_state;
+                                $checkinurl = ("/checkin/" . $value->id_reservations);
+                                $checkouturl = ("/checkout/" . $value->id_reservations);
+                                if ($state == 'Ocupado'){
+                                    echo "<a href='$checkouturl'><button>Ver</button></a>";
+                                } else{
 
-                            if ($state == 'Ocupado'){
-                                echo '<a href="/checkout"><button>Ver</button></a>';
-                            } else{
-                                echo '<a href="/checkin"><button>Ver</button></a>';
-                            }
-                            ?>
+                                    echo "<a href='$checkinurl'><button>Ver</button></a>";
+
+                                }
+                                ?>
                             </td>
 
 

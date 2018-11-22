@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Checkin;
-use Illuminate\Http\Request;
+use App\reservation;
+use Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use DB;
+use Illuminate\Support\Facades\Session;
+use Illuminate\View\View;
 
 class CheckInController extends Controller
 {
@@ -19,8 +22,8 @@ class CheckInController extends Controller
      */
     public function index()
     {
-        $data['data'] = DB::table('reservations')->get();
-        return view('reservations.checkIn',$data);
+        $reserva['reserva'] = DB::table('reservations')->get();
+        return view('reservations.checkIn',$reserva);
     }
 
     /**
@@ -50,9 +53,12 @@ class CheckInController extends Controller
      * @param  \App\TemporalClosed  $temporalClosed
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($id)
     {
         //
+        $reserva = reservation::where('id_reservations',$id)->first();
+
+        return View('reservations.checkIn', compact('reserva'));
     }
 
     /**
@@ -73,9 +79,24 @@ class CheckInController extends Controller
      * @param  \App\TemporalClosed  $temporalClosed
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public static function update(Request $request, $id)
     {
         //
+        $request->validate([
+            'reservation_state'=> 'required',
+        ]);
+        $id->update($request->all());
+        //$reservation = array(
+        //    'reservation_state'=> 'required',
+        //);
+        //$validator = Validator::make(Input::all(), $reservation);
+
+        //$reservation = CheckInController::show($id);
+        //$reservation->reservation_state = "Ocupado";
+        //$reservation->save();
+
+        Session::flash('message','Reserva actualizada correctamente');
+        return redirect()->route('reservations.bookings');
     }
 
     /**

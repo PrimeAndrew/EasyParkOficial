@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Checkout;
+use App\reservation;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -19,8 +20,8 @@ class CheckOutController extends Controller
      */
     public function index()
     {
-        $data['data'] = DB::table('reservations')->get();
-        return view('reservations.checkOut',$data);
+        $reserva['reserva'] = DB::table('reservations')->get();
+        return view('reservations.checkOut',$reserva);
     }
 
     /**
@@ -50,9 +51,12 @@ class CheckOutController extends Controller
      * @param  \App\TemporalClosed  $temporalClosed
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($id)
     {
         //
+        $reserva = reservation::where('id_reservations',$id)->first();
+
+        return View('reservations.checkOut', compact('reserva'));
     }
 
     /**
