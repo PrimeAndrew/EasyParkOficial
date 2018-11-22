@@ -48,6 +48,9 @@
                                             {{--<label>Fecha salida</label>--}}
                                         {{--</div>--}}
 
+
+                                        {{----}}
+
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                             <input type="text" class="form-text dateAnimate" required>
                                             <span class="bar"></span>
@@ -60,13 +63,31 @@
                                             <label>Hora salida</label>
                                         </div>
 
-                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="" name="" required disabled>
-                                            <span class="bar"></span>
-                                            <label>Placa</label>
+                                        {{----}}
+
+                                        {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
+                                            {{--<input type="text" class="form-text" id="" name="" required disabled>--}}
+                                            {{--<span class="bar"></span>--}}
+                                            {{--<label>Placa</label>--}}
+                                        {{--</div>--}}
+
+                                        <div class="col-md-9 form-group form-animate-text" style="margin-top:0px !important;">
+                                            <div class="col-sm-3 control-label text-right">
+                                                <label class="control-label text-right">Placa</label>
+                                            </div>
+                                            <div class="col-sm-6 control-label text-left">
+
+                                                <select class="form-control" name="id_car">
+                                                    @foreach($cars as $car)
+                                                        <option value="{{ $car['id_car'] }}">{{ $car['plate_number'] }}</option>
+                                                    @endforeach
+                                                </select>
+
+                                            </div>
                                         </div>
 
-                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
+
+                                        <div class="form-group form-animate-text col-md-12" style="margin-top:10px !important;">
                                             <input type="text" class="form-text" id="plate_number" name="plate_number" value="{{ $park->parking_address }}" required disabled>
                                             <span class="bar"></span>
                                         </div>

@@ -41,8 +41,11 @@ class CarController extends Controller
     {
         $cars_types = Cars_type::all();
         $cars_models = Cars_model::all();
-        $user_roles = UserRole::all();
-        return view('cars.create',compact('cars_types','cars_models','user_roles'));
+       // $user_roles = UserRole::all();
+        $user_roles = User::all();
+       // return view('cars.create',compact('cars_types','cars_models','user_roles'));
+         return view('cars.create',compact('cars_types','cars_models','user_roles'));
+
     }
 
     /**
@@ -87,7 +90,9 @@ class CarController extends Controller
     {
         $cars_types = Cars_type::all();
         $cars_models = Cars_model::all();
-        $user_roles = UserRole::all();
+//        $user_roles = UserRole::all();
+        $user_roles = User::all();
+
         return view('cars.edit',compact('car','cars_types','cars_models','user_roles'));
     }
 

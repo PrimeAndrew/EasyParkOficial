@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Car;
 use App\Parking;
+use App\User;
 use App\Reservation_client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -70,8 +72,10 @@ class ReservationClientController extends Controller
         $park=DB::table('parkings')->where('id_parkings','=',$id)->first();
         $space=DB::table('parking_spaces')->where('id_parkings_fk','=',$id)->first();
 
+        $cars = Car::all();
+
         //dd($park->parking_name);
-        return view('reservationClients.create',compact('park','space'));
+        return view('reservationClients.create',compact('park','space','cars'));
     }
 
     /**
