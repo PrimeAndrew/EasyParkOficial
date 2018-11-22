@@ -28,6 +28,7 @@ class ReservationSeeder extends Seeder
         $loc->client_score='5';
         $loc->parking_score='4';
         $loc->id_parking_spaces_fk='11';
+        $loc->id_car_fk='1';
         $loc->save();
 /*
         ///cliente 2
@@ -47,6 +48,7 @@ class ReservationSeeder extends Seeder
         $loc->client_score='4';
         $loc->parking_score='3';
         $loc->id_parking_spaces_fk=='12';
+        $loc->id_car_fk='1';
         $loc->save();
 */
 
@@ -64,9 +66,10 @@ class ReservationSeeder extends Seeder
         $loc->real_departure_date= '2018-07-15';
         $loc->real_departure_hour='21:30';
         $loc->reservation_type='Cliente';
-         $loc->client_score='4';
+        $loc->client_score='4';
         $loc->parking_score='3';
         $loc->id_parking_spaces_fk='13';
+        $loc->id_car_fk='1';
         $loc->save();
 
         ///cliente 5
@@ -86,6 +89,7 @@ class ReservationSeeder extends Seeder
         $loc->client_score='4';
         $loc->parking_score='3';
         $loc->id_parking_spaces_fk='14';
+        $loc->id_car_fk='1';
         $loc->save();
 
         ///cliente 6
@@ -105,6 +109,7 @@ class ReservationSeeder extends Seeder
         $loc->client_score='4';
         $loc->parking_score='3';
         $loc->id_parking_spaces_fk='14';
+        $loc->id_car_fk='1';
         $loc->save();
 
         ///cliente 7
@@ -124,6 +129,7 @@ class ReservationSeeder extends Seeder
         $loc->client_score='4';
         $loc->parking_score='3';
         $loc->id_parking_spaces_fk='14';
+        $loc->id_car_fk='1';
         $loc->save();
 
     }

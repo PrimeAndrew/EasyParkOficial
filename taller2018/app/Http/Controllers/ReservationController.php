@@ -22,8 +22,10 @@ class ReservationController extends Controller
     public function index()
     {
         $data['data'] = DB::table('reservations')->get();
+
         return view('reservations.bookings',$data);
     }
+
 
     /**
      * Show the form for creating a new resource.
