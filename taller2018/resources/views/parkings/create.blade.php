@@ -47,7 +47,7 @@
 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" name="parking_name" class="form-text" id="parking_name" name="plate_number" required maxlength="30" pattern="[A-Za-z]+" title="No se adminten numeros" >
+                                                    <input type="text" name="parking_name" class="form-text" id="parking_name" name="plate_number" required  >
                                                     <span class="bar"></span>
                                                     <label>Nombre del parqueo:</label>
 
@@ -78,9 +78,14 @@
                                                 <input type="text" class="form-text" id="open_hour" name="open_hour" required>
                                                 <span class="bar"></span>
                                                 <label>Introduzca la hora que de apertura del parqueo</label>
-                                                <label>Introduzca la hora que de apertura del parqueo <i class="fas fa-clock"></i></label>
+                                                <label>Introduzca la hora que de apertura del parqueo(hh:mm) <i class="fas fa-clock"></i></label>
                                             </div>
-
+                                            
+                                            {{--<div class="form-group form-animate-text">--}}
+                                                {{--<input type="text" class="form-text time" required>--}}
+                                                {{--<span class="bar"></span>--}}
+                                                {{--<label><span class="fa fa-clock-o"></span> Time Picker</label>--}}
+                                            {{--</div>--}}
                                             {{--<div class="form-group form-animate-text">--}}
                                                 {{--<input type="text" class="form-text time" required>--}}
                                                 {{--<span class="bar"></span>--}}
@@ -97,7 +102,7 @@
                                                 <input type="text" class="form-text" id="close_hour" name="close_hour" required>
                                                 <span class="bar"></span>
                                                 <label>Introduzca la hora que de cierre del parqueo</label>
-                                                <label>Introduzca la hora que de cierre del parqueo <i class="fas fa-clock"></i></label>
+                                                <label>Introduzca la hora que de cierre del parqueo(hh:mm) <i class="fas fa-clock"></i></label>
                                             </div>
 
 
