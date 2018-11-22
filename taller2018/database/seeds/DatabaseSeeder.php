@@ -14,9 +14,8 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         $this->call(BrandsTableSeeder::class);
         $this->call(Roles::class);
-        $this->call(UserSeeder::class);
 
-        // Los usuarios necesitarán los roles previamente generados
+
 
         $this->call('Cars_Type');
         $this->call('Cars_Model');
@@ -28,6 +27,10 @@ class DatabaseSeeder extends Seeder
         $this->call('ScheduleSeeder');
 
         $this->call('ServiceSeeder');
+
+        //$this->call(UserSeeder::class);
+
+
 
     }
 }

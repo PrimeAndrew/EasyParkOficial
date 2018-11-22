@@ -32,8 +32,8 @@
                     <tr>
                         <!-- th onclick="sortTable(0)" style="cursor:pointer">Cliente</th-->
                         <!-- th onclick="sortTable(1)" style="cursor:pointer">Matricula</th-->
-                        <th>Fecha de entrada</th>
-                        <th>Fecha de salida</th>
+                        <th onclick="sortTable(0)" style="cursor:pointer">Fecha de entrada</th>
+                        <th onclick="sortTable(1)" style="cursor:pointer">Fecha de salida</th>
                         <th onclick="sortTable(2)" style="cursor:pointer">Estado</th>
                         <th>Accion</th>
                     </tr>
@@ -45,8 +45,17 @@
                             <td>{{ $value->reservation_entry_date }}</td>
                             <td>{{ $value->reservation_departure_date }}</td>
                             <td>{{ $value->reservation_state }}</td>
-                            <!--td><a href="/delete/{<!--{$value -> id_reservations}}"><button>Ver</button></a></td> -->
-                            <td><a href="/checkin"><button>Ver</button></a></td>
+                            <td><?php
+                            $state = $value->reservation_state;
+
+                            if ($state == 'Ocupado'){
+                                echo '<a href="/checkout"><button>Ver</button></a>';
+                            } else{
+                                echo '<a href="/checkin"><button>Ver</button></a>';
+                            }
+                            ?>
+                            </td>
+
 
                         </tr>
 

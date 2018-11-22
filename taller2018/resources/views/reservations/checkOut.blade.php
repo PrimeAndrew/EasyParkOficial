@@ -4,7 +4,7 @@
         <div class="panel">
             <div class="panel-body">
 
-                <h2>Paso 2: Check In clientes con cuenta</h2>
+                <h2>Paso 2: Check Out clientes con cuenta</h2>
 
 
             </div>
