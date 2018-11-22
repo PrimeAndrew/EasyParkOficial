@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->call('ScheduleSeeder');
         $this->call('ServiceSeeder');
         $this->call('AgendaSeeder');
+        $this->call('ReservationSeeder');
 
     }
 }
