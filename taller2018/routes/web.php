@@ -42,6 +42,9 @@ Route::get('/registerCliente', function () {
 Route::resource('reservations', 'GmapsController');
 //Roles
 Route::resource('roles', 'RoleController');
+//Reservation Client
+Route:: resource('reservationClients','ReservationClientController');
+
 
 Route::resource('users_roles', 'UserRoleController');
 
