@@ -24,4 +24,8 @@ class Parking extends Model
           //  dd($query);
         }
     }
+    ///para la llave que va a services.Estos son metodos de Eloquent
+    public function services (){
+        return $this -> hasMany(Service::class,'id_parkings_fk');
+    }
 }
