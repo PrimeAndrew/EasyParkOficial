@@ -11,8 +11,9 @@
                         </div>
                         <div class="col-md-12 panel-body" style="padding-bottom:30px;">
                             <div class="col-md-12">
-                                <form class="cmxform" id="signupForm" method="POST" action="" >
+                                <form class="cmxform" id="signupForm" method="POST" action="{{  route('reservationClients.store',$park->id_parkings) }}" >
                                     @csrf
+                                    @method('PUT')
                                     <div class="col-md-6">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                             <input type="text" class="form-text" id="reservation_entry_date" name="reservation_entry_date" required maxlength="10" pattern="[/|0-9]+">
@@ -28,15 +29,13 @@
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="" name="" disabled required>
+                                            <input type="text" class="form-text" id="" name="" value="{{ $space->space_code }}" disabled required>
                                             <span class="bar"></span>
-                                            <label>Numero de espacio</label>
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="" name="" required disabled>
+                                            <input type="text" class="form-text" id="parking_name" name="parking_name" value="{{ $park->parking_name }}" required disabled>
                                             <span class="bar"></span>
-                                            <label>Nombre de parqueo</label>
                                         </div>
 
                                     </div>
@@ -68,9 +67,8 @@
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="plate_number" name="plate_number" required disabled>
+                                            <input type="text" class="form-text" id="plate_number" name="plate_number" value="{{ $park->parking_address }}" required disabled>
                                             <span class="bar"></span>
-                                            <label>Dirrecion</label>
                                         </div>
 
                                     </div>

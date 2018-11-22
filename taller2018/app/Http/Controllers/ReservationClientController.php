@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Parking;
 use App\Reservation_client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ReservationClientController extends Controller
 {
@@ -23,7 +25,7 @@ class ReservationClientController extends Controller
      */
     public function create()
     {
-        return view('reservationClients.create');
+
 
     }
 
@@ -33,14 +35,22 @@ class ReservationClientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Parking $parking)
     {
         $request->validate([
-
+            'parking_name' => 'required',
+            'parking_address' => 'required',
+            'total_spaces'=> 'required',
+            'open_hour' => 'required',
+            'close_hour' => 'required',
+            'latitude' => 'required',
+            'longitud' => 'required',
+            'id_zones_fk' => 'required',
+            'id_price_list_fk' => 'required'
         ]);
-        Car::create($request->all());
-        Session::flash('message','Creado');
-        return redirect()->route('cars.index');
+        $parking::create($request->all());
+        //Session::flash('message','Creado');
+        return redirect()->route('reservationClients.create');
     }
 
     /**
@@ -49,9 +59,19 @@ class ReservationClientController extends Controller
      * @param  \App\Reservation_client  $reservation_client
      * @return \Illuminate\Http\Response
      */
-    public function show(Reservation_client $reservation_client)
+    public function show($id)
     {
-        //
+        //$parkings = Parking::all();
+        //dd($parking->parking_name);
+
+        //$park=Parking::find($id)->id_parkings;
+
+
+        $park=DB::table('parkings')->where('id_parkings','=',$id)->first();
+        $space=DB::table('parking_spaces')->where('id_parkings_fk','=',$id)->first();
+
+        //dd($park->parking_name);
+        return view('reservationClients.create',compact('park','space'));
     }
 
     /**

@@ -23,6 +23,7 @@
                                 <th>Cod Espacio</th>
                                 <th>Estado</th>
                                 <th># Espacios</th>
+                                <th>###</th>
                                 </thead>
                                 <tbody>
                                 @if($ocupados->count())
@@ -32,16 +33,17 @@
                                             <td>{{ $parking->parking_name }}</td>
                                             <td>{{ $parking->total_spaces }}</td>
                                             <td>{{ $parking->codigo }}</td>
+
                                             @if($parking->estado=='Libre')
                                             <td style="background-color:#ACEC70"><span > {{ $parking->estado }}</span></td>
                                              <td><a class="btn btn-primary btn-xs"
-                                                       href="{{action('GmapsController@create', $parking->id_parkings)}}"><span
+                                                       href="{{action('ReservationClientController@show', $parking->id_parkings)}}"><span
                                                                 class="glyphicon glyphicon-pencil"></span></a></td>
                                             @else
                                                 <td ><span > {{ $parking->estado }}</span></td>
                                                 <td>    </td>
                                             @endif
-
+                                            <td>{{ $parking->id_parkings}}</td>
                                         </tr>
                                     @endforeach
                                 @else
