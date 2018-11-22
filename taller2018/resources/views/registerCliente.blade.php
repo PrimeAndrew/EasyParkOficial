@@ -139,7 +139,7 @@
 
                                     <div class="col-md-12">
                                         <div class="col-md-4">
-                                            <input class="submit btn btn-success" type="submit" value="Add">
+                                            <input class="submit btn btn-success" type="submit" value="CONTINUAR">
                                         </div>
 
                                     </div>

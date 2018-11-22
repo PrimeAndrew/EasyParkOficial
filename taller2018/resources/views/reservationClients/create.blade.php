@@ -18,7 +18,7 @@
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                             <input type="text" class="form-text" id="reservation_entry_date" name="reservation_entry_date" required maxlength="10" pattern="[/|0-9]+">
                                             <span class="bar"></span>
-                                            <label>Fecha entrada</label>
+                                            <label>Fecha entrada(dd/mm/yyyy)</label>
                                         </div>
 
 
@@ -60,6 +60,7 @@
                                             <label>Hora salida</label>
                                         </div>
 
+                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                             <input type="text" class="form-text" id="" name="" required disabled>
                                             <span class="bar"></span>
