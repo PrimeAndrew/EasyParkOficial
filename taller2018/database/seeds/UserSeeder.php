@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     {
 
         $role_propietario = Role::where('roles_description', 'Propietario')->first();
-        $role_administrador = Role::where('roles_description', 'Administrator')->first();
+        $role_administrador = Role::where('roles_description', 'Administrador')->first();
         $role_cliente = Role::where('roles_description', 'Cliente')->first();
 
         $user = new User();
