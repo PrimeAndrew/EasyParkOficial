@@ -37,8 +37,8 @@
                     </tr>
 
                         <tr>
-                            <td>{{ $reserva->reservation_entry_date }}</td>
-                            <td>{{ $reserva->reservation_departure_date }}</td>
+                            <td>{{ $reserva->entry_date }}</td>
+                            <td>{{ $reserva->departure_date }}</td>
                             <td>Calculando monto estimado...</td>
 
                         </tr>

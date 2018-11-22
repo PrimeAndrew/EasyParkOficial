@@ -43,8 +43,8 @@
                         <tr>
                             <!-- td>{<!--{ $value->name }}</td>
                             <td>{<!--{ $value->plate_number }}</td> -->
-                            <td>{{ $value->reservation_entry_date }}</td>
-                            <td>{{ $value->reservation_departure_date }}</td>
+                            <td>{{ $value->entry_date }}</td>
+                            <td>{{ $value->departure_date }}</td>
                             <td>{{ $value->reservation_state }}</td>
                             <td>{{ $value->id_reservations }}</td>
                             <td><?php
