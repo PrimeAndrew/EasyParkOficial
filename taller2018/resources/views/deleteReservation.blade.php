@@ -28,15 +28,19 @@
             <tr>
                 <th>ID</th>
                 <th>Fecha de Entrada</th>
+                <th>Hora de Entrada</th>
                 <th>Fecha de Salida</th>
+                <th>Hora de Salida</th>
                 <th>Eliminar</th>
             </tr>
             @foreach($data as $value)
 
                 <tr>
                     <td>{{ $value->id_reservations }}</td>
-                    <td>{{ $value->reservation_entry_date }}</td>
-                    <td>{{ $value->reservation_departure_date }}</td>
+                    <td>{{ $value->entry_date }}</td>
+                    <td>{{ $value->entry_hour }}</td>
+                    <td>{{ $value->departure_date }}</td>
+                    <td>{{ $value->departure_hour }}</td>
                     <td><a href="/delete/{{$value -> id_reservations}}"><button>Eliminar</button></a></td>
                 </tr>
 

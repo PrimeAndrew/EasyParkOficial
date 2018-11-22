@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*
-Route::get('/bookings', function () {
-    return view('bookings');
-});*/
 Route::resource('/bookings','ReservationController');
 Route::resource('/checkin','CheckInController');
 Route::resource('/checkout','CheckOutController');
