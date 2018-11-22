@@ -12,22 +12,31 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $role_user = Role::where('roles_description', 'prop')->first();
-        $role_admin = Role::where('roles_description', 'admin')->first();
+
+        $role_propietario = Role::where('roles_description', 'Propietario')->first();
+        $role_administrador = Role::where('roles_description', 'Administrador')->first();
+        $role_cliente = Role::where('roles_description', 'Cliente')->first();
 
         $user = new User();
         $user->name = 'Propietario 1';
         $user->email = 'propietario1@gmail.com';
         $user->password = bcrypt('propietario1');
         $user->save();
-        $user->roles()->attach($role_user);
+        $user->roles()->attach($role_propietario);
 
         $user = new User();
-        $user->name = 'admin';
-        $user->email = 'admin@gmail.com';
-        $user->password = bcrypt('admin');
+        $user->name = 'Administrador 1';
+        $user->email = 'administrador1@gmail.com';
+        $user->password = bcrypt('administrador1');
         $user->save();
-        $user->roles()->attach($role_admin);
+        $user->roles()->attach($role_administrador);
+
+        $user = new User();
+        $user->name = 'Cliente 1';
+        $user->email = 'cliente1@gmail.com';
+        $user->password = bcrypt('cliente1');
+        $user->save();
+        $user->roles()->attach($role_cliente);
 
     }
 }

@@ -17,7 +17,6 @@ class CreateReservationsTable extends Migration
             $table->increments('id_reservations');
             //$table->unsignedInteger('id_parking_space_fk');
             //$table->unsignedInteger('id_users_roles_fk');
-            //$table->unsignedInteger('id_car_fk');
             //$table->unsignedInteger('id_schedule_fk');
             $table->date('entry_date');
             $table->time('entry_hour');
@@ -34,6 +33,7 @@ class CreateReservationsTable extends Migration
             $table->unsignedInteger('client_score')->nullable();
             $table->unsignedInteger('parking_score')->nullable();
             $table->timestamps();
+            $table->unsignedInteger('id_car_fk');
         });
     }
 

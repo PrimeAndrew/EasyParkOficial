@@ -47,3 +47,27 @@ Route::resource('users_roles', 'UserRoleController');
 Route::get('/deleterev  ','Controller@getData');
 Route::get('/delete/{id_reservations}','Controller@delete');
 
+Route::post('/login/custom', [
+        'uses' => 'LoginController@login',
+        'as' => 'login.custom'
+    ]);
+
+Route::get('/administradorhome', function (){
+    return view('administradorhome');
+})->name('administradorhome');
+
+Route::get('/clientehome', function (){
+    return view('clientehome');
+})->name('clientehome');
+
+/*Route::group(['middleware' => 'auth'], function(){
+
+    Route::get('/administradorhome', function (){
+        return view('administradorhome');
+    })->name('administradorhome');
+
+    Route::get('/clientehome', function (){
+        return view('clientehome');
+    })->name('clientehome');
+
+});*/
