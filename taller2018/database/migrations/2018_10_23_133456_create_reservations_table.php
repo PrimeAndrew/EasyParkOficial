@@ -22,9 +22,9 @@ class CreateReservationsTable extends Migration
             $table->time('entry_hour');
             $table->date('departure_date');
             $table->time('departure_hour');
-            $table->decimal('amount',10,7);
-            $table->string('confirmation_code',45);
-            $table->string('reservation_state',45);
+            $table->decimal('amount',10,7)->nullable();
+            $table->string('confirmation_code',45)->nullable();
+            $table->string('reservation_state',45)->nullable();
             $table->date('real_entry_date')->nullable();
             $table->time('real_entry_hour')->nullable();
             $table->date('real_departure_date')->nullable();
