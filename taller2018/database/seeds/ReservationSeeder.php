@@ -88,5 +88,43 @@ class ReservationSeeder extends Seeder
         $loc->id_parking_spaces_fk='14';
         $loc->save();
 
+        ///cliente 6
+        $loc = new Reservation();
+        $loc->entry_date= '2018-03-19';
+        $loc->entry_hour= '10:45';
+        $loc->departure_date= '2018-05-11';
+        $loc->departure_hour= '11:34';
+        $loc->amount= '123';
+        $loc->confirmation_code = 'dsfds44465';
+        $loc->reservation_state= 'Ocupado';
+        $loc->real_entry_date='2018-02-5';
+        $loc->real_entry_hour='11:11';
+        $loc->real_departure_date= '2018-09-16';
+        $loc->real_departure_hour='17:59';
+        $loc->reservation_type='Empleado';
+        $loc->client_score='4';
+        $loc->parking_score='3';
+        $loc->id_parking_spaces_fk='14';
+        $loc->save();
+
+        ///cliente 7
+        $loc = new Reservation();
+        $loc->entry_date= '2018-04-11';
+        $loc->entry_hour= '11:44';
+        $loc->departure_date= '2018-05-15';
+        $loc->departure_hour= '12:37';
+        $loc->amount= '13';
+        $loc->confirmation_code = 'rrrrrr34565';
+        $loc->reservation_state= 'Ocupado';
+        $loc->real_entry_date='2018-07-16';
+        $loc->real_entry_hour='15:00';
+        $loc->real_departure_date= '2018-07-16';
+        $loc->real_departure_hour='17:00';
+        $loc->reservation_type='Empleado';
+        $loc->client_score='4';
+        $loc->parking_score='3';
+        $loc->id_parking_spaces_fk='14';
+        $loc->save();
+
     }
 }
