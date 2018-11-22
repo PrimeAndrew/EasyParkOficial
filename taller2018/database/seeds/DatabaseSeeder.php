@@ -26,6 +26,9 @@ class DatabaseSeeder extends Seeder
         $this->call('Parking_Spaces');
         $this->call('ScheduleSeeder');
         $this->call('ServiceSeeder');
+        $this->call('UserSeeder');
+        $this->call('User_Roles');
+        $this->call('CarsSeeder');
         $this->call('AgendaSeeder');
         $this->call('ReservationSeeder');
 
