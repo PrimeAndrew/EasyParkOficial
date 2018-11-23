@@ -41,18 +41,27 @@ class ReservationClientController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'id_reservations' => 'required',
             'entry_date' => 'required',
             'entry_hour' => 'required',
             'departure_date' => 'required',
             'departure_hour' => 'required',
             //'amount',
             //'confirmation_code',
-            //'id_car_fk',
-            //'id_parking_spaces_fk'
+            'id_car_fk',
+            'id_parking_spaces_fk'
 
         ]);
-        Reservation_client::create($request->all());
+        //Reservation_client::create($request->all());
+        $res = new Reservation_client();
+        $res->entry_date = $request->input('entry_date');
+        $res->entry_hour = $request->input('entry_hour');
+        $res->departure_date = $request->input('departure_date');
+        $res->departure_hour = $request->input('departure_hour');
+        $res->id_car_fk = $request->input('id_car_fk');
+        $res->id_parking_spaces_fk = $request->input('id_parking_spaces_fk');
+
+        $res->save();
+
         //Session::flash('message','Creado');
         return redirect()->route('bookings.index');
     }
@@ -82,7 +91,7 @@ class ReservationClientController extends Controller
             ->first();
         $carsP=DB::table('cars')
             ->join('users_roles','users_roles.id_roles_users','=','cars.id_roles_users_fk')
-            ->select('plate_number')
+            ->select('plate_number','id_car')
             ->where('users_roles.id_users_fk','=',$id_auth)
             ->first();
 

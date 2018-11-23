@@ -28,7 +28,9 @@
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="{{ $space->id_parking_spaces }}" name="{{ $space->id_parking_spaces }}" value="{{ $space->space_code }}" disabled required>
+                                            <input type="text" class="form-text" value="{{ $space->space_code }}" disabled required>
+                                            <input type="hidden" class="form-text" id="id_parking_spaces_fk" name="id_parking_spaces_fk" value="{{ $space->id_parking_spaces }}">
+
                                             <span class="bar"></span>
                                         </div>
 
@@ -71,7 +73,9 @@
                                         {{--</div>--}}
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="" name="" value="{{ $carsP->plate_number }}" disabled>
+                                            <input type="hidden" class="form-text" id="id_car_fk" name="id_car_fk" value="{{ $carsP->id_car }}">
+                                            <input type="text" class="form-text" value="{{ $carsP->plate_number }}" disabled>
+
                                             <span class="bar"></span>
                                             {{--<label>Placa</label>--}}
                                         </div>

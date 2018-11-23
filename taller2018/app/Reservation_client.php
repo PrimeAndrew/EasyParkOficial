@@ -14,8 +14,8 @@ class Reservation_client extends Model
         'departure_hour',
         //'amount',
         //'confirmation_code',
-        //'id_car_fk',
-        //'id_parking_spaces_fk'
+        'id_car_fk',
+        'id_parking_spaces_fk'
     ];
     protected $primaryKey = 'id_reservations';
     protected $table = "reservations";

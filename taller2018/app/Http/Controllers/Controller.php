@@ -43,7 +43,7 @@ class Controller extends BaseController
         DB::table('users')->insert($data);
         $id = DB::getPdo()->lastInsertId();
 
-        $data2 = array('id_users_fk'=>$id,'id_roles_fk'=>3,'id_parkings_fk'=>1);
+        $data2 = array('id_users_fk'=>$id,'id_roles_fk'=>1,'id_parkings_fk'=>1);
 
         DB::table('users_roles')->insert($data2);
 
