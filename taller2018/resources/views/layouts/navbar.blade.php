@@ -15,10 +15,17 @@
                  <li class="user-name"><span>Usuario</span></li>
                  <li class="dropdown avatar-dropdown">
                      <img src="asset/img/avatar.jpg" class="img-circle avatar" alt="nombre_usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
-                     <ul class="dropdown-menu user-dropdown">
-                          <li><a href="#"><span class="fa fa-user"></span>Mi Perfil</a></li>
-                         <li><a href="#"><span class="fa fa-power-off "></span>Cerrar Sesion</a></li>
-                     </ul>
+                     @if (Route::has('login'))
+                         <ul class="dropdown-menu user-dropdown">
+                             @auth
+                                 <li><a href="{{ url('/home') }}"><span class="fa fa-user"></span>Inicio</a></li>
+                                 <li><a href="{{ route('login') }}"><span class="fa fa-power-off "></span>Cerrar Sesion</a></li>
+                             @else
+                                 <a href="{{ route('login') }}">Login</a>
+                                 <a href="{{ route('register') }}">Register</a>
+                             @endauth
+                         </ul>
+                     @endif
                  </li>
              </ul>
          </div>
