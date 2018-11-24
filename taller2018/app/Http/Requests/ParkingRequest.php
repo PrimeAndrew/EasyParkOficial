@@ -24,8 +24,10 @@ class ParkingRequest extends FormRequest
     public function rules()
     {
         return [
-            'parking_name' => 'max:30|required',
-            'parking_address'=>'required'
+            'parking_name' => 'max:30|unique:parkings|required|',
+            'parking_address'=>'required|max:300',
+            'total_spaces'=>'required|max: 1000|numeric'
+
         ];
     }
 }
