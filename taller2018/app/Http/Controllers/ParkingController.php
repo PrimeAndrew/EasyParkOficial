@@ -8,7 +8,7 @@ use App\Zone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
-
+use App\Http\Requests\ParkingRequest;
 
 class ParkingController extends Controller
 {
@@ -94,12 +94,12 @@ class ParkingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ParkingRequest $request)
     {
         //
         $request->validate([
-            'parking_name'=> 'required',
-            'parking_address' => 'required',
+//            'parking_name'=> 'required',
+//            'parking_address' => 'required',
             'total_spaces' => 'required',
             'open_hour' => 'required',
             'close_hour' => 'required',
