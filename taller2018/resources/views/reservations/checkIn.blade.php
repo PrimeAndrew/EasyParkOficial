@@ -35,6 +35,7 @@
                         <th>Fecha de salida</th>
                         <th>Horas Reserva</th>
                         <th>Monto a pagar</th>
+                        <th>Codigo Reserva</th>
                     </tr>
                         <tr>
                             <td>{{ $reserva->entry_date }}</td>
@@ -46,6 +47,7 @@
                             <td>Calculando timepo</td>
                             <td>Calculando monto</td>
                             @endif
+                            <td>{{$cod}}</td>
                         </tr>
 
                 </table>
