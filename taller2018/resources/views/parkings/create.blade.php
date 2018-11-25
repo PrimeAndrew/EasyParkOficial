@@ -17,7 +17,7 @@
                             <h4>Registrar Parqueos</h4>
                         </div>
                 </div>
-
+{{--errores--}}
               @if(count($errors))
                   <div class="alert alert-danger">
                       <button type="button" class="close" data-dismiss="alert">
@@ -30,6 +30,7 @@
                       </ul>
                   </div>
               @endif
+{{--errores--}}
                             <div class="container mb-5" >
                                 <form action="{{ route('parkings.store') }}" method="POST">
                                     @csrf

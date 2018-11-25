@@ -15,8 +15,9 @@
                                     <form class="cmxform" id="signupForm" method="POST" action="{{  route('cars.store') }}" >
                                         @csrf
                                         <div class="col-md-6">
+
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                <input type="text" class="form-text" id="plate_number" name="plate_number" required maxlength="7" pattern="[A-Z0-9]+">
+                                                <input type="text" class="form-text" id="plate_number" name="plate_number" maxlength="7"  value="{{old('plate_number')}}">
                                                 <span class="bar"></span>
                                                 <label>Numero de placa</label>
                                             </div>
