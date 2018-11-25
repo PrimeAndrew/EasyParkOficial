@@ -9,7 +9,7 @@ use App\User;
 use App\UserRole;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-
+use App\Http\Requests\CarRequest;
 class CarController extends Controller
 {
     /**
@@ -57,7 +57,7 @@ class CarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'plate_number'=> 'required',
+            //'plate_number'=> 'required',
             'color' => 'required',
             'id_car_type_fk' => 'required',
             'id_car_model_fk' => 'required',
