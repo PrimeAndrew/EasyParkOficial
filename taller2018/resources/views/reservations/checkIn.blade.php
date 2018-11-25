@@ -33,14 +33,19 @@
                         <!--th>Matricula</th-->
                         <th>Fecha de entrada</th>
                         <th>Fecha de salida</th>
+                        <th>Horas Reserva</th>
                         <th>Monto a pagar</th>
                     </tr>
-
                         <tr>
                             <td>{{ $reserva->entry_date }}</td>
                             <td>{{ $reserva->departure_date }}</td>
-                            <td>Calculando monto estimado...</td>
-
+                            @if($reserva->entry_date == $reserva->departure_date)
+                           <td>{{$tiempot}}</td>
+                            <td>{{$precio}}</td>
+                            @else
+                            <td>Calculando timepo</td>
+                            <td>Calculando monto</td>
+                            @endif
                         </tr>
 
                 </table>

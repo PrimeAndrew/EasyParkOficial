@@ -56,9 +56,23 @@ class CheckInController extends Controller
     public function show($id)
     {
         //
-        $reserva = reservation::where('id_reservations',$id)->first();
+        $reserva = reservation::where('id_reservations',$id)
+            ->first();
+        $space=DB::table('parking_spaces')->where('id_parking_spaces','=',$reserva->id_parking_spaces_fk)->first();
+        $park=DB::table('parkings')->where('id_parkings','=',$space->id_parkings_fk)->first();
+        $serv=DB::table('services')->where('id_services','=',$park->id_parkings)->first();
+////para mostrar la cantidad de horas que se quedara la persona con formato H:min:seg
+        $salida = new \DateTime($reserva->departure_hour);
+        $entrada = new \DateTime($reserva->entry_hour);
+        $tiempo = $salida->diff($entrada);
+        $tiempot=$tiempo->format("%H:%I:%S");
+////para calcular el monto a pagar
+         $c_salida=strtotime($reserva->departure_hour);
+         $c_entrada=strtotime($reserva->entry_hour);
+        $tiempores=($c_salida-$c_entrada)/60/60;
+        $precio=$serv->rate_per_hour*$tiempores;
 
-        return View('reservations.checkIn', compact('reserva'));
+        return View('reservations.checkIn', compact('reserva','serv','tiempot','precio'));
     }
 
     /**
