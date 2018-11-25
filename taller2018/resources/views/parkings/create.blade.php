@@ -17,6 +17,19 @@
                             <h4>Registrar Parqueos</h4>
                         </div>
                 </div>
+
+              @if(count($errors))
+                  <div class="alert alert-danger">
+                      <button type="button" class="close" data-dismiss="alert">
+                          &times;
+                      </button>nas $errors
+                      <ul>
+                          @foreach($errors->all() as $errors)
+                              <li>{{$errors}}</li>
+                          @endforeach
+                      </ul>
+                  </div>
+              @endif
                             <div class="container mb-5" >
                                 <form action="{{ route('parkings.store') }}" method="POST">
                                     @csrf
@@ -33,12 +46,12 @@
 
                                                 <div class="form-group col-md-6">
                                                     <label for="Latitud">Latitud:</label>
-                                                    <input type="text" class="form-control" name="latitude" id="latitude" readonly>
+                                                    <input type="text" class="form-control" name="latitude" id="latitude" value="{{old('latitude')}}" readonly >
                                                 </div>
 
                                                 <div class="form-group col-md-6">
                                                     <label for="Longitud">Longitud:</label>
-                                                    <input type="text" class="form-control" name="longitud" id="longitud" readonly>
+                                                    <input type="text" class="form-control" name="longitud" id="longitud" value="{{old('longitud')}}" readonly>
                                                 </div>
                                              </div>
                                         </div>
@@ -47,19 +60,19 @@
 
                                         <div class="col-md-6">
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" name="parking_name" class="form-text" id="parking_name" name="plate_number" required  >
+                                                    <input type="text" name="parking_name" class="form-text" value="{{old('parking_name')}}" id="parking_name" name="plate_number" >
                                                     <span class="bar"></span>
                                                     <label>Nombre del parqueo:</label>
 
                                             </div>
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                    <input type="text" class="form-text" id="parking_address" name="parking_address" required>
+                                                    <input type="text" class="form-text" value="{{old('parking_address')}}"  id="parking_address" name="parking_address" >
                                                     <span class="bar"></span>
                                                     <label>Direccion del parqueo</label>
                                             </div>
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                        <input type="text" class="form-text" id="total_spaces" name="total_spaces" required maxlength="4" pattern="[0-24]{0-100}" title="No se adminten numeros">
+                                                        <input type="text" class="form-text" id="total_spaces" name="total_spaces" value="{{old('total_spaces')}}" >
                                                         <span class="bar"></span>
                                                         <label>Introduzca el espacio del parqueo</label>
                                              </div>
@@ -75,12 +88,19 @@
 
                                             {{--</div>--}}
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                <input type="text" class="form-text" id="open_hour" name="open_hour" required>
+                                                <input type="time" class="form-text" id="open_hour" name="open_hour"  maxlength="7" pattern="[:|0-9]+" value="{{old('open_hour')}}">
                                                 <span class="bar"></span>
-                                                <label>Introduzca la hora que de apertura del parqueo</label>
+                                                {{--<label>Introduzca la hora que de apertura del parqueo</label>--}}
                                                 <label>Introduzca la hora que de apertura del parqueo(hh:mm) <i class="fas fa-clock"></i></label>
                                             </div>
-                                            
+
+
+
+                                            {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
+                                                {{--<input type="time" class="form-text" id="departure_hour" name="departure_hour" required maxlength="7" pattern="[:|0-9]+">--}}
+                                                {{--<span class="bar"></span>--}}
+                                                {{--<label>Hora salida</label>--}}
+                                            {{--</div>--}}
                                             {{--<div class="form-group form-animate-text">--}}
                                                 {{--<input type="text" class="form-text time" required>--}}
                                                 {{--<span class="bar"></span>--}}
@@ -99,9 +119,9 @@
 
 
                                             <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                                <input type="text" class="form-text" id="close_hour" name="close_hour" required>
+                                                <input type="time" class="form-text" id="close_hour" name="close_hour"  maxlength="7" pattern="[:|0-9]+" value="{{old('close_hour')}}">
                                                 <span class="bar"></span>
-                                                <label>Introduzca la hora que de cierre del parqueo</label>
+                                                {{--<label>Introduzca la hora que de cierre del parqueo</label>--}}
                                                 <label>Introduzca la hora que de cierre del parqueo(hh:mm) <i class="fas fa-clock"></i></label>
                                             </div>
 

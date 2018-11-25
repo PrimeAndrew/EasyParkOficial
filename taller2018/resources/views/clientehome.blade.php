@@ -92,7 +92,7 @@
 
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" name="users_email" required>
+                                            <input type=email class="form-text" name="users_email" required>
                                             <span class="bar"></span>
                                             <label>Email</label>
                                         </div>
