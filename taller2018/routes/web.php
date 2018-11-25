@@ -15,15 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
 Route::resource('/bookings','ReservationController');
 Route::resource('/checkin','CheckInController');
 Route::resource('/checkout','CheckOutController');
 
 
 Route:: resource('cars','CarController');
-
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route:: resource('parkings','ParkingController');

@@ -12,14 +12,22 @@
                  <b>Easy Park</b>
              </a>
              <ul class="nav navbar-nav navbar-right user-nav">
-                 <li class="user-name"><span>Usuario</span></li>
+                 <li class="user-name"><span> usuario</span></li>
                  <li class="dropdown avatar-dropdown">
                      <img src="asset/img/avatar.jpg" class="img-circle avatar" alt="nombre_usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
                      @if (Route::has('login'))
                          <ul class="dropdown-menu user-dropdown">
                              @auth
                                  <li><a href="{{ url('/home') }}"><span class="fa fa-user"></span>Inicio</a></li>
-                                 <li><a href="{{ route('login') }}"><span class="fa fa-power-off "></span>Cerrar Sesion</a></li>
+                                 <li><a href="{{route('logout')}}" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                     <span class="fa fa-power-off "></span>Cerrar Sesion
+                                     </a>
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                         {{csrf_field()}}
+                                     </form>
+                                 </li>
+
                              @else
                                  <a href="{{ route('login') }}">Login</a>
                                  <a href="{{ route('register') }}">Register</a>
