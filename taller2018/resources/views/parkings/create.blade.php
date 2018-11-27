@@ -17,12 +17,13 @@
                             <h4>Registrar Parqueos</h4>
                         </div>
                 </div>
-{{--errores--}}
+{{--validaciones--}}
               @if(count($errors))
                   <div class="alert alert-danger">
+                      <b><p>Por favor introduzca los siguientes errores:</p></b>
                       <button type="button" class="close" data-dismiss="alert">
                           &times;
-                      </button>nas $errors
+                      </button>
                       <ul>
                           @foreach($errors->all() as $errors)
                               <li>{{$errors}}</li>
@@ -30,7 +31,7 @@
                       </ul>
                   </div>
               @endif
-{{--errores--}}
+{{--validaciones--}}
                             <div class="container mb-5" >
                                 <form action="{{ route('parkings.store') }}" method="POST">
                                     @csrf

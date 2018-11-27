@@ -110,6 +110,8 @@ return [
         'open_hour' => 'Hora de apertura',
         'close_hour' => 'Hora de cierre',
         'latitude' => 'Ubicacion del parqueo',
+        'plate_number' => 'Numero de placa',
+
 //        'longitud' => 'required',
     ],
 
