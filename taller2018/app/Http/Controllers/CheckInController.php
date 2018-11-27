@@ -11,6 +11,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use DB;
 use Illuminate\Support\Facades\Session;
+use App\Reservation_client;
 use Illuminate\View\View;
 
 class CheckInController extends Controller
@@ -56,9 +57,30 @@ class CheckInController extends Controller
     public function show($id)
     {
         //
-        $reserva = reservation::where('id_reservations',$id)->first();
+        $reserva = reservation::where('id_reservations',$id)
+            ->first();
+        $space=DB::table('parking_spaces')->where('id_parking_spaces','=',$reserva->id_parking_spaces_fk)->first();
+        $park=DB::table('parkings')->where('id_parkings','=',$space->id_parkings_fk)->first();
+        $serv=DB::table('services')->where('id_services','=',$park->id_parkings)->first();
+////para mostrar la cantidad de horas que se quedara la persona con formato H:min:seg
+        $salida = new \DateTime($reserva->departure_hour);
+        $entrada = new \DateTime($reserva->entry_hour);
+        $tiempo = $salida->diff($entrada);
+        $tiempot=$tiempo->format("%H:%I:%S");
+////para calcular el monto a pagar
+         $c_salida=strtotime($reserva->departure_hour);
+         $c_entrada=strtotime($reserva->entry_hour);
+        $tiempores=($c_salida-$c_entrada)/60/60;
+        $precio=$serv->rate_per_hour*$tiempores;
 
-        return View('reservations.checkIn', compact('reserva'));
+        //se genera un codigo aleatorio:  https://code.i-harness.com/es/q/1c2bba
+        $cod=substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTVWXYZ"), 0, 8);
+
+        //Se debe actualziar precio, estado,codigo en la tabla reserva
+        //$this->update($id,$precio);
+
+
+        return View('reservations.checkIn', compact('reserva','cod','tiempot','precio'));
     }
 
     /**
@@ -70,6 +92,7 @@ class CheckInController extends Controller
     public function edit(Request $request)
     {
         //
+
     }
 
     /**
@@ -79,11 +102,15 @@ class CheckInController extends Controller
      * @param  \App\TemporalClosed  $temporalClosed
      * @return \Illuminate\Http\Response
      */
-    public static function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
+
+
         $request->validate([
-            'reservation_state'=> 'required',
+            'reservation_state'=> 'Reservado',
+
+
         ]);
         $id->update($request->all());
         //$reservation = array(

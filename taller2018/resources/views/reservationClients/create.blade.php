@@ -30,7 +30,6 @@
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
                                             <input type="text" class="form-text" value="{{ $space->space_code }}" disabled required>
                                             <input type="hidden" class="form-text" id="id_parking_spaces_fk" name="id_parking_spaces_fk" value="{{ $space->id_parking_spaces }}">
-
                                             <span class="bar"></span>
                                         </div>
 
@@ -101,6 +100,7 @@
                                             <input type="text" class="form-text" id="" name="" value="{{ $usersP->name }}" disabled >
                                             <span class="bar"></span>
                                         </div>
+
                                         <div class="col-md-3 control-label text-right">
                                             <label class="control-label text-right">Correo</label>
                                         </div>
