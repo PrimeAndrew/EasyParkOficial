@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
-class reservation extends Model
+class Reservation extends Model
 {
     protected $fillable = [
         'id_reservations',
@@ -13,8 +13,8 @@ class reservation extends Model
         'entry_hour',
         'departure_date',
         'departure_hour',
-        //'amount',
-        //'confirmation_code',
+        'amount',
+        'confirmation_code',
         //'id_car_fk',
         //'id_parking_spaces_fk'
     ];

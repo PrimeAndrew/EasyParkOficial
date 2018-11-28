@@ -29,22 +29,27 @@
                 <table id="myTable" style="width:100%" align="center">
                     <tr>
                         <!--th>Parqueo</th-->
-                        <!--th>Matricula</th-->
+                        <th>Matricula</th>
                         <th>Fecha de entrada</th>
                         <th>Fecha de salida</th>
                         <th>Monto a pagar</th>
+                        <th>Codigo Reserva</th>
                     </tr>
 
                     <tr>
+                        <td>{{$car->plate_number}}</td>
                         <td>{{ $reserva->entry_date }}</td>
                         <td>{{ $reserva->departure_date }}</td>
-                        <td>Calculando monto estimado...</td>
-
+                        @if($reserva->entry_date == $reserva->departure_date)
+                            <td>{{$reserva->amount}}</td>
+                        @else
+                            <td>Calculando monto</td>
+                        @endif
+                        <td>{{$reserva->confirmation_code}}</td>
+                        <td> <a href="/bookings"><button style="float:right">Finalizar reserva</button></a></td>
                     </tr>
 
                 </table>
-                <a href="/bookings"><button style="float:right">Finalizar reserva</button></a>
-
 
             </div>
         </div>

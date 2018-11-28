@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Checkout;
 use App\reservation;
 use Illuminate\Http\Request;
+use App\ParkingSpace;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -53,10 +54,23 @@ class CheckOutController extends Controller
      */
     public function show($id)
     {
-        //
+        /*
         $reserva = reservation::where('id_reservations',$id)->first();
+*/
+        $reserva = Reservation::where('id_reservations','=',$id)
+            ->first();
+        $car=DB::table('cars')->where('id_car','=',$reserva->id_car_fk)->first();
+        $space=DB::table('parking_spaces')->where('id_parking_spaces','=',$reserva->id_parking_spaces_fk)->first();
 
-        return View('reservations.checkOut', compact('reserva'));
+
+        $tarea =Reservation::find($id);
+        $tarea->reservation_state = 'Finalizado';
+        $tarea->update();
+
+        $spaces=ParkingSpace::find($space->id_parking_spaces);
+        $spaces->space_status= 'Libre';
+        $spaces->update();
+        return View('reservations.checkOut', compact('reserva','car'));
     }
 
     /**

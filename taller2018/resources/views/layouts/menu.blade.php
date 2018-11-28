@@ -34,8 +34,7 @@
                 </a>
                 <ul class="nav nav-list tree">
                     <li><a href="/reservations">Busqueda Parqueo</a></li>
-                    <li><a href="">Seleccionar Horario</a></li>
-                    <li><a href="">Vista Previa</a></li>
+
                 </ul>
             </li>
             <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-table"></span> Historial Reservas<span class="fa-angle-right fa right-arrow text-right"></span> </a>
