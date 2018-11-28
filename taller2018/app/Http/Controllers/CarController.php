@@ -55,10 +55,10 @@ class CarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CarRequest $request)
+    public function store(Request $request)
     {
         $request->validate([
-            //'plate_number'=> 'required',
+            'plate_number'=> 'max:7|min:6|unique|required',
             'color' => 'required',
             'id_car_type_fk' => 'required',
             'id_car_model_fk' => 'required',
@@ -66,8 +66,8 @@ class CarController extends Controller
         ]);
         Car::create($request->all());
         Session::flash('message','Creado');
-        //return redirect()->route('cars.index');
-        return redirect()->route('reservations.index');
+        return redirect()->route('cars.index');
+        //return redirect()->route('reservations.index');
     }
 
     /**
