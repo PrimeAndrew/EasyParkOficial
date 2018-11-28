@@ -13,7 +13,7 @@ class CarRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,8 +24,9 @@ class CarRequest extends FormRequest
     public function rules()
     {
         return [
-            //
-//            'plate_number'=> 'max:7|min:6|unique:car|required',
+
+              'plate_number' => 'max:7|min:6|unique:car|required',
+//            'plate_number' => 'required'
 //            'plate_number'=> 'required',
 //            'parking_name' => 'max:30|unique:parkings|required|',
         ];

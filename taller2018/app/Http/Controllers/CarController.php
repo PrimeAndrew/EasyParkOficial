@@ -44,6 +44,7 @@ class CarController extends Controller
        // $user_roles = UserRole::all();
         $user_roles = User::all();
        // return view('cars.create',compact('cars_types','cars_models','user_roles'));
+        //$usersP = DB::table('users')->select('id_users','name','email')->orderby('id_users','DESC')->first();
          return view('cars.create',compact('cars_types','cars_models','user_roles'));
 
     }
@@ -54,7 +55,7 @@ class CarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CarRequest $request)
     {
         $request->validate([
             //'plate_number'=> 'required',

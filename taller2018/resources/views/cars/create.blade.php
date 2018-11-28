@@ -10,6 +10,24 @@
                             <div class="col-md-12 panel-heading">
                                 <h4>Registrar Vehiculo</h4>
                             </div>
+
+                            {{--validaciones--}}
+                            @if(count($errors))
+                                <div class="alert alert-danger">
+                                    <b><p>Por favor introduzca los siguientes errores:</p></b>
+                                    <button type="button" class="close" data-dismiss="alert">
+                                        &times;
+                                    </button>
+                                    <ul>
+                                        @foreach($errors->all() as $errors)
+                                            <li>{{$errors}}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            {{--validaciones--}}
+
+
                             <div class="col-md-12 panel-body" style="padding-bottom:30px;">
                                 <div class="col-md-12">
                                     <form class="cmxform" id="signupForm" method="POST" action="{{  route('cars.store') }}" >
