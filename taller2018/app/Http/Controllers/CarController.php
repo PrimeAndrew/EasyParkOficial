@@ -58,7 +58,7 @@ class CarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'plate_number'=> 'max:7|min:6|required',
+            'plate_number'=> 'max:7|min:6|required|unique:cars',
             'color' => 'required',
             'id_car_type_fk' => 'required',
             'id_car_model_fk' => 'required',

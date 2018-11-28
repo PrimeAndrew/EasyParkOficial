@@ -9,7 +9,7 @@ use App\Reservation_client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use App\Http\Requests\ReservationClientsRequest;
 class ReservationClientController extends Controller
 {
     /**
@@ -42,6 +42,15 @@ class ReservationClientController extends Controller
     {
         $request->validate([
             'entry_date' => 'required',
+//            'AUD_FECHA'=>Carbon::now(),
+//            if(Carbon::now()->entry ){
+//
+//            }
+
+//             if ('entry_date'!=){
+//                 return 0;
+//             }
+//        date('m/d/Y g:ia')
             'entry_hour' => 'required',
             'departure_date' => 'required',
             'departure_hour' => 'required',

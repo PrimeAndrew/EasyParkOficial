@@ -111,6 +111,10 @@ return [
         'close_hour' => 'Hora de cierre',
         'latitude' => 'Ubicacion del parqueo',
         'plate_number' => 'Numero de placa',
+        'entry_date' => 'Fecha de entrada',
+        'entry_hour' => 'Hora de entrada',
+        'departure_date' => 'Fecha de saluida',
+        'departure_hour' => 'Hora de salida'
 
 //        'longitud' => 'required',
     ],
