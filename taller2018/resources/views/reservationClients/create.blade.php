@@ -9,20 +9,39 @@
                         <div class="col-md-12 panel-heading">
                             <h4>Reserva</h4>
                         </div>
+
+
+                        {{--validaciones--}}
+                        @if(count($errors))
+                            <div class="alert alert-danger">
+                                <b><p>Por favor introduzca los siguientes errores:</p></b>
+                                <button type="button" class="close" data-dismiss="alert">
+                                    &times;
+                                </button>
+                                <ul>
+                                    @foreach($errors->all() as $errors)
+                                        <li>{{$errors}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        {{--validaciones--}}
+
+
                         <div class="col-md-12 panel-body" style="padding-bottom:30px;">
                             <div class="col-md-12">
                                 <form class="cmxform" id="signupForm" method="POST" action="{{  route('reservationClients.store') }}" >
                                     @csrf
                                     <div class="col-md-6">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="date" class="form-text" id="entry_date" name="entry_date" required maxlength="10" pattern="[/|0-9]+">
+                                            <input type="date" class="form-text" id="entry_date" name="entry_date" value="{{old('entry_date')}}">
                                             <span class="bar"></span>
                                             <label>Fecha entrada</label>
                                         </div>
 
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="time" class="form-text" id="entry_hour" name="entry_hour" required maxlength="10" pattern="[:|0-9]+">
+                                            <input type="time" class="form-text" id="entry_hour" name="entry_hour"   pattern="[:|0-9]+" value="{{old('entry_hour')}}">
                                             <span class="bar"></span>
                                             <label>Hora entrada</label>
                                         </div>
@@ -52,13 +71,13 @@
                                         {{----}}
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="date" class="form-text" id="departure_date" name="departure_date" required maxlength="10" pattern="[/|0-9]+">
+                                            <input type="date" class="form-text" id="departure_date" name="departure_date" pattern="[/|0-9]+" value="{{old('departure_date')}}">
                                             <span class="bar"></span>
                                             <label>Fecha salida</label>
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="time" class="form-text" id="departure_hour" name="departure_hour" required maxlength="7" pattern="[:|0-9]+">
+                                            <input type="time" class="form-text" id="departure_hour" name="departure_hour" pattern="[:|0-9]+" value="{{old('departure_hour')}}">
                                             <span class="bar"></span>
                                             <label>Hora salida</label>
                                         </div>
