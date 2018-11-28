@@ -20,10 +20,5 @@ class Reservation_client extends Model
     protected $primaryKey = 'id_reservations';
     protected $table = "reservations";
 
-
-    public function boot(){
-
-
-    }
 }
 
