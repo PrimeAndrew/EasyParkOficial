@@ -83,10 +83,11 @@ class ReservationClientController extends Controller
      */
     public function show($id)
     {
+        $id_auth = Auth::id();
         $park=DB::table('parkings')->where('id_parkings','=',$id)->first();
         $space=DB::table('parking_spaces')->where('id_parkings_fk','=',$id)->first();
-        $cars = Car::all();
-        $id_auth = Auth::id();
+        $cars = Car::all()->where ('id_roles_users_fk','=',$id_auth);
+
         $usersP=DB::table('users')
             ->join('users_roles','users.id_users','=','users_roles.id_users_fk')
             ->select('id_roles_users','id_users_fk','name','email')
@@ -96,9 +97,9 @@ class ReservationClientController extends Controller
             ->join('users_roles','users_roles.id_roles_users','=','cars.id_roles_users_fk')
             ->select('plate_number','id_car')
             ->where('users_roles.id_users_fk','=',$id_auth)
-            ->first();
+            ->get();
 
-        //dd($park->parking_name);
+//        dd($cars);
         return view('reservationClients.create',compact('park','space','cars','usersP','carsP'));
     }
 

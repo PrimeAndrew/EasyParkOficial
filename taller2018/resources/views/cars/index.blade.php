@@ -57,7 +57,7 @@
                             <th scope="col">Color</th>
                             <th scope="col">Tipo</th>
                             <th scope="col">Modelo</th>
-                            <th scope="col">Reserva</th>
+                            {{--<th scope="col">Reserva</th>--}}
                             <th scope="col">Editar</th>
                             <th scope="col">Eliminar</th>
                         </tr>
@@ -70,7 +70,7 @@
                                 <td>{{ $car->color}}</td>
                                 <td>{{ $car->car_type}}</td>
                                 <td>{{ $car->model}}</td>
-                                <td><a class="btn btn-info mb-1" href="{{ route('reservations.index', $car->id_car) }}"><i class="fas fa-car"></i></a></td>
+{{--                                <td><a class="btn btn-info mb-1" href="{{ route('reservations.index', $car->id_car) }}"><i class="fas fa-car"></i></a></td>--}}
                                 <td><a class="btn btn-info mb-1" href="{{ route('cars.edit', $car->id_car) }}"><i class="far fa-edit"></i></a></td>
                                 <td>
 
