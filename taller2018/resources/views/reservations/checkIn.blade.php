@@ -48,10 +48,11 @@
                             <td>Calculando monto</td>
                             @endif
                             <td>{{$cod}}</td>
+                            <td><a href="/bookings"><button style="float:right">Confirmar reserva</button></a></td>
                         </tr>
 
                 </table>
-                <a href="/bookings"><button style="float:right">Confirmar reserva</button></a>
+
 
             </div>
         </div>

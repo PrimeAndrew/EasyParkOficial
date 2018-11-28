@@ -77,7 +77,12 @@ class CheckInController extends Controller
         $cod=substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTVWXYZ"), 0, 8);
 
         //Se debe actualziar precio, estado,codigo en la tabla reserva
-        //$this->update($id,$precio);
+
+        $tarea =reservation::find($id);
+        $tarea->amount= $precio;
+        $tarea->confirmation_code = $cod;
+        $tarea->reservation_state = 'Reservado';
+        $tarea->update();
 
 
         return View('reservations.checkIn', compact('reserva','cod','tiempot','precio'));
