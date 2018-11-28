@@ -60,7 +60,7 @@ class CheckInController extends Controller
 
         $reserva = Reservation::where('id_reservations','=',$id)
             ->first();
-        $car=DB::table('cars')->where('id_car','=',$reserva->id_car_fk)->first;
+        $car=DB::table('cars')->where('id_car','=',$reserva->id_car_fk)->first();
         $space=DB::table('parking_spaces')->where('id_parking_spaces','=',$reserva->id_parking_spaces_fk)->first();
 
         $park=DB::table('parkings')->where('id_parkings','=',$space->id_parkings_fk )->first();

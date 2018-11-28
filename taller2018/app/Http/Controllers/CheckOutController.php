@@ -64,7 +64,7 @@ class CheckOutController extends Controller
 
 
         $tarea =Reservation::find($id);
-        $tarea->reservation_state = 'Libre';
+        $tarea->reservation_state = 'Finalizado';
         $tarea->update();
 
         $spaces=ParkingSpace::find($space->id_parking_spaces);
