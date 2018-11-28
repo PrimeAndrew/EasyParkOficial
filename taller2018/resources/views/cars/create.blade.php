@@ -104,20 +104,40 @@
                                                 {{--<span class="bar"></span>--}}
                                                 {{--<label>UserSeeder</label>--}}
                                             {{--</div>--}}
+
                                             <div class="col-md-12 form-group form-animate-text" style="margin-top:20px !important;">
-                                                <div class="col-sm-5 control-label text-right">
-                                                    <label class="control-label text-right">Usuario</label>
-                                                </div>
-                                                <div class="col-sm-7 control-label text-left">
 
-                                                    <select class="form-control" name="id_roles_users_fk">
-                                                        @foreach($user_roles as $user_role)
-                                                            <option value="{{ $user_role['id_users'] }}">{{ $user_role['name'] }}</option>
-                                                        @endforeach
-                                                    </select>
+                                                <input type="hidden" class="form-text" id="id_roles_users_fk" name="id_roles_users_fk" value="{{ $name_auth["id_users"] }}">
+                                                <input type="text" class="form-text" value="{{ $name_auth["name"] }}" disabled>
 
-                                                </div>
+                                                <span class="bar"></span>
+                                                {{--<label>{{ $name_auth["name"] }}</label>--}}
+
+                                                {{--<div class="col-sm-5 control-label text-right">--}}
+                                                    {{--<label class="control-label text-right">Usuario</label>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="col-sm-7 control-label text-left">--}}
+                                                    {{--<select class="form-control" name="id_roles_users_fk">--}}
+                                                        {{--@foreach($user_roles as $user_role)--}}
+                                                            {{--<option value="{{ $name_auth["id_user"] }}">{{ $name_auth["name"] }}</option>--}}
+                                                        {{--@endforeach--}}
+                                                    {{--</select>--}}
+
+                                                {{--</div>--}}
                                             </div>
+                                            {{--<div class="col-md-12 form-group form-animate-text" style="margin-top:20px !important;">--}}
+                                                {{--<div class="col-sm-5 control-label text-right">--}}
+                                                    {{--<label class="control-label text-right">Usuario</label>--}}
+                                                {{--</div>--}}
+                                                {{--<div class="col-sm-7 control-label text-left">--}}
+                                                    {{--<select class="form-control" name="id_roles_users_fk">--}}
+                                                        {{--@foreach($user_roles as $user_role)--}}
+                                                            {{--<option value="{{ $user_role['id_users'] }}">{{ $user_role['name'] }}</option>--}}
+                                                        {{--@endforeach--}}
+                                                    {{--</select>--}}
+
+                                                {{--</div>--}}
+                                            {{--</div>--}}
 
                                         </div>
 
