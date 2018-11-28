@@ -90,13 +90,28 @@
                                             {{--<label>Placa</label>--}}
                                         {{--</div>--}}
 
-                                        <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="hidden" class="form-text" id="id_car_fk" name="id_car_fk" value="{{ $carsP->id_car }}">
-                                            <input type="text" class="form-text" value="{{ $carsP->plate_number }}" disabled>
+                                        <div class="col-md-12 form-group form-animate-text" style="margin-top:10px !important;">
+                                            <div class="col-sm-5 control-label text-right">
+                                                <label class="control-label text-right">Automovil</label>
+                                            </div>
+                                            <div class="col-sm-7 control-label text-left">
 
-                                            <span class="bar"></span>
-                                            {{--<label>Placa</label>--}}
+                                                <select class="form-control" name="id_car_fk">
+                                                    @foreach($cars as $car)
+                                                        <option value="{{ $car['id_car'] }}">{{ $car['plate_number'] }}</option>
+                                                    @endforeach
+                                                </select>
+
+                                            </div>
                                         </div>
+
+                                        {{--<div class="form-group form-animate-text" style="margin-top:40px !important;">--}}
+                                            {{--<input type="hidden" class="form-text" id="id_car_fk" name="id_car_fk" value="{{ $carsP->id_car }}">--}}
+                                            {{--<input type="text" class="form-text" value="{{ $carsP->plate_number }}" disabled>--}}
+
+                                            {{--<span class="bar"></span>--}}
+                                            {{--<label>Placa</label>--}}
+                                        {{--</div>--}}
 
 
                                         <div class="form-group form-animate-text col-md-12" style="margin-top:10px !important;">
