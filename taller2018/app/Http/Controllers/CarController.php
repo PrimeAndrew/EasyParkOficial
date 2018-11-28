@@ -8,8 +8,9 @@ use App\Cars_model;
 use App\User;
 use App\UserRole;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-use App\Http\Requests\CarRequest;
+
 class CarController extends Controller
 {
     /**
@@ -19,11 +20,13 @@ class CarController extends Controller
      */
     public function index(Request $request)
     {
-        //$users = User::all();
+        $id_auth = Auth::id();
         $cars =  Car::plate($request->get('plate_number'))
             ->join('cars_type','cars.id_car_type_fk','=','cars_type.id_car_type')
             ->join('cars_model','cars.id_car_model_fk','=','cars_model.id_car_model')
             ->join('users_roles','cars.id_roles_users_fk','=','users_roles.id_roles_users')
+            ->where ('users_roles.id_users_fk','=',$id_auth)
+
             //->whereHas()
             //->join('users','users_roles','users_roles.id_users_fk','=','users.id_users')
             ->orderBy('id_car','ASC')
@@ -43,9 +46,12 @@ class CarController extends Controller
         $cars_models = Cars_model::all();
        // $user_roles = UserRole::all();
         $user_roles = User::all();
+        $id_auth = Auth::id();
+        $name_auth = Auth::user();
+
        // return view('cars.create',compact('cars_types','cars_models','user_roles'));
         //$usersP = DB::table('users')->select('id_users','name','email')->orderby('id_users','DESC')->first();
-         return view('cars.create',compact('cars_types','cars_models','user_roles'));
+         return view('cars.create',compact('cars_types','cars_models','user_roles','id_auth','name_auth'));
 
     }
 

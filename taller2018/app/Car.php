@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
 class Car extends Model
 {
@@ -25,7 +26,8 @@ class Car extends Model
     public function scopePlate($query, $plate_number){
 
         if(trim($plate_number != "")){
-            $query -> where ("plate_number","like","%$plate_number%");
+            $id_auth = Auth::id();
+            $query -> where ("plate_number","like","%$plate_number%")->where("id_roles_users_fk",$id_auth);
 
         }
     }
