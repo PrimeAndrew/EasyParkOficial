@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Checkin;
-use App\reservation;
+use App\ParkingSpace;
+use App\Reservation;
 use Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -57,9 +58,11 @@ class CheckInController extends Controller
     public function show($id)
     {
         //
-        $reserva = reservation::where('id_reservations',$id)
+        $reserva = Reservation::where('id_reservations',$id)
             ->first();
+
         $space=DB::table('parking_spaces')->where('id_parking_spaces','=',$reserva->id_parking_spaces_fk)->first();
+
         $park=DB::table('parkings')->where('id_parkings','=',$space->id_parkings_fk)->first();
         $serv=DB::table('services')->where('id_services','=',$park->id_parkings)->first();
 ////para mostrar la cantidad de horas que se quedara la persona con formato H:min:seg
@@ -78,11 +81,18 @@ class CheckInController extends Controller
 
         //Se debe actualziar precio, estado,codigo en la tabla reserva
 
-        $tarea =reservation::find($id);
+        $tarea =Reservation::find($id);
         $tarea->amount= $precio;
         $tarea->confirmation_code = $cod;
-        $tarea->reservation_state = 'Reservado';
+        $tarea->reservation_state = 'Ocupado';
         $tarea->update();
+
+/*
+        $spaces=ParkingSpace::where('id_parking_spaces','=',$space)->where('id_parkings_fk','=',$park)->select('id_parking:spaces');
+        $spaces=ParkingSpace::find($spaces);
+        $spaces->space_status= 'Ocupado';
+        $spaces->update();
+*/
 
 
         return View('reservations.checkIn', compact('reserva','cod','tiempot','precio'));
@@ -109,12 +119,9 @@ class CheckInController extends Controller
      */
     public function update(Request $request)
     {
-        //
-
 
         $request->validate([
             'reservation_state'=> 'Reservado',
-
 
         ]);
         $id->update($request->all());

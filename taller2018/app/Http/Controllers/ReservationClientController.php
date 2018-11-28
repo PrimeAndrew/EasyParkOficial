@@ -68,7 +68,7 @@ class ReservationClientController extends Controller
         $res->departure_hour = $request->input('departure_hour');
         $res->id_car_fk = $request->input('id_car_fk');
         $res->id_parking_spaces_fk = $request->input('id_parking_spaces_fk');
-        $res->reservation_state = 'Confirmar';
+        $res->reservation_state = 'Reservado';
         $res->save();
 
         //Session::flash('message','Creado');
