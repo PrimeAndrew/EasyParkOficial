@@ -50,7 +50,7 @@
                                 <th>Total esapcio</th>
                                 <th>Hora apertura</th>
                                 <th>Hora Cierre</th>
-                                <th>zona</th>
+                                <!--    <th>zona</th>-->
                                 <th>Seleccionar</th>
                                 </thead>
                                 <tbody>
@@ -63,7 +63,7 @@
                                             <td>{{ $parking->total_spaces }}</td>
                                             <td>{{ $parking->open_hour }}</td>
                                             <td>{{ $parking->close_hour }}</td>
-                                            <td>{{ $parking->id_zones_fk}}</td>
+                                         <!--   <td>{{ $parking->id_zones_fk}}</td>-->
                                             <td><a class="btn btn-info"
                                                    href="{{action('GmapsController@show', $parking->id_parkings)}}"><span
                                                             class="glyphicon glyphicon-pencil"></span></a></td>

@@ -57,15 +57,15 @@ class CheckInController extends Controller
      */
     public function show($id)
     {
-        //
-        $reserva = Reservation::where('id_reservations',$id)
-            ->first();
 
+        $reserva = Reservation::where('id_reservations','=',$id)
+            ->first();
         $space=DB::table('parking_spaces')->where('id_parking_spaces','=',$reserva->id_parking_spaces_fk)->first();
 
-        $park=DB::table('parkings')->where('id_parkings','=',$space->id_parkings_fk)->first();
+        $park=DB::table('parkings')->where('id_parkings','=',$space->id_parkings_fk )->first();
         $serv=DB::table('services')->where('id_services','=',$park->id_parkings)->first();
-////para mostrar la cantidad de horas que se quedara la persona con formato H:min:seg
+
+        ////para mostrar la cantidad de horas que se quedara la persona con formato H:min:seg
         $salida = new \DateTime($reserva->departure_hour);
         $entrada = new \DateTime($reserva->entry_hour);
         $tiempo = $salida->diff($entrada);
@@ -87,13 +87,11 @@ class CheckInController extends Controller
         $tarea->reservation_state = 'Ocupado';
         $tarea->update();
 
-/*
-        $spaces=ParkingSpace::where('id_parking_spaces','=',$space)->where('id_parkings_fk','=',$park)->select('id_parking:spaces');
-        $spaces=ParkingSpace::find($spaces);
+
+
+        $spaces=ParkingSpace::find($space->id_parking_spaces);
         $spaces->space_status= 'Ocupado';
         $spaces->update();
-*/
-
 
         return View('reservations.checkIn', compact('reserva','cod','tiempot','precio'));
     }
@@ -117,7 +115,7 @@ class CheckInController extends Controller
      * @param  \App\TemporalClosed  $temporalClosed
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
 
         $request->validate([
