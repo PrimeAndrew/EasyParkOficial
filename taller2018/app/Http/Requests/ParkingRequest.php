@@ -26,7 +26,11 @@ class ParkingRequest extends FormRequest
         return [
             'parking_name' => 'max:30|unique:parkings|required|',
             'parking_address'=>'required|max:300',
-            'total_spaces'=>'required|max: 1000|numeric'
+            'total_spaces'=>'required|max: 1000|numeric',
+            'open_hour' => 'required',
+            'close_hour' => 'required',
+            'latitude' => 'required',
+            'longitud' => 'required'
 
         ];
     }

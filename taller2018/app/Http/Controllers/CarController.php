@@ -20,11 +20,13 @@ class CarController extends Controller
      */
     public function index(Request $request)
     {
-        //$users = User::all();
+        $id_auth = Auth::id();
         $cars =  Car::plate($request->get('plate_number'))
             ->join('cars_type','cars.id_car_type_fk','=','cars_type.id_car_type')
             ->join('cars_model','cars.id_car_model_fk','=','cars_model.id_car_model')
             ->join('users_roles','cars.id_roles_users_fk','=','users_roles.id_roles_users')
+            ->where ('users_roles.id_users_fk','=',$id_auth)
+
             //->whereHas()
             //->join('users','users_roles','users_roles.id_users_fk','=','users.id_users')
             ->orderBy('id_car','ASC')
@@ -62,7 +64,7 @@ class CarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'plate_number'=> 'max:7|min:6|required',
+            'plate_number'=> 'max:7|min:6|required|unique:cars',
             'color' => 'required',
             'id_car_type_fk' => 'required',
             'id_car_model_fk' => 'required',

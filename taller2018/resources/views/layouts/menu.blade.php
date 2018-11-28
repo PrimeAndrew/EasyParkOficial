@@ -19,7 +19,7 @@
 
             <li class="ripple">
                 <a class="tree-toggle nav-header">
-                    <span class="fa-diamond fa"></span> Parqueos
+                    <span class="fas fa-car"></span> Parqueos
                     <span class="fa-angle-right fa right-arrow text-right"></span>
                 </a>
                 <ul class="nav nav-list tree">
