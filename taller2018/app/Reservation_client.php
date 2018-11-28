@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use validator;
+
 class Reservation_client extends Model
 {
     protected $fillable = [
@@ -21,9 +21,6 @@ class Reservation_client extends Model
     protected $table = "reservations";
 
 
-    public function boot(){
 
-
-    }
 }
 

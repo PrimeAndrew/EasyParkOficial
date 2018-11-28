@@ -42,15 +42,6 @@ class ReservationClientController extends Controller
     {
         $request->validate([
             'entry_date' => 'required',
-//            'AUD_FECHA'=>Carbon::now(),
-//            if(Carbon::now()->entry ){
-//
-//            }
-
-//             if ('entry_date'!=){
-//                 return 0;
-//             }
-//        date('m/d/Y g:ia')
             'entry_hour' => 'required',
             'departure_date' => 'required',
             'departure_hour' => 'required',

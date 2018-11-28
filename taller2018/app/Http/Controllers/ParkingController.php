@@ -182,4 +182,12 @@ class ParkingController extends Controller
         Session::flash('message','Parqueo borrado correctamente');
         return redirect()->route('parkings.index');
     }
+    public function pdfexport(Parking $parking)
+    {
+
+        //
+//        $parking->delete();
+//        Session::flash('message','Parqueo borrado correctamente');
+//        return redirect()->route('parkings.index');
+    }
 }
