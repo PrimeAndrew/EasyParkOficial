@@ -74,12 +74,6 @@ class ReservationClientController extends Controller
      */
     public function show($id)
     {
-        //$parkings = Parking::all();
-        //dd($parking->parking_name);
-
-        //$park=Parking::find($id)->id_parkings;
-
-
         $park=DB::table('parkings')->where('id_parkings','=',$id)->first();
         $space=DB::table('parking_spaces')->where('id_parkings_fk','=',$id)->first();
         $cars = Car::all();
