@@ -17,17 +17,7 @@
                 </ul>
             </li>
 
-            <li class="ripple">
-                <a class="tree-toggle nav-header">
-                    <span class="fas fa-car"></span> Parqueos
-                    <span class="fa-angle-right fa right-arrow text-right"></span>
-                </a>
-                <ul class="nav nav-list tree">
-                    <li><a href="/parkings">Listado Parqueo</a></li>
-                    <li><a href="/parkings/create">Nuevo Parqueo</a></li>
 
-                </ul>
-            </li>
             <li class="ripple">
                 <a class="tree-toggle nav-header">
                     <span class="fa fa-pencil-square"></span>Nueva Reserva<span class="fa-angle-right fa right-arrow text-right"></span>
@@ -41,17 +31,22 @@
                 <ul class="nav nav-list tree">
                     <li><a href="/bookings">Listar Reservas</a></li>
 
-                    <li class="ripple">
-                        <a class="sub-tree-toggle nav-header">
-                            <span class="fa fa-table"></span> Listar Reservas
-                            <span class="fa-angle-right fa right-arrow text-right"></span>
-                        </a>
-                        <ul class="nav nav-list sub-tree">
-                            <!--li><a href=" ">Check In</a></li-->
-                            <!--li><a href=" ">Check Out</a></li-->
-                            <li><a href="/deleterev">Cancelar Reserva</a></li>
-                        </ul>
+                    <li class="nav nav-list sub-tree">
+                        <!--li><a href=" ">Check In</a></li-->
+                        <!--li><a href=" ">Check Out</a></li-->
+                        <li><a href="/deleterev">Cancelar Reserva</a></li>
                     </li>
+                </ul>
+            </li>
+            <li class="ripple">
+                <a class="tree-toggle nav-header">
+                    <span class="fas fa-car"></span> Parqueos
+                    <span class="fa-angle-right fa right-arrow text-right"></span>
+                </a>
+                <ul class="nav nav-list tree">
+                    <li><a href="/parkings">Listado Parqueo</a></li>
+                    <li><a href="/parkings/create">Nuevo Parqueo</a></li>
+
                 </ul>
             </li>
         </ul>

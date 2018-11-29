@@ -7,7 +7,7 @@
                 <div class="col-md-20">
                     <div class="col-md-12 panel">
                         <div class="col-md-12 panel-heading">
-                            <h4>Reserva</h4>
+                            <h4>Recibo reserva</h4>
                         </div>
 
 

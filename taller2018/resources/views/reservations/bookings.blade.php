@@ -49,6 +49,7 @@
                             <td>{{ $value->departure_date }}</td>
                             <td>{{ $value->departure_hour }}</td>
                             <td>{{ $value->reservation_state }}</td>
+                            @if($value->reservation_state!='Finalizado')
                             <td><?php
                                 $state = $value->reservation_state;
                                 $checkinurl = ("/checkin/" . $value->id_reservations);
@@ -62,6 +63,7 @@
                                 }
                                 ?>
                             </td>
+                            @endif
 
 
                         </tr>
