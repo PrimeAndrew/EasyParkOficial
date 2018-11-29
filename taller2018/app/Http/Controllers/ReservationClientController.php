@@ -9,7 +9,6 @@ use App\Reservation_client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Http\Requests\ReservationClientsRequest;
 class ReservationClientController extends Controller
 {
     /**
@@ -19,6 +18,7 @@ class ReservationClientController extends Controller
      */
     public function index()
     {
+
     }
 
     /**
@@ -100,9 +100,30 @@ class ReservationClientController extends Controller
      * @param  \App\Reservation_client  $reservation_client
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reservation_client $reservation_client)
+    public function edit($id)
     {
-        //
+        $id_auth = Auth::id();
+        $park=DB::table('parkings')->where('id_parkings','=',$id)->first();
+        $space=DB::table('parking_spaces')->where('id_parkings_fk','=',$id)->first();
+        $cars = Car::all()->where ('id_roles_users_fk','=',$id_auth);
+
+        $usersP=DB::table('users')
+            ->join('users_roles','users.id_users','=','users_roles.id_users_fk')
+            ->select('id_roles_users','id_users_fk','name','email')
+            ->where('id_users','=',$id_auth)
+            ->first();
+        $carsP=DB::table('cars')
+            ->join('users_roles','users_roles.id_roles_users','=','cars.id_roles_users_fk')
+            ->select('plate_number','id_car')
+            ->where('users_roles.id_users_fk','=',$id_auth)
+            ->get();
+
+        $resClient=Reservation_client::where('id_reservations','=',$id)
+
+
+            ->first();
+//        dd($usersP);
+        return view('reservationClients.recibo',compact('resClient','park','space','cars','usersP','carsP'));
     }
 
     /**
