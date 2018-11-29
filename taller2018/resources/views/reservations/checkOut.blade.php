@@ -46,7 +46,22 @@
                             <td>Calculando monto</td>
                         @endif
                         <td>{{$reserva->confirmation_code}}</td>
-                        <td> <a href="/bookings"><button style="float:right">Finalizar reserva</button></a></td>
+                        <td>
+                            {{--<form action="/reservationClients" method="get">--}}
+{{--                                <input type="text" name="{{ $reserva->id_reservations }}" value="{{ $reserva->id_reservations }}">--}}
+                                {{--<button type="submit" class="btn btn-success mb-3">Finalizar reserva</button>--}}
+                            <a href={{ action('ReservationClientController@edit',$reserva->id_reservations) }}><button >Finalizar reserva</button></a>
+
+                            <?php
+//                                $ccc = ("/reservationClients/create".$reserva->id_reservations);
+//
+//                                echo "<a href='$ccc'><button >Finalizar reserva</button></a>"
+
+                            ?>
+
+                            {{--</form>--}}
+
+                        </td>
                     </tr>
 
                 </table>
