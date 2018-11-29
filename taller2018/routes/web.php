@@ -26,6 +26,7 @@ Route:: resource('cars','CarController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route:: resource('parkings','ParkingController');
+Route::get('parkings/pdfexport/{id_parkings}','ParkingController@pdfexport');
 
 Route::post('/insert','Controller@insert');
 

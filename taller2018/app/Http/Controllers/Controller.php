@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ClienteRequest;
+use Carbon\Carbon;
 
 
 class Controller extends BaseController
@@ -53,7 +54,9 @@ class Controller extends BaseController
     }
 
     function getData(){
-        $data['data'] = DB::table('reservations')->get();
+        $data['data'] = DB::table('reservations')
+            ->whereNull('deleted_at')
+            ->get();
 
         //dd($data);
 
@@ -65,7 +68,10 @@ class Controller extends BaseController
     }
 
     function delete($id_reservations){
-        DB::table('reservations')->where('id_reservations',$id_reservations)->delete();
+        DB::table('reservations')
+            ->where('id_reservations',$id_reservations)
+            ->whereNull('deleted_at')
+            ->update(['deleted_at' => \Carbon::now()]);
         return redirect('/deleterev');
     }
 }

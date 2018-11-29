@@ -38,7 +38,11 @@
                 <th scope="col">Latitud del parqueo</th>
                 <th scope="col">Longitud del parqueo</th>
                 <th scope="col">Acciones</th>
+              {{--PDF--}}
 
+                <th style="text-align: right;">Action</th>
+
+              {{--PDF--}}
 
             </tr>
             </thead>
@@ -51,8 +55,17 @@
                     <td>{{ $parking->total_spaces }}</td>
                     <td>{{ $parking->open_hour }}</td>
                     <td>{{ $parking->close_hour }}</td>
-                    <td>{{ $parking->latitude }}
-                    <td>{{ $parking->longitud }}
+                    <td>{{ $parking->latitude }}</td>
+                    <td>{{ $parking->longitud }}</td>
+
+
+                    {{--pdf--}}
+
+                    <td>
+                        <a href="{{ url('$parking/pdfexport/' . $parking->id_parkings) }}"class="btn btn-primary btn-xs">PDF Export</a>
+                    </td>
+
+                    {{--pdf--}}
                     <td><a class="btn btn-info mb-1" href="{{ route('parkings.edit', $parking->id_parkings) }}"><i class="far fa-edit"></i></a></td>
                     <td>
 
