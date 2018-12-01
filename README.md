@@ -1,4 +1,4 @@
-Proyecto: EASYPARK
+Project: EASYPARK
 ===
 <div align="center">
     <center>
@@ -6,7 +6,7 @@ Proyecto: EASYPARK
     </center>
 </div>
 
-Repositorio Proyecto Final de la Materia Taller de Sistemas 2-2018, llevado a cabo en la ciudad de La Paz, Bolivia a cargo del <a target="_blank" href="http://github.com/ernestomar">Ing. Ernesto Campo Hermoso</a> .
+Repositorio de proyecto final de la materia "Taller de Sistemas 2-2018 UCB", llevado a cabo en la ciudad de La Paz-Bolivia a cargo del <a target="_blank" href="http://github.com/ernestomar">Ing. Ernesto Campo Hermoso</a> .
 
 Nombre Aplicación.
 ---
@@ -17,14 +17,19 @@ Objetivo
 Facilitar la busqueda y reservas de parqueos publicos al rededor del dispositivo de uso,
 
 
-Uso
----------
-Para probar este ejemplo segui los siguientes pasos:
+Requisitos con DOCKER
+---
+*hoi
+*akdd
+Para probar este ejemplo seguir los siguientes pasos:
 >
 >     en construccon
 
 .
 .
 .
+
+Requisitos sin DOCKER
+---
 
 Autor(es)
