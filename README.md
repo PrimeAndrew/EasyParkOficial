@@ -34,15 +34,39 @@ Una vez instalado todos los requisitos para empezar el proyecto, levantar el "Do
 * Dentro del proyecto clonado:
 >   $ sudo docker-compose up
 
-Levantar otra terminal
-Para ingresar iterativamente al contenedor:
+* Levantar otra terminal, para ingresar iterativamente al contenedor:
 >   $ sudo docker exec -it "easyparkoficial_web_1" /bin/bash
 
-Ingresamos al proyecto para instalar las dependencias
-* composer install
+* Ingresamos al proyecto dentro del contenedor:
+>   container@container:~/dev/taller2018/
 
-En la equipo "host" remplazamos los siguientes <a target="_blank" href="https://drive.google.com/drive/folders/15vt0CJ0UQ0vgmmlTPOLnNXTVuKEAK4CB?usp=sharing">archivos</a> en la siguiente direccion:
-> user@user:~/UbicacionDelProyecto/EasyParkOficial/taller2018/vendor/genealabs/phpgmaps/src/GeneaLabs/Phpgmaps
+* Instalamos dependencias del proyecto
+>   $ composer install
+
+* En el equipo "host" remplazamos los siguientes <a target="_blank" href="https://drive.google.com/drive/folders/15vt0CJ0UQ0vgmmlTPOLnNXTVuKEAK4CB?usp=sharing">archivos</a> en la siguiente direccion:
+> host@host:~/UbicacionDelProyecto/EasyParkOficial/taller2018/vendor/genealabs/phpgmaps/src/GeneaLabs/Phpgmaps
+
+* Una vez remplazados los archivos en el "host", en el "contenedor" actualizamos las dependencias:
+>   $ composer up   
+
+* Volvemos a la carpeta principal del proyecto en el contenedor:
+>   container@container:~/dev/taller2018/
+
+Configuramos el archivo .env
+* Copiamos el archivo .env.example en el archivo .env
+> cp .env.example .env
+
+* En el "host" editamos el archivo .env remplazando las siguientes lineas de esta manera:
+>   DB_CONNECTION=pgsql
+>   DB_HOST=db
+>   DB_PORT=5432
+>   DB_DATABASE=postgres
+>   DB_USERNAME=postgres
+>   DB_PASSWORD=postgres
+
+
+
+
 
 
 
