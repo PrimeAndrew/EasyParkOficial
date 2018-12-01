@@ -41,7 +41,7 @@ Una vez instalado todos los requisitos para empezar el proyecto, levantar el "Do
 >   $ sudo docker exec -it "easyparkoficial_web_1" /bin/bash
 
 * Ingresamos al proyecto dentro del contenedor:
->   container@container:~/dev/taller2018/
+>   container@container:~cd root/dev/taller2018/
 
 * Instalamos dependencias del proyecto
 >   $ composer install
@@ -50,10 +50,13 @@ Una vez instalado todos los requisitos para empezar el proyecto, levantar el "Do
 > host@host:~/UbicacionDelProyecto/EasyParkOficial/taller2018/vendor/genealabs/phpgmaps/src/GeneaLabs/Phpgmaps
 
 * Una vez remplazados los archivos en el "host", en el "contenedor" actualizamos las dependencias:
->   $ composer up   
+>   $ composer update 
+
+* Volvemos a instalar las dependencias del proyecto
+>   $ composer install
 
 * Volvemos a la carpeta principal del proyecto en el contenedor:
->   container@container:~/dev/taller2018/
+>   container@container:~cd root/dev/taller2018/
 
 Configuramos el archivo .env
 * Copiamos el archivo .env.example en el archivo .env
@@ -70,7 +73,7 @@ Configuramos el archivo .env
 * Generamos las llaves del proyecto:
 >   $ php artisan key:generate
 
-* Sincroizamos archivos:
+* Sincronizamos archivos
 >   $ composer dump-autoload
 
 * Levatamos las migraciones y los seeders:
@@ -78,6 +81,8 @@ Configuramos el archivo .env
 
 * Levatamos el proyecto:
 >   $ php artisan serve --host=0.0.0.0
+
+*Para acceder el sistema debe crear una usuario
 
 En caso de poder ingresar a la base de datos, usar el puerto "15432" en la coneccion con postgres.
 
@@ -92,5 +97,3 @@ Autor(es)
 * Mateo Navia
 * Wendy Guzman Rojas
 * Ronald Aparicio Yañez
-
->   /* prime */
