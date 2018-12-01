@@ -57,10 +57,12 @@ Configuramos el archivo .env
 > cp .env.example .env
 
 * En el "host" editamos el archivo .env remplazando las siguientes lineas de esta manera:
->   DB_CONNECTION=pgsql
+>   DB_CONNECTION=pgsql <br>
 >   DB_HOST=db
 >   DB_PORT=5432
+
 >   DB_DATABASE=postgres
+
 >   DB_USERNAME=postgres
 >   DB_PASSWORD=postgres
 
