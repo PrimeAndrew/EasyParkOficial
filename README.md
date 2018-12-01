@@ -25,6 +25,9 @@ Requisitos
 
 Probar proyecto
 ---
+Nota:
+En caso de necesitar permisos y escritura para configurar archivos, dar los permisos correspondientes.
+
 Para probar este proyecto seguir los siguientes pasos:
 
 * Clonar el respositorio:
@@ -58,14 +61,25 @@ Configuramos el archivo .env
 
 * En el "host" editamos el archivo .env remplazando las siguientes lineas de esta manera:
 >   DB_CONNECTION=pgsql <br>
->   DB_HOST=db
->   DB_PORT=5432
+>   DB_HOST=db <br>
+>   DB_PORT=5432 <br>
+>   DB_DATABASE=postgres <br>
+>   DB_USERNAME=postgres <br>
+>   DB_PASSWORD=postgres <br>
 
->   DB_DATABASE=postgres
+* Generamos las llaves del proyecto:
+>   $ php artisan key:generate
 
->   DB_USERNAME=postgres
->   DB_PASSWORD=postgres
+* Sincroizamos archivos:
+>   $ composer dump-autoload
 
+* Levatamos las migraciones y los seeders:
+>   $ php artisan migrate:refresh --seed
+
+* Levatamos el proyecto:
+>   $ php artisan serve --host=0.0.0.0
+
+En caso de poder ingresar a la base de datos, usar el puerto "15432" en la coneccion con postgres.
 
 
 
@@ -73,3 +87,10 @@ Configuramos el archivo .env
 
 
 Autor(es)
+* Jose Lujan Escalera
+* Jose Cordova
+* Mateo Navia
+* Wendy Guzman Rojas
+* Ronald Aparicio Yañez
+
+/*prime*/
