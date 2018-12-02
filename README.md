@@ -82,7 +82,7 @@ Configuramos el archivo .env
 * Levatamos el proyecto:
 >   $ php artisan serve --host=0.0.0.0
 
-*Para acceder el sistema debe crear una usuario
+* Para acceder el sistema debe crear una usuario
 
 En caso de poder ingresar a la base de datos, usar el puerto "15432" en la coneccion con postgres.
 
