@@ -34,33 +34,38 @@
                                     {{--@csrf--}}
                                     <div class="col-md-6">
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="date" class="form-text" id="entry_date" name="entry_date" value="{{ $resClient->entry_date }}">
+                                            <h5>Fecha entrada</h5>
+                                            <input type="date" class="form-text" id="entry_date" name="entry_date" readonly value="{{ $resClient->entry_date }}">
                                             <span class="bar"></span>
-                                            <label>Fecha entrada</label>
+
                                         </div>
 
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="time" class="form-text" id="entry_hour" name="entry_hour" value="{{ $resClient->entry_hour }}">
+                                            <h5>Hora entrada</h5>
+                                            <input type="time" class="form-text" id="entry_hour" name="entry_hour" readonly value="{{ $resClient->entry_hour }}">
                                             <span class="bar"></span>
-                                            <label>Hora entrada</label>
+
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" value="{{ $space->space_code }}" >
+                                            <h5>Codigo de Espacio</h5>
+                                            <input type="text" class="form-text" readonly value="{{ $space->space_code }}" >
                                             <input type="hidden" class="form-text" id="id_parking_spaces_fk" name="id_parking_spaces_fk" value="{{ $space->id_parking_spaces }}">
                                             <span class="bar"></span>
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="" name="" value="{{ $park->parking_name }}"  >
+                                            <h5>Nombre del parqueo</h5>
+                                            <input type="text" class="form-text" id="" readonly name="" value="{{ $park->parking_name }}"  >
                                             <span class="bar"></span>
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="entry_hour" name="entry_hour" value="{{ $resClient->amount }}">
+                                            <h5>Monto</h5>
+                                            <input type="text" class="form-text" readonly id="entry_hour" name="entry_hour" value="{{ $resClient->amount }}">
                                             <span class="bar"></span>
-                                            <label>Monto</label>
+
                                         </div>
 
 
@@ -79,15 +84,17 @@
                                         {{----}}
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="date" class="form-text" id="departure_date" name="departure_date" value="{{ $resClient->departure_date }}">
+                                            <h5>Fecha salida</h5>
+                                            <input type="date" class="form-text" readonly id="departure_date" name="departure_date" value="{{ $resClient->departure_date }}">
                                             <span class="bar"></span>
-                                            <label>Fecha salida</label>
+
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                                            <input type="time" class="form-text" id="departure_hour" name="departure_hour"  value="{{ $resClient->departure_hour }}">
+                                            <h5>Hora salida</h5>
+                                            <input type="time" class="form-text" readonly id="departure_hour" name="departure_hour"  value="{{ $resClient->departure_hour }}">
                                             <span class="bar"></span>
-                                            <label>Hora salida</label>
+
                                         </div>
 
                                         {{----}}
@@ -117,14 +124,16 @@
                                         {{--</div>--}}
 
 
-                                        <div class="form-group form-animate-text col-md-12" style="margin-top:10px !important;">
-                                            <input type="text" class="form-text" id="" name="" value="{{ $park->parking_address }}" >
+                                        <div class="form-group form-animate-text" style="margin-top:10px !important;">
+                                            <h5>Parqueo</h5>
+                                            <input type="text" class="form-text" readonly id="" name="" value="{{ $park->parking_address }}" >
                                             <span class="bar"></span>
-                                            <label>Parqueo</label>
+
 
                                         </div>
 
                                         <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                                            <h5>Codigo de Reserva</h5>
                                             <input type="text" class="form-text" id="" name="" value="{{ $resClient->confirmation_code }}">
                                             <span class="bar"></span>
                                             {{--<label>Codigo</label>--}}
@@ -142,7 +151,7 @@
                                             <label class="control-label text-right">Nombre</label>
                                         </div>
                                         <div class="form-group form-animate-text col-md-9" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="" name="" value="{{ $usersP->name }}"  >
+                                            <input type="text" class="form-text" readonly id="" name="" value="{{ $usersP->name }}"  >
                                             <span class="bar"></span>
                                         </div>
 
@@ -150,7 +159,7 @@
                                             <label class="control-label text-right">Correo</label>
                                         </div>
                                         <div class="form-group col-md-9" style="margin-top:40px !important;">
-                                            <input type="text" class="form-text" id="" name="" value="{{ $usersP->email }}"  >
+                                            <input type="text" class="form-text" id="" readonly name="" value="{{ $usersP->email }}"  >
                                             <span class="bar"></span>
                                         </div>
                                     </div>

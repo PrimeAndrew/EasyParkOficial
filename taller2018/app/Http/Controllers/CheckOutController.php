@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Checkout;
-use App\reservation;
+use App\Reservation;
 use Illuminate\Http\Request;
 use App\ParkingSpace;
 use Illuminate\Foundation\Bus\DispatchesJobs;
