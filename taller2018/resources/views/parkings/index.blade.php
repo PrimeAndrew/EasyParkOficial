@@ -61,9 +61,9 @@
 
                     {{--pdf--}}
 
-                    <td>
-                        <a href="{{ url('$parking/pdfexport/' . $parking->id_parkings) }}"class="btn btn-primary btn-xs">PDF Export</a>
-                    </td>
+                    {{--<td>--}}
+                        {{--<a href="{{ url('$parking/pdfexport/' . $parking->id_parkings) }}"class="btn btn-primary btn-xs">PDF Export</a>--}}
+                    {{--</td>--}}
 
                     {{--pdf--}}
                     <td><a class="btn btn-info mb-1" href="{{ route('parkings.edit', $parking->id_parkings) }}"><i class="far fa-edit"></i></a></td>
