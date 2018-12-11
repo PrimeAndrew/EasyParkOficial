@@ -9,6 +9,15 @@
                         <div class="col-md-12 panel-heading">
                             <h4>Reserva</h4>
                         </div>
+@if ($message = Session::get('message'))
+<div class="alert alert-info alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+    <strong>{{ $message }}</strong>
+</div>
+@endif
+
+
+
 
 
                         {{--validaciones--}}
