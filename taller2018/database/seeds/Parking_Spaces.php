@@ -28,7 +28,7 @@ class Parking_Spaces extends Seeder
         for ($i = 0,$j=6; $i < 5; $i++,$j++) {
             DB::table('parking_spaces')->insert([
                 'space_code' => $j,
-                'space_status' => 'Ocupado',
+                'space_status' => 'Libre',
                 'space_mod_date' =>'2018-10-10',
                 'id_parkings_fk' => $i+2
             ]);
@@ -38,7 +38,7 @@ class Parking_Spaces extends Seeder
         for ($i = 0,$j=10; $i < 5; $i++,$j++) {
             DB::table('parking_spaces')->insert([
                 'space_code' => $j,
-                'space_status' => 'Reservado',
+                'space_status' => 'Libre',
                 'space_mod_date' =>'2018-10-10',
                 'id_parkings_fk' => $i+1
             ]);
@@ -48,7 +48,7 @@ class Parking_Spaces extends Seeder
         for ($i = 0,$j=14; $i < 5; $i++,$j++) {
             DB::table('parking_spaces')->insert([
                 'space_code' => $j,
-                'space_status' => 'Cancelado',
+                'space_status' => 'Libre',
                 'space_mod_date' =>'2018-10-10',
                 'id_parkings_fk' => $i+1
             ]);

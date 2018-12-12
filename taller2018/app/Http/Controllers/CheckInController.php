@@ -71,7 +71,7 @@ class CheckInController extends Controller
         $entrada = new \DateTime($reserva->entry_hour);
         $tiempo = $salida->diff($entrada);
         $tiempot=$tiempo->format("%H:%I:%S");
-////para calcular el monto a pagar
+        ////para calcular el monto a pagar
          $c_salida=strtotime($reserva->departure_hour);
          $c_entrada=strtotime($reserva->entry_hour);
         $tiempores=($c_salida-$c_entrada)/60/60;

@@ -54,8 +54,13 @@ class ReservationClientController extends Controller
         //Reservation_client::create($request->all());
         $hoy=date("Y-m-d");
         $entry=$request->input('entry_date');
-
         $departure=$request->input('departure_date');
+
+        //para validar que la hora de reserva sea mayor a la actual
+       /* $hr_hoy=time("H:m:s");
+        $hr_entry=$request->input('entry_hour');
+        $hr_departure=$request->input('departure_hour');*/
+
         if ($hoy<=$entry && $entry<=$departure) { 
         $res = new Reservation_client();
         $res->entry_date = $request->input('entry_date');
@@ -66,7 +71,7 @@ class ReservationClientController extends Controller
         $res->id_parking_spaces_fk = $request->input('id_parking_spaces_fk');
         $res->reservation_state = 'Reservado';
         $res->save();
-    return redirect()->route('bookings.index')->with('message','Registro exitoso');
+            return redirect()->route('bookings.index')->with('message','Registro exitoso');
          }
          else{
             return redirect()->route('bookings.index')->with('message','Ingrese una fecha valida');
