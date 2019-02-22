@@ -74,6 +74,7 @@ class CheckInController extends Controller
         ////para calcular el monto a pagar
          $c_salida=strtotime($reserva->departure_hour);
          $c_entrada=strtotime($reserva->entry_hour);
+         
         $tiempores=($c_salida-$c_entrada)/60/60;
         $precio=$serv->rate_per_hour*$tiempores;
 
